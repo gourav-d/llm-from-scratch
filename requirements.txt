@@ -1,0 +1,11 @@
+# Core dependencies
+numpy>=1.24.0
+matplotlib>=3.7.0
+
+# Optional for Jupyter notebooks
+jupyter>=1.0.0
+notebook>=7.0.0
+
+# Code quality (optional)
+pytest>=7.4.0
+black>=23.0.0
