@@ -1,0 +1,23 @@
+# Sample Emails for Testing
+# Format: One email per line, label after |
+
+Buy cheap pills now! Limited offer! | spam
+Meeting tomorrow at 3pm in conference room B | ham
+URGENT: Your account will be suspended! Click here! | spam
+Please review the attached quarterly report | ham
+Congratulations! You won $1,000,000! Claim now! | spam
+Let's schedule a call to discuss the project timeline | ham
+FREE MONEY! No strings attached! Act now! | spam
+The deadline for the proposal is next Friday | ham
+Get rich quick! Work from home! | spam
+Thanks for your email, I will review and get back to you | ham
+Weight loss miracle! Buy now! Limited stock! | spam
+Can we reschedule our meeting to Thursday? | ham
+CHEAP VIAGRA! Best prices online! | spam
+I have completed the code review, see comments | ham
+You have inherited millions! Contact us immediately! | spam
+Looking forward to our standup meeting | ham
+Click here to verify your account NOW! | spam
+Please find the invoice attached for your reference | ham
+Make $5000 per week from home! Easy! | spam
+The deployment is scheduled for 2am on Saturday | ham

@@ -1,0 +1,201 @@
+text,label
+"Buy cheap pills now! Limited time offer! Act fast!",spam
+"Meeting tomorrow at 3pm in conference room B",ham
+"URGENT: Your account will be suspended! Click here immediately!",spam
+"Please review the attached quarterly financial report",ham
+"Congratulations! You won $1000000! Claim your prize now!",spam
+"Let's schedule a call to discuss the new project timeline",ham
+"FREE MONEY! No strings attached! Click to claim!",spam
+"The deadline for the proposal submission is next Friday",ham
+"Get rich quick! Work from home! Earn $5000 per week!",spam
+"Thanks for your email, I will review it and get back to you soon",ham
+"Weight loss miracle! Lose 30 pounds in 30 days! Buy now!",spam
+"Can we reschedule our standup meeting to Thursday afternoon?",ham
+"CHEAP VIAGRA! Best prices online! Overnight delivery!",spam
+"I have completed the code review, please see my comments",ham
+"You have inherited millions from a distant relative! Contact us!",spam
+"Looking forward to our sprint planning session tomorrow",ham
+"Click here to verify your account NOW or lose access!",spam
+"Please find the updated invoice attached for your reference",ham
+"Make $5000 per week from home! Easy! No experience needed!",spam
+"The production deployment is scheduled for 2am Saturday",ham
+"Limited time offer! 90% discount! Buy now before it's gone!",spam
+"Could you send me the latest version of the presentation?",ham
+"Enlarge your muscles fast! Guaranteed results! Order today!",spam
+"The client meeting went well, they approved the proposal",ham
+"Free trial! No credit card required! Sign up now!",spam
+"I'll be out of office next week, please contact Sarah instead",ham
+"Urgent business proposal! Reply immediately for details!",spam
+"The bug fix has been deployed to production successfully",ham
+"Win a free iPhone! Click here to enter the contest!",spam
+"Please review the pull request when you have a moment",ham
+"Debt consolidation! Lower your payments! Call now!",spam
+"The quarterly team meeting is scheduled for next Tuesday",ham
+"Guaranteed lottery win! Secret system revealed!",spam
+"I've updated the documentation with the new API endpoints",ham
+"Work from home! Be your own boss! Unlimited income!",spam
+"Can you help me debug this issue in the authentication module?",ham
+"Get paid to shop! Become a mystery shopper today!",spam
+"The standup notes are in the shared drive under team folder",ham
+"Free vacation! All expenses paid! Limited spots available!",spam
+"Thanks for attending the workshop, the slides are attached",ham
+"Lose weight without exercise! Magic pill! Order now!",spam
+"The code review feedback has been incorporated, ready for merge",ham
+"Nigerian prince needs your help! Transfer money urgently!",spam
+"Let's grab coffee tomorrow to discuss the architecture design",ham
+"Buy now pay later! No interest! Limited time offer!",spam
+"The integration tests are passing, we're ready to deploy",ham
+"You've been selected for a special offer! Act fast!",spam
+"Please update your availability for the upcoming sprint",ham
+"Casino online! Win big! Free bonus on first deposit!",spam
+"The client has requested some changes to the mockups",ham
+"Refinance your mortgage! Lowest rates! Apply now!",spam
+"I've scheduled a meeting for next week to discuss requirements",ham
+"Make money while you sleep! Passive income! Join now!",spam
+"The performance optimization reduced load time by 40%",ham
+"Free gift card! $500 value! Click to claim yours!",spam
+"Can we move the retrospective to Friday morning instead?",ham
+"Earn money taking surveys! $50 per hour! Sign up free!",spam
+"The database migration completed successfully last night",ham
+"Amazing business opportunity! Get rich! No risk!",spam
+"I'll send you the meeting minutes by end of day",ham
+"Diet pills! Burn fat fast! No exercise needed!",spam
+"The feature branch is ready for code review",ham
+"You've won! Claim your prize! Click here now!",spam
+"Please confirm your attendance for the all-hands meeting",ham
+"Cash advance! Get money today! Bad credit OK!",spam
+"The API documentation has been updated with examples",ham
+"Free money! Government grants! Apply now!",spam
+"Let me know if you need any help with the implementation",ham
+"Order pills online! Cheap! Discreet shipping!",spam
+"The client demo is scheduled for Thursday at 2pm",ham
+"Work from anywhere! Laptop lifestyle! Join us!",spam
+"I've created a ticket for the bug you reported",ham
+"Win cash prizes! Enter free! No purchase necessary!",spam
+"The deployment pipeline is now automated with CI/CD",ham
+"Get out of debt! Free consultation! Call today!",spam
+"Please review the design mockups and share your feedback",ham
+"Miracle cure! Works overnight! Doctors hate this!",spam
+"The sprint velocity has improved significantly this iteration",ham
+"Free iPhone! Win now! Limited time! Click here!",spam
+"I'll be working from home tomorrow, available on Slack",ham
+"Make money online! Passive income! Easy!",spam
+"The technical specification document is ready for review",ham
+"Lowest prices! Guaranteed! Shop now! Save big!",spam
+"Can you update the status in the project management tool?",ham
+"You're approved! Get cash now! Bad credit OK!",spam
+"The security audit found no critical vulnerabilities",ham
+"Earn while you learn! Online courses! Get rich!",spam
+"Please test the new feature and log any issues you find",ham
+"Free trial! Cancel anytime! No commitment!",spam
+"The onboarding documentation for new developers is complete",ham
+"Congratulations! You qualify! Special offer! Act now!",spam
+"I've added you to the repository with write access",ham
+"Get paid daily! Work from home! Easy money!",spam
+"The load testing showed we can handle 10k concurrent users",ham
+"Win! Win! Win! Free entry! Click now!",spam
+"The architecture review meeting is confirmed for Monday",ham
+"Buy cheap software! Instant download! 90% off!",spam
+"I'll update the team on progress during standup tomorrow",ham
+"Make $10000 per month! Proven system! Join free!",spam
+"The feature flag is enabled in production for beta users",ham
+"Free money! No catch! Limited time! Hurry!",spam
+"Please share your input on the technology stack selection",ham
+"Lowest prices guaranteed! Buy now! Save huge!",spam
+"The monitoring dashboard shows all systems are healthy",ham
+"Get rich trading! Secret strategy! Free webinar!",spam
+"I've scheduled pair programming sessions for the team",ham
+"Win big! Lottery! Free ticket! Click here!",spam
+"The performance metrics improved after the optimization",ham
+"Debt relief! Stop payments! Free consultation!",spam
+"Let's discuss the requirements for the next sprint",ham
+"Buy pills! Fast shipping! Private! Secure!",spam
+"The documentation site is now live at docs.example.com",ham
+"Make money fast! No experience! Start today!",spam
+"I've updated the project timeline based on our discussion",ham
+"Free vacation! Bahamas! All paid! Click now!",spam
+"The automated tests caught a regression in the payment flow",ham
+"Cheap loans! Get approved! Bad credit welcome!",spam
+"Please review the user stories and estimate complexity",ham
+"Guaranteed income! Work at home! Easy!",spam
+"The deployment was rolled back due to database issues",ham
+"Win money! Free lottery! Enter now! Click!",spam
+"I've shared the meeting recording in the team channel",ham
+"Order now! Limited stock! Best deal ever!",spam
+"The infrastructure costs decreased 30% after optimization",ham
+"Free trial! Premium features! No credit card!",spam
+"Let's schedule a brainstorming session for new features",ham
+"Get cash! Apply online! Instant approval!",spam
+"The code coverage increased to 85% after adding tests",ham
+"Miracle product! Amazing results! Buy now!",spam
+"Please complete the team survey by end of week",ham
+"Earn $100 per hour! Online job! No experience!",spam
+"The API rate limiting is now properly configured",ham
+"Free gift! Limited offer! Claim yours! Hurry!",spam
+"I've documented the deployment process in the wiki",ham
+"Work from beach! Digital nomad! Join now!",spam
+"The feature is ready for QA testing in staging environment",ham
+"Win iPad! Free contest! Enter now! Click!",spam
+"Please update your profile with your current skills",ham
+"Buy now! 80% off! Today only! Don't miss!",spam
+"The refactoring improved code maintainability significantly",ham
+"Make money posting! Get paid! Easy work!",spam
+"I'll send you the onboarding checklist for new team members",ham
+"Free money! Government program! Apply today!",spam
+"The integration with the payment gateway is complete",ham
+"Guaranteed weight loss! No diet! Magic pill!",spam
+"Let's review the architecture decisions in our next meeting",ham
+"Get rich! Forex trading! Secret method!",spam
+"The accessibility audit recommendations have been implemented",ham
+"Win money online! Free! Easy! Click here!",spam
+"Please provide feedback on the proposed database schema",ham
+"Cheap prescription! Online pharmacy! Fast!",spam
+"The service mesh configuration improved reliability",ham
+"Business opportunity! No risk! High reward!",spam
+"I've created the development environment setup guide",ham
+"Free iPhone 15! Win now! Limited! Click!",spam
+"The retrospective action items have been added to backlog",ham
+"Make $5000 weekly! Guaranteed! Easy job!",spam
+"Please review the security vulnerability report",ham
+"Lowest mortgage rates! Apply now! Get approved!",spam
+"The continuous integration pipeline is fully automated now",ham
+"Diet miracle! Lose 50 pounds! No exercise!",spam
+"Let's discuss the technical approach during planning",ham
+"Win cash! Lottery! Free! Enter today!",spam
+"The database indexing improved query performance by 10x",ham
+"Get paid to click! Easy money! Start now!",spam
+"I'll update the team calendar with the upcoming holidays",ham
+"Free vacation! All expenses! Limited time!",spam
+"The mobile app performance improved significantly",ham
+"Order pills! Overnight delivery! Cheap! Discreet!",spam
+"Please test the new authentication flow and report issues",ham
+"Make money from home! Flexible hours! Easy!",spam
+"The error monitoring shows no critical issues in production",ham
+"Guaranteed approval! Cash advance! Apply online!",spam
+"Let's schedule knowledge sharing sessions for the team",ham
+"Win! Click here! Free entry! Prize money!",spam
+"The technical debt has been reduced by 25% this quarter",ham
+"Buy software! Cheap! Instant download! 90% off!",spam
+"I've created templates for common development tasks",ham
+"Get rich! Multi-level marketing! Join now!",spam
+"The container orchestration setup is complete and tested",ham
+"Free trial! Full access! No payment! Limited!",spam
+"Please update the project README with setup instructions",ham
+"Debt consolidation! Lower payments! Free quote!",spam
+"The load balancer configuration improved availability",ham
+"Make money! Online business! Passive income!",spam
+"I'll coordinate with the design team on the UI updates",ham
+"Win big! Casino! Free spins! Bonus cash!",spam
+"The logging infrastructure provides better observability",ham
+"Cheap flights! Book now! Limited seats!",spam
+"Let's review the sprint goals in tomorrow's planning meeting",ham
+"Get paid! Mystery shopper! Easy money!",spam
+"The service level objectives are being met consistently",ham
+"Free money! Cash prize! Win! Click now!",spam
+"Please share your thoughts on the proposed changes",ham
+"Buy! Order! Cheap! Fast! Best deal!",spam
+"The incident response playbook has been updated",ham
+"Work online! Earn big! Flexible schedule!",spam
+"I've scheduled training sessions on the new framework",ham
+"Win lottery! Free ticket! Click! Prize!",spam
+"The disaster recovery plan has been tested successfully",ham
