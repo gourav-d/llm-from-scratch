@@ -2,7 +2,19 @@
   "permissions": {
     "allow": [
       "Bash(cat:*)",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(cd \"C:\\\\Users\\\\gourav.dwivedi\\\\OneDrive - BLACKLINE\\\\Documents\\\\GD\\\\Learning\\\\LLM\\\\2026\\\\1\" && git push -u origin main 2>&1)",
+      "Bash(ls:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(echo Testing shell:*)",
+      "Bash(git push:*)",
+      "Bash(git log:*)",
+      "Bash(git status:*)",
+      "Bash(do echo:*)",
+      "Bash(find .:*)",
+      "Bash(python:*)",
+      "Bash(test:*)"
     ]
   }
 }

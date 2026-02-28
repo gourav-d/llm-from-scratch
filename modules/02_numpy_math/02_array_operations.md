@@ -29,6 +29,7 @@ result = matrix + col
 ```
 
 **Why broadcasting matters for neural networks:**
+
 - Adding bias to all neurons at once
 - Normalizing data efficiently
 - Fast computations
@@ -62,7 +63,7 @@ print(dot)
 # Or use @ operator
 dot = a @ b  # Same as np.dot(a, b)
 
-# Matrix multiplication
+# Matrix multiplication ==> Where row are multiply by columns.
 A = np.array([[1, 2], [3, 4]])
 B = np.array([[5, 6], [7, 8]])
 result = A @ B
@@ -72,6 +73,7 @@ print(result)
 ```
 
 **IMPORTANT:** `*` vs `@`
+
 ```python
 A = np.array([[1, 2], [3, 4]])
 B = np.array([[5, 6], [7, 8]])
@@ -101,8 +103,8 @@ arr = np.array([[1, 2, 3], [4, 5, 6]])
 # Overall
 print(arr.sum())    # 21
 print(arr.mean())   # 3.5
-print(arr.std())    # Standard deviation
-print(arr.var())    # Variance
+print(arr.std())    # 1.7 Standard deviation
+print(arr.var())    # 2.91 Variance
 
 # Axis operations
 print(arr.sum(axis=0))   # [5, 7, 9] - column sums
@@ -112,7 +114,13 @@ print(arr.mean(axis=0))  # [2.5, 3.5, 4.5]
 # Cumulative
 arr = np.array([1, 2, 3, 4])
 print(np.cumsum(arr))  # [ 1  3  6 10] - cumulative sum
+
+
 ```
+
+![alt text](image.png)
+
+![alt text](image-1.png)
 
 ## Stacking and Splitting
 
@@ -170,7 +178,7 @@ np.random.shuffle(arr)
 # Output: 128 neurons
 
 # Random initialization (simple but not optimal)
-weights = np.random.randn(784, 128) * 0.01
+weights = np.random.randn(784, 128) * 0.01    # 748 rows & 128 columns martics with random data
 bias = np.zeros(128)
 
 print(f"Weights shape: {weights.shape}")  # (784, 128)
@@ -237,6 +245,7 @@ print(f"Dot product: {v1 @ v2}")
 ```
 
 ## 💡 Key Points
+
 - Broadcasting = operations on different shapes
 - `@` for matrix multiplication, `*` for element-wise
 - `.T` for transpose
