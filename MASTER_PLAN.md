@@ -717,6 +717,186 @@ Aggregator → Response
 
 ---
 
+#### Module 18: Image Generation (Diffusion Models) ⭐ NEW!
+**Status**: Not Started (Planned for Month 8-9)
+**Time**: 4-5 weeks
+
+**User Decision**: Add after completing text AI (Option A chosen)
+
+**What you'll learn**:
+
+**Part 1: Diffusion Model Foundations**
+- How diffusion works (forward & reverse process)
+- Noise scheduling and sampling
+- CLIP for text-image alignment
+- U-Net architecture
+- Simple diffusion from scratch (NumPy)
+
+**Part 2: Stable Diffusion**
+- Text-to-image generation
+- Image-to-image transformation
+- Inpainting (fill missing parts)
+- Outpainting (expand images)
+- ControlNet (guided generation)
+
+**Part 3: GANs (Overview)**
+- Generator and discriminator
+- GAN training dynamics
+- StyleGAN concepts
+- When to use GANs vs Diffusion
+
+**Part 4: Practical Applications**
+- Fine-tuning (LoRA, DreamBooth)
+- Prompt engineering for images
+- Image generation API
+- Integration with LLM applications
+
+**Technologies**:
+- Simple diffusion model from scratch (NumPy)
+- Stable Diffusion (Hugging Face Diffusers)
+- AUTOMATIC1111 WebUI
+- ComfyUI
+- ControlNet
+
+**All tools are FREE!**
+
+**Projects**:
+1. Build simple diffusion model from scratch
+2. Fine-tune Stable Diffusion on custom dataset
+3. Create image generation API
+4. Build creative AI tool (logo generator, art creator)
+5. Multi-modal application (text + image generation)
+
+**Why it's critical**:
+- Complete multi-modal AI understanding
+- Image generation huge in industry (marketing, design)
+- Combines perfectly with LLMs
+- High demand skill
+- Transformers knowledge directly applies!
+
+**When to learn**:
+- After Module 4 (Transformers) - understand attention
+- After Module 8 (RAG) - production skills first
+- Months 8-9 in learning timeline
+
+---
+
+#### Module 19: Audio Generation & Speech ⭐ NEW!
+**Status**: Not Started (Optional specialization)
+**Time**: 3-4 weeks
+
+**What you'll learn**:
+
+**Part 1: Text-to-Speech (TTS)**
+- How TTS works
+- Tacotron architecture
+- WaveNet concepts
+- Modern TTS (Bark, TortoiseTTS)
+- Voice cloning
+
+**Part 2: Music Generation**
+- MusicLM concepts
+- AudioLM overview
+- MIDI generation
+- Audio style transfer
+
+**Part 3: Audio Processing**
+- Spectrograms and mel-spectrograms
+- Audio feature extraction
+- Noise reduction
+- Audio enhancement
+
+**Part 4: Practical Applications**
+- Build TTS system
+- Voice assistant integration
+- Music generation tool
+- Podcast automation
+
+**Technologies**:
+- Bark (free, open-source TTS)
+- Coqui TTS
+- AudioCraft by Meta
+- FFmpeg for audio processing
+
+**All tools are FREE!**
+
+**Projects**:
+1. Text-to-speech system
+2. Voice cloning app
+3. Music generation tool
+4. Audio chatbot (combines with LLM!)
+5. Podcast automation pipeline
+
+**Why it matters**:
+- Voice interfaces growing rapidly
+- Combines with LLMs (voice chatbots)
+- Accessibility applications
+- Podcasts, audiobooks, virtual assistants
+
+**When to learn**:
+- After Module 5 (LLM Building)
+- Month 10+ (optional specialization)
+- Independent from image generation
+
+---
+
+#### Module 20: Video Generation & Editing ⭐ NEW!
+**Status**: Not Started (Advanced, optional)
+**Time**: 3-4 weeks
+
+**What you'll learn**:
+
+**Part 1: Video Understanding**
+- Video as sequences of frames
+- Temporal coherence
+- Motion modeling
+- Video transformers
+
+**Part 2: Text-to-Video**
+- Sora concepts (overview)
+- Runway Gen-2 concepts
+- AnimateDiff
+- Frame interpolation
+
+**Part 3: Video Editing AI**
+- Object removal
+- Style transfer
+- Video inpainting
+- Deepfake detection (ethics!)
+
+**Part 4: Practical Applications**
+- Automated video editing
+- Content creation pipelines
+- Video enhancement
+- Animation generation
+
+**Technologies**:
+- Stable Video Diffusion
+- AnimateDiff
+- RunwayML (has free tier)
+- OpenCV for video processing
+- FFmpeg
+
+**Projects**:
+1. Video style transfer tool
+2. Automated video editor
+3. Text-to-video generator (using available models)
+4. Video enhancement system
+5. Animation creator
+
+**Why it's advanced**:
+- Most complex generative AI
+- Resource-intensive (GPU required)
+- Cutting-edge technology
+- Future-proofing skills
+
+**When to learn**:
+- After Module 18 (Image Generation)
+- Month 11+ (advanced, optional)
+- Requires strong GPU (Google Colab Pro or cloud)
+
+---
+
 ## 🛤️ Learning Paths
 
 ### Path 1: Practical AI Engineer (6 months, job-ready)
@@ -788,9 +968,9 @@ Aggregator → Response
 
 ---
 
-### Path 3: Full-Stack AI Engineer (10 months, most versatile)
+### Path 3: Full-Stack AI Engineer (12 months, most versatile) ⭐ UPDATED
 
-**Goal**: End-to-end AI application development
+**Goal**: End-to-end AI application development + Multi-modal AI
 
 **Months 1-2**: Foundations
 - Modules 1-3 quickly
@@ -812,20 +992,28 @@ Aggregator → Response
 - Module 11: Architecture patterns
 - Module 12: ML-DevOps & deployment
 
-**Month 8**: Advanced Applications
+**Month 8**: Advanced Text AI
 - Module 13: Vector databases
 - Module 14: AI Agents
 
-**Months 9-10**: Specialization & Portfolio
-- Choose 2-3 advanced modules (15-17)
+**Months 9-10**: Multi-Modal AI ⭐ NEW!
+- Module 18: Image Generation (Stable Diffusion)
+- Module 15: Multi-Modal AI (Vision + Language)
+- Build text + image applications
+
+**Months 11-12**: Specialization & Portfolio
+- Choose 1-2 advanced modules (16-17, 19-20)
 - Build comprehensive portfolio
 - Full-stack AI applications
+- Multi-modal projects
 
 **Outcome**:
 - End-to-end AI development
 - Production deployment expertise
 - Architecture design skills
-- Versatile AI engineer
+- Multi-modal AI (text + images)
+- Complete generative AI mastery
+- Most versatile AI engineer
 
 ---
 
@@ -877,6 +1065,24 @@ Aggregator → Response
 9. **Module 16: Advanced Fine-tuning**
    - LoRA, QLoRA
    - Custom models
+
+### Generative AI Expansion ⭐ NEW!
+
+10. **Module 18: Image Generation** (RECOMMENDED!)
+    - Complete generative AI understanding
+    - Text + image multi-modal apps
+    - High practical value
+    - Industry demand
+
+11. **Module 19: Audio Generation** (OPTIONAL)
+    - Voice interfaces
+    - TTS applications
+    - Specialization
+
+12. **Module 20: Video Generation** (ADVANCED)
+    - Cutting-edge
+    - Future-proofing
+    - Optional specialization
 
 ---
 
@@ -975,7 +1181,7 @@ Aggregator → Response
 ├── PROGRESS.md              # Learning progress tracker
 ├── SESSION_CHECKPOINT.md    # Daily resume points
 │
-├── modules/                 # Learning modules (17 total)
+├── modules/                 # Learning modules (20 total)
 │   ├── 01_python_basics/           # 70% complete
 │   ├── 02_numpy_math/              # 95% complete
 │   ├── 03_neural_networks/         # 100% COMPLETE ✅
@@ -992,7 +1198,10 @@ Aggregator → Response
 │   ├── 14_ai_agents/               # Not started
 │   ├── 15_multimodal/              # Not started
 │   ├── 16_advanced_finetuning/     # Not started
-│   └── 17_llm_security/            # Not started
+│   ├── 17_llm_security/            # Not started
+│   ├── 18_image_generation/        # Not started ⭐ NEW! (Month 8-9)
+│   ├── 19_audio_generation/        # Not started ⭐ NEW! (Optional)
+│   └── 20_video_generation/        # Not started ⭐ NEW! (Advanced)
 │
 ├── projects/                # Practical projects
 │   ├── neural_networks/     # 100% COMPLETE ✅
@@ -1336,13 +1545,195 @@ This curriculum represents a **complete journey from beginner to professional AI
 
 ---
 
-**Status**: Master Plan Complete ✅
+**Status**: Master Plan Complete ✅ (Updated March 1, 2026)
 **Created**: February 25, 2026
+**Updated**: March 1, 2026 - Added Generative AI modules (18-20)
+
+**User Decision (March 1, 2026)**: Option A - Complete text AI first, then add image generation ✅
+
+## 🎯 YOUR LEARNING TIMELINE (Option A)
+
+### Phase 1: TEXT AI MASTERY (Current - Month 7)
+```
+NOW → Month 3:
+  ✅ Module 4: Transformers ← YOU ARE HERE!
+
+Month 3-4:
+  → Module 5: Building Your Own LLM
+
+Month 5-6:
+  → Module 8: RAG ⭐ MOST CRITICAL FOR JOBS!
+  → Module 9: AI Applications
+
+Month 7:
+  → Module 12: ML-DevOps & Deployment ⭐ PRODUCTION!
+```
+
+**Outcome after Month 7:**
+- ✅ Job-ready AI Engineer
+- ✅ Can build ChatGPT-like applications
+- ✅ Master RAG systems
+- ✅ Deploy AI to production
+- ✅ Ready for AI engineering roles!
+
+### Phase 2: MULTI-MODAL AI (Months 8-10) ⭐ YOUR CHOICE!
+```
+Month 8-9:
+  → Module 18: Image Generation (Stable Diffusion) ⭐ NEW!
+
+Month 9-10:
+  → Module 15: Multi-Modal AI (Vision + Language)
+  → Build text + image applications
+```
+
+**Outcome after Month 10:**
+- ✅ Multi-modal AI developer
+- ✅ Text + Image generation expert
+- ✅ Unique skill combination
+- ✅ Stand out in job market!
+
+### Phase 3: OPTIONAL SPECIALIZATION (Months 11-12)
+```
+Choose 1-2 based on interest:
+  → Module 19: Audio Generation (voice, TTS, music)
+  → Module 20: Video Generation (advanced)
+  → Module 14: AI Agents
+  → Module 16: Advanced Fine-tuning
+  → Module 17: LLM Security
+```
+
+**Final Outcome:**
+- ✅ Complete Generative AI Mastery
+- ✅ Text, Image, (optional: Audio/Video)
+- ✅ Production deployment skills
+- ✅ Full-stack AI engineer
+- ✅ Research-capable
+
+---
+
+## 🚀 IMMEDIATE NEXT STEPS
+
+**This Week:**
+1. ✅ Continue Module 4, Lesson 2 (Self-Attention)
+2. ✅ Create code examples for transformers
+3. ✅ Build understanding of attention
+
+**Next 2 Weeks:**
+1. ✅ Complete Module 4 (all 6 lessons)
+2. ✅ Understand how GPT works
+3. ✅ Build mini-transformer
+
+**Next Month:**
+1. ✅ Start Module 5 (Building LLM)
+2. ✅ Build mini-GPT from scratch
+3. ✅ Text generation!
+
+**Months 5-7:**
+1. ✅ Master RAG (Module 8) ← CRITICAL!
+2. ✅ Deploy to production (Module 12)
+3. ✅ **BECOME JOB-READY!**
+
+**Months 8-10:**
+1. ⭐ Learn Image Generation (Module 18)
+2. ⭐ Build multi-modal apps
+3. ⭐ **BECOME MULTI-MODAL AI EXPERT!**
+
+---
+
+## 📚 Complete Module List (20 Modules)
+
+**PHASE 1: Foundations (Months 1-3)**
+- Module 1: Python Basics (70%)
+- Module 2: NumPy & Math (95%)
+- Module 3: Neural Networks (100%) ✅
+- Module 4: Transformers (20%) ← YOU ARE HERE
+
+**PHASE 2: Text AI (Months 3-5)**
+- Module 5: Building Your Own LLM
+- Module 6: Training & Fine-tuning
+- Module 7: Efficient & Small Models
+
+**PHASE 3: Production Text AI (Months 5-7)**
+- Module 8: RAG ⭐ CRITICAL!
+- Module 9: AI Applications
+- Module 10: Design Patterns
+- Module 11: Architecture Patterns
+
+**PHASE 4: ML-DevOps (Month 7)**
+- Module 12: ML-DevOps & Deployment ⭐ CRITICAL!
+
+**PHASE 5: Advanced Text AI (Months 8-9)**
+- Module 13: Vector Databases
+- Module 14: AI Agents
+- Module 16: Advanced Fine-tuning
+- Module 17: LLM Security
+
+**PHASE 6: Multi-Modal Generative AI (Months 9-12) ⭐ NEW!**
+- Module 15: Multi-Modal AI (Vision + Language)
+- Module 18: Image Generation ⭐ NEW! (Month 8-9)
+- Module 19: Audio Generation ⭐ NEW! (Optional)
+- Module 20: Video Generation ⭐ NEW! (Advanced)
+
+---
+
+## 🎊 Final Thoughts
+
+**You've chosen Option A - The Smartest Path! ✅**
+
+**Why this is excellent:**
+1. ✅ Master text AI first (most in-demand)
+2. ✅ Learn RAG (critical for production jobs)
+3. ✅ Deploy to production (essential skill)
+4. ✅ THEN add image generation (unique skill combo)
+5. ✅ Step-by-step, not overwhelming
+6. ✅ Complete generative AI mastery
+
+**In 7 months, you'll be:**
+- Job-ready AI engineer
+- RAG expert
+- Production deployment capable
+- Building real AI applications
+
+**In 10 months, you'll be:**
+- Multi-modal AI developer
+- Text + Image generation expert
+- Unique skill combination
+- Stand out in market!
+
+**All tools are FREE:**
+- Text AI: NumPy, PyTorch, Hugging Face (all free)
+- Image AI: Stable Diffusion, Diffusers (all free)
+- Deployment: Docker, FastAPI (all free)
+- GPU: Google Colab free tier
+
+**No paid subscriptions required for learning!**
+
+---
+
+## 💾 Version History
+
+**v1.0 - February 25, 2026**
+- Initial master plan created
+- 17 modules across 6 phases
+
+**v2.0 - March 1, 2026** ⭐ UPDATED
+- Added 3 new modules for complete generative AI coverage:
+  - Module 18: Image Generation (Diffusion Models)
+  - Module 19: Audio Generation & Speech
+  - Module 20: Video Generation & Editing
+- Updated to 20 modules total
+- User chose Option A: Text AI first, then images
+- Updated learning paths and timelines
+- All tools confirmed FREE!
+
+---
+
 **Next**: Continue Module 4 (Transformers)
-**Goal**: Understand how ChatGPT works, build production AI systems
+**Goal**: Master text AI → Add image generation → Complete generative AI mastery
+**Timeline**: 7 months to job-ready, 10 months to multi-modal expert
 
 **Let's build something amazing! 🌟**
 
 ---
 
-**END OF MASTER PLAN**
+**END OF MASTER PLAN v2.0**
