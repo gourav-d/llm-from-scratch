@@ -14,7 +14,11 @@
       "Bash(do echo:*)",
       "Bash(find .:*)",
       "Bash(python:*)",
-      "Bash(test:*)"
+      "Bash(test:*)",
+      "Bash(dir modules\\\\04_transformers:*)",
+      "Bash(mkdir:*)",
+      "Bash(wc:*)",
+      "Bash(find:*)"
     ]
   }
 }
