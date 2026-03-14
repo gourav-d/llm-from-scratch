@@ -43,9 +43,11 @@ Module 1: Python Basics           ██████████ 100%
 Module 2: NumPy & Math            ██████████ 100%
 Module 3: Neural Networks         ████████░░  65%
 Module 4: Transformers            ░░░░░░░░░░   0%
-Module 5: Building LLMs           ░░░░░░░░░░   0%
+Module 5: Building LLMs           ██████████ 100%
+Module 6: Training & Fine-tuning  ░░░░░░░░░░   0%
+Module 7: Reasoning & Coding      ░░░░░░░░░░   0% (NEW!)
 
-Overall Completion:               ████░░░░░░  40%
+Overall Completion:               ████████░░  55%
 ```
 
 ## 📖 Module Overview
@@ -74,8 +76,54 @@ Build and train neural networks using only NumPy:
 
 **Projects:** XOR solver, MNIST classifier (95%+ accuracy)
 
-### Modules 4-6: Coming Soon
-Transformers, GPT architecture, and production training techniques.
+### Module 4: Transformers & Attention Mechanism
+**Status:** 🚧 In Development | **Time:** 22-34 hours
+
+Learn the revolutionary architecture behind GPT, ChatGPT, and all modern LLMs:
+- Attention mechanism and self-attention
+- Multi-head attention layers
+- Positional encoding
+- Complete transformer architecture
+
+### Module 5: Tokenization & Word Embeddings
+**Status:** ✅ Complete | **Time:** 8-12 hours
+
+Transform text into numbers that neural networks understand:
+- BPE tokenization (like GPT!)
+- Word embeddings and semantic relationships
+- Building vocabulary
+
+### Module 6: Training & Fine-tuning Your GPT
+**Status:** 📝 Ready | **Time:** 19-27 hours
+
+Build a complete, working GPT model from scratch:
+- Full GPT architecture assembly
+- Text generation strategies
+- Training on custom data
+
+### Module 7: Advanced LLM Applications 🆕
+**Status:** 🆕 NEW | **Time:** 25-35 hours
+
+Master cutting-edge AI techniques:
+
+**Part A: Reasoning Models (like o1)**
+- Chain-of-Thought prompting
+- Tree-of-Thoughts search
+- Process supervision
+- Building reasoning systems
+
+**Part B: Coding Models (like Copilot)**
+- Code tokenization with AST
+- Training on code (FIM technique)
+- Code generation and completion
+- Automated testing
+
+**Projects:** Math reasoner, Logic solver, Mini-Copilot, Bug detector
+
+### Module 8: Production LLM & Capstone
+**Status:** 📅 Planned | **Time:** 30-40 hours
+
+Deploy your LLM to production and build a complete AI application.
 
 ## 🎓 What Makes This Different
 

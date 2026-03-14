@@ -97,25 +97,40 @@ Track your progress through the LLM from Scratch course.
 
 ---
 
-## Module 7: Training and Fine-tuning
-- [ ] 7.1 Dataset Preparation
-- [ ] 7.2 Training Strategies
-- [ ] 7.3 Evaluation Metrics
-- [ ] 7.4 Fine-tuning
-- [ ] 7.5 Best Practices
-- [ ] Quiz 7 Completed
-- [ ] Lab 7 Completed
+## Module 7: Advanced LLM Applications - Reasoning & Coding Models
+**NEW MODULE - Cutting-Edge AI!**
+
+### Part A: Reasoning Models
+- [ ] 7.1 Chain-of-Thought (CoT) Prompting
+- [ ] 7.2 Self-Consistency & Ensemble Reasoning
+- [ ] 7.3 Tree-of-Thoughts (ToT)
+- [ ] 7.4 Process Supervision & Reasoning Traces
+- [ ] 7.5 Building Reasoning Systems (o1-like)
+
+### Part B: Coding Models
+- [ ] 7.6 Code Representation & Tokenization
+- [ ] 7.7 Code Embeddings & AST
+- [ ] 7.8 Training Models on Code
+- [ ] 7.9 Code Generation & Completion
+- [ ] 7.10 Code Evaluation & Testing
+
+### Projects
+- [ ] Project 1: Math Reasoning System
+- [ ] Project 2: Logic Puzzle Solver
+- [ ] Project 3: Code Completion Engine (Mini-Copilot)
+- [ ] Project 4: Bug Detection System
+- [ ] Project 5: Unit Test Generator
 
 **Notes:**
-
+This module teaches you how OpenAI o1 and GitHub Copilot work!
 
 ---
 
 ## Module 8: Capstone Project
 - [ ] 8.1 Project Planning
-- [ ] 8.2 Build Chatbot
-- [ ] 8.3 Train on Custom Data
-- [ ] 8.4 Evaluation
+- [ ] 8.2 Build Production LLM Application
+- [ ] 8.3 Deploy and Scale
+- [ ] 8.4 Evaluation & Monitoring
 - [ ] 8.5 Final Presentation
 
 **Notes:**
