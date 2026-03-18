@@ -1,0 +1,28 @@
+# AI Code Reviewer Dependencies
+
+# Core dependencies
+torch>=2.0.0              # For LLM inference
+transformers>=4.30.0      # HuggingFace models
+tiktoken>=0.5.0           # Tokenization
+
+# Code analysis
+ast-comments>=1.1.0       # Enhanced AST with comments
+astroid>=2.15.0          # Advanced AST analysis
+pylint>=2.17.0           # Code quality checks
+radon>=5.1.0             # Complexity metrics
+bandit>=1.7.5            # Security scanner
+
+# Git integration
+GitPython>=3.1.31        # Git operations
+whatthepatch>=1.0.5      # Diff parsing
+
+# Utilities
+colorama>=0.4.6          # Colored terminal output
+rich>=13.3.5             # Beautiful terminal formatting
+click>=8.1.3             # CLI framework
+pyyaml>=6.0              # Config files
+python-dotenv>=1.0.0     # Environment variables
+
+# Testing (optional)
+pytest>=7.3.1
+pytest-cov>=4.1.0

@@ -1,0 +1,21 @@
+# Smart Debugger Dependencies
+
+# Core
+torch>=2.0.0              # For LLM
+transformers>=4.30.0      # HuggingFace
+
+# Code analysis
+ast-comments>=1.1.0
+astroid>=2.15.0
+
+# Error analysis
+tblib>=1.7.0             # Traceback serialization
+better-exceptions>=0.3.3  # Better exception formatting
+
+# Utilities
+colorama>=0.4.6          # Colored output
+rich>=13.3.5             # Rich terminal output
+click>=8.1.3             # CLI
+
+# Testing
+pytest>=7.3.1
