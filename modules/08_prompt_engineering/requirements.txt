@@ -1,0 +1,51 @@
+# Module 8: Prompt Engineering Requirements
+
+# Core LLM APIs
+openai>=1.12.0          # OpenAI GPT models
+anthropic>=0.18.0       # Anthropic Claude models
+ollama>=0.1.6           # Local models via Ollama
+
+# Prompt Engineering Frameworks
+dspy-ai>=2.4.0          # DSPy for prompt optimization
+langchain>=0.1.0        # LangChain for templates and chains
+langchain-openai>=0.0.5 # OpenAI integration for LangChain
+langchain-anthropic>=0.0.1  # Anthropic integration for LangChain
+
+# Data Handling
+pydantic>=2.5.0         # Data validation for structured outputs
+jsonschema>=4.20.0      # JSON schema validation
+pyyaml>=6.0             # YAML config files
+
+# Development Tools
+python-dotenv>=1.0.0    # Environment variable management
+jupyter>=1.0.0          # Jupyter notebooks for experimentation
+ipython>=8.18.0         # Interactive Python shell
+
+# Testing & Evaluation
+pytest>=7.4.0           # Testing framework
+pytest-asyncio>=0.21.0  # Async testing
+promptfoo>=0.38.0       # Prompt testing and evaluation
+
+# Utilities
+tqdm>=4.66.0            # Progress bars
+colorama>=0.4.6         # Colored terminal output
+tabulate>=0.9.0         # Pretty tables
+rich>=13.7.0            # Rich terminal formatting
+
+# Analysis & Metrics
+pandas>=2.1.0           # Data analysis
+numpy>=1.26.0           # Numerical computing
+matplotlib>=3.8.0       # Plotting
+
+# Security
+validators>=0.22.0      # Input validation
+bleach>=6.1.0           # HTML sanitization
+
+# Optional but recommended
+tiktoken>=0.5.0         # Token counting (OpenAI)
+anthropic-tokenizer>=0.1.0  # Token counting (Anthropic)
+
+# Development only (optional)
+black>=23.12.0          # Code formatting
+flake8>=6.1.0           # Linting
+mypy>=1.7.0             # Type checking
