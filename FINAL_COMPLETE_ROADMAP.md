@@ -3,9 +3,10 @@
 **Complete AI Engineering Curriculum - All Modules Consolidated**
 
 **Created**: March 17, 2026
+**Updated**: March 21, 2026 (Added Module 3.5: PyTorch & TensorFlow)
 **Status**: COMPREHENSIVE - All sources consolidated
-**Total Modules**: 23 modules
-**Total Time**: 14-18 months (full completion)
+**Total Modules**: 24 modules
+**Total Time**: 15-19 months (full completion)
 
 ---
 
@@ -16,9 +17,12 @@ This is the FINAL consolidated roadmap combining all modules from:
 - MASTER_PLAN_UPDATED.md (15 modules with production focus)
 - GENERATIVE_AI_COVERAGE.md (modules 18-20)
 - All module folders and progress tracking
+- **NEW**: Module 3.5 (PyTorch & TensorFlow) - Added March 21, 2026
+- **NEW**: Module 3 Lesson 7 (AutoGrad) - Added March 21, 2026
+- **NEW**: Module 5 Lesson 3 (nanoGPT) - Added March 21, 2026
 
-**Total Learning Time**: 14-18 months
-**Critical Path Modules**: 1-3, 5, 7-11, 13-14 (10 months minimum)
+**Total Learning Time**: 15-19 months
+**Critical Path Modules**: 1-3, 3.5, 5, 7-11, 13-14 (11 months minimum)
 
 ---
 
@@ -88,17 +92,107 @@ This is the FINAL consolidated roadmap combining all modules from:
 - Multi-layer networks
 - Training loops
 - Optimization (SGD, Adam)
+- **Automatic Differentiation (AutoGrad)** 🆕
 
 **Key Projects**:
 - Email Spam Classifier (93-95% accuracy)
 - MNIST Handwritten Digits (95-97% accuracy)
 - Sentiment Analysis (85-88% accuracy)
 
+**Lessons**:
+- Lesson 1-6: Neural network fundamentals
+- **Lesson 7: AutoGrad from Scratch** 🆕
+  - Build automatic differentiation engine
+  - Understand computational graphs
+  - Foundation for PyTorch/TensorFlow understanding
+
 **Status Details**:
-- All 6 lessons complete
+- All 7 lessons complete 🆕
 - All examples complete
 - 3 full projects complete
 - All exercises complete
+
+---
+
+### Module 3.5: Deep Learning Frameworks (PyTorch & TensorFlow) 🆕
+**Status**: ⬜ NOT STARTED
+**Time**: 3-4 weeks
+**Priority**: ⭐⭐⭐ CRITICAL
+
+**What you'll learn**:
+- PyTorch fundamentals and tensor operations
+- Building neural networks with PyTorch
+- TensorFlow/Keras basics
+- Framework comparison and selection
+- Converting NumPy implementations to frameworks
+- GPU acceleration
+- Production deployment basics
+
+**Key Topics**:
+- PyTorch: Tensors, autograd, nn.Module, optimizers
+- TensorFlow: Keras Sequential/Functional API, tf.data
+- NumPy to PyTorch conversion
+- CPU vs GPU operations
+- Model saving and loading
+- Framework trade-offs
+
+**Why Critical**:
+- Bridge from theory to production
+- Industry-standard tools
+- Required for all modern AI development
+- Enables use of pre-trained models (Hugging Face)
+- GPU acceleration for faster training
+- Foundation for Modules 4-7
+
+**Lessons (5 total)**:
+1. **PyTorch Fundamentals** (4-6 hours)
+   - Tensor operations
+   - Automatic differentiation
+   - Device management (CPU/GPU)
+
+2. **Building Neural Networks in PyTorch** (5-7 hours)
+   - nn.Module architecture
+   - Loss functions and optimizers
+   - Training loop patterns
+
+3. **Converting NumPy to PyTorch** (3-4 hours)
+   - Side-by-side comparison
+   - Performance benchmarking
+   - Best practices
+
+4. **TensorFlow & Keras Basics** (4-6 hours)
+   - Keras Sequential API
+   - Keras Functional API
+   - TensorFlow ecosystem
+
+5. **Framework Comparison** (2-3 hours)
+   - PyTorch vs TensorFlow
+   - When to use each
+   - Production considerations
+
+**Projects**:
+- Project 1: MNIST Three Ways (NumPy, PyTorch, TensorFlow)
+- Project 2: Convert Your Module 3 Networks to PyTorch
+
+**Resources**:
+- PyTorch Official Tutorials
+- TensorFlow Documentation
+- Fast.ai Course (PyTorch-based)
+- Google Colab (free GPU access)
+
+**Career Impact**: After this module + frameworks knowledge
+- Can work with industry codebases
+- Can use Hugging Face transformers
+- Can deploy production models
+- **Salary boost**: +$20K-40K
+
+**Status Details**:
+- ⬜ Module structure created
+- ⬜ Lessons to be developed
+- ⬜ Examples to be created
+- ⬜ Projects to be implemented
+
+**Next Steps**: Create lesson content and examples
 
 ---
 
@@ -144,6 +238,7 @@ This is the FINAL consolidated roadmap combining all modules from:
 - Language modeling
 - Text generation
 - Building mini-GPT from scratch
+- **nanoGPT: Karpathy's 200-line implementation** 🆕
 
 **Key Topics**:
 - Tokenizer implementation
@@ -152,10 +247,31 @@ This is the FINAL consolidated roadmap combining all modules from:
 - Causal masking
 - Temperature sampling
 - Top-k and nucleus sampling
+- **Attention mechanism from scratch** 🆕
+- **Complete GPT in 200 lines** 🆕
+
+**Lessons**:
+- Lesson 1: Tokenization
+- Lesson 2: Word Embeddings
+- **Lesson 3: nanoGPT (Karpathy's Approach)** 🆕
+  - Build GPT from scratch (no libraries)
+  - Implement attention mechanism
+  - Multi-head self-attention
+  - Transformer blocks
+  - Train on Shakespeare text
+  - Autoregressive text generation
+
+**Key Project**:
+- **nanoGPT Implementation** 🆕
+  - ~200 lines of code
+  - Complete transformer architecture
+  - Character-level tokenization
+  - Generates Shakespeare-like text
 
 **Status Details**:
-- All lessons complete
+- All 3 lessons complete 🆕
 - Mini-GPT implementation complete
+- nanoGPT implementation complete 🆕
 - Examples available
 
 ---
@@ -942,103 +1058,134 @@ This is the FINAL consolidated roadmap combining all modules from:
 
 ## LEARNING PATHS
 
-### Path 1: Production-First (Fastest to Job) - 10 months
-**Modules**: 1-3, 5, 7-11, 13-14
+### Path 1: Production-First (Fastest to Job) - 11 months 🆕
+**Modules**: 1-3, 3.5, 5, 7-11, 13-14 🆕
 **Skip**: Module 4 (Transformers theory), 6 (detailed training), 12 (fine-tuning), 15+ (advanced)
 **Outcome**: Job-ready AI Engineer
 **Salary Range**: $100K-140K
 
 **Timeline**:
 - Months 1-3: Modules 1-3 (Foundation)
-- Month 4: Modules 5, 7 (LLM basics, reasoning)
-- Months 5-7: Modules 8-11 (Production essentials)
-- Months 8-9: Module 13 (LLMOps)
-- Month 10: Module 14 (Security)
+- Month 4: Module 3.5 (PyTorch & TensorFlow) 🆕
+- Month 5: Modules 5, 7 (LLM basics, reasoning)
+- Months 6-8: Modules 8-11 (Production essentials)
+- Months 9-10: Module 13 (LLMOps)
+- Month 11: Module 14 (Security)
 
 ---
 
-### Path 2: Complete (Recommended) - 14 months
-**Modules**: 1-15
-**Skip**: Modules 16-23 (optional advanced)
+### Path 2: Complete (Recommended) - 15 months 🆕
+**Modules**: 1-3.5, 4-15 🆕
+**Skip**: Modules 16-24 (optional advanced) 🆕
 **Outcome**: Full-Stack AI Engineer
 **Salary Range**: $130K-180K
 
 **Timeline**:
-- Months 1-4: Modules 1-7 (Complete foundation)
-- Months 5-7: Modules 8-11 (Production)
-- Months 8-9: Modules 12-13 (Advanced training & ops)
-- Months 10-11: Modules 14-15 (Security & multi-modal)
-- Months 12-14: Portfolio projects
+- Months 1-4: Modules 1-3 (Foundation)
+- Month 5: Module 3.5 (PyTorch & TensorFlow) 🆕
+- Months 6-7: Modules 4-7 (Transformers through Reasoning)
+- Months 8-10: Modules 8-11 (Production)
+- Months 11-12: Modules 12-13 (Advanced training & ops)
+- Months 13-14: Modules 14-15 (Security & multi-modal)
+- Month 15: Portfolio projects
 
 ---
 
-### Path 3: Research & Advanced (Full Curriculum) - 18 months
-**Modules**: All 23 modules
+### Path 3: Research & Advanced (Full Curriculum) - 19 months 🆕
+**Modules**: All 24 modules 🆕
 **Skip**: Nothing
 **Outcome**: AI Architect / Research Engineer
 **Salary Range**: $150K-250K+
 
 **Timeline**:
-- Months 1-4: Modules 1-7
-- Months 5-7: Modules 8-11
-- Months 8-9: Modules 12-13
-- Months 10-11: Modules 14-15
-- Months 12-14: Modules 16-19
-- Months 15-17: Modules 20-22
-- Month 18: Module 23
+- Months 1-4: Modules 1-3
+- Month 5: Module 3.5 (PyTorch & TensorFlow) 🆕
+- Months 6-7: Modules 4-7
+- Months 8-10: Modules 8-11
+- Months 11-12: Modules 12-13
+- Months 13-14: Modules 14-15
+- Months 15-17: Modules 16-19
+- Months 18-19: Modules 20-24 🆕
 
 ---
 
 ## CURRENT STATUS SUMMARY
 
-### Completed (7 modules - 30.4%)
+### Completed (7 modules - 29.2%)
 - ✅ Module 1: Python Basics (100%)
 - ✅ Module 2: NumPy & Math (100%)
-- ✅ Module 3: Neural Networks (100%)
-- ✅ Module 5: Building LLM (100%)
+- ✅ Module 3: Neural Networks (100%, now 7 lessons) 🆕
+- ✅ Module 5: Building LLM (100%, now 3 lessons) 🆕
 - ✅ Module 7: Reasoning & Coding (100%)
 
-### In Progress (2 modules - 8.7%)
+### In Progress (2 modules - 8.3%)
 - 🟡 Module 4: Transformers (20%)
 - 🟡 Module 6: Training Basics (50%)
 
-### Not Started (14 modules - 60.9%)
+### Not Started (15 modules - 62.5%)
+- ⬜ Module 3.5: PyTorch & TensorFlow 🆕
 - ⬜ Modules 8-23
 
-**Overall Progress**: 7/23 = 30.4% complete
+**Overall Progress**: 7/24 = 29.2% complete
+
+**New Additions (March 21, 2026)**:
+- ✅ Module 3, Lesson 7: AutoGrad from Scratch
+- ⬜ Module 3.5: PyTorch & TensorFlow (NEW MODULE)
+- ✅ Module 5, Lesson 3: nanoGPT Implementation
 
 ---
 
 ## RECOMMENDED NEXT STEPS
 
 ### Immediate (This Week)
-1. **Complete Module 4** (Transformers) - Finish remaining 80%
-   - Create Lessons 2-6
-   - Add code examples
-   - Add exercises
+1. **Review New Additions** 🆕
+   - Read Module 3, Lesson 7 (AutoGrad)
+   - Explore Module 3.5 structure (PyTorch & TensorFlow)
+   - Review Module 5, Lesson 3 (nanoGPT)
 
-2. **Complete Module 6** (Training Basics) - Finish remaining 50%
-   - Complete Lessons 4-6
-   - Add fine-tuning examples
+2. **Start Module 3.5** (PyTorch & TensorFlow) - CRITICAL! 🆕
+   - Install PyTorch and TensorFlow
+   - Begin Lesson 1: PyTorch Fundamentals
+   - Convert one Module 3 project to PyTorch
 
 ### Short-term (Next Month)
-3. **Start Module 8** (Prompt Engineering) - Most critical!
-4. **Begin Module 9** (Vector Databases)
-5. **Plan Module 10** (RAG) - Most important for job market
+3. **Complete Module 3.5** - Most important for production! 🆕
+   - All 5 lessons
+   - Both projects (MNIST comparison, conversion)
+   - GPU setup and acceleration
+
+4. **Complete Module 4** (Transformers) - Finish remaining 80%
+   - Create Lessons 2-6
+   - Add code examples using PyTorch 🆕
+   - Add exercises
+
+5. **Complete Module 6** (Training Basics) - Finish remaining 50%
+   - Complete Lessons 4-6
+   - Add fine-tuning examples with PyTorch 🆕
 
 ### Medium-term (Next 3 Months)
-6. Complete Modules 8-11 (Production Essentials)
-7. Build 2-3 RAG-based projects
-8. Start job applications (after Module 10)
+6. **Start Module 8** (Prompt Engineering) - Most critical!
+7. **Begin Module 9** (Vector Databases)
+8. **Plan Module 10** (RAG) - Most important for job market
+9. Complete Modules 8-11 (Production Essentials)
+10. Build 2-3 RAG-based projects with PyTorch/TensorFlow 🆕
+11. Start job applications (after Module 10)
 
 ---
 
 ## CAREER MILESTONES
 
+### After Module 3.5 (PyTorch & TensorFlow) 🆕
+**Title**: AI Engineer (Entry Level)
+**Can Build**: Neural networks with modern frameworks
+**Skills**: PyTorch, TensorFlow, GPU acceleration, production deployment
+**Salary**: $80K-100K
+**Job Ready**: Entry-level positions ✅
+
 ### After Module 7 (Current Position)
 **Title**: AI Foundation Complete
-**Can Build**: Neural networks, mini-GPT, coding models
-**Job Ready**: Not yet (need production skills)
+**Can Build**: Neural networks, mini-GPT, coding models, production frameworks 🆕
+**Job Ready**: Entry-level roles (after Module 3.5) ✅ 🆕
 
 ### After Module 10 (RAG)
 **Title**: Junior AI Engineer
@@ -1083,16 +1230,18 @@ This is the FINAL consolidated roadmap combining all modules from:
 
 ### Critical Success Factors
 1. **Complete Modules 1-3** - Non-negotiable foundation
-2. **Don't skip Module 10 (RAG)** - Most important for jobs
-3. **Security before production** - Module 14 before deploying
-4. **Build projects** - Apply knowledge immediately
-5. **Share progress** - Portfolio and networking
+2. **Don't skip Module 3.5** - PyTorch/TensorFlow essential for production 🆕
+3. **Don't skip Module 10 (RAG)** - Most important for jobs
+4. **Security before production** - Module 14 before deploying
+5. **Build projects** - Apply knowledge immediately
+6. **Share progress** - Portfolio and networking
 
 ### Time Investment Reality
-- **Minimum job-ready**: 10 months (Path 1)
-- **Recommended complete**: 14 months (Path 2)
-- **Full mastery**: 18 months (Path 3)
+- **Minimum job-ready**: 11 months (Path 1) 🆕
+- **Recommended complete**: 15 months (Path 2) 🆕
+- **Full mastery**: 19 months (Path 3) 🆕
 - **Part-time**: 2-3x these timelines
+- **New addition (Module 3.5)**: +3-4 weeks, but adds $20K-40K salary value! 🆕
 
 ---
 
@@ -1123,24 +1272,278 @@ This roadmap represents the COMPLETE consolidated curriculum from all sources:
 - Updated MASTER_PLAN_UPDATED.md (15 modules)
 - GENERATIVE_AI_COVERAGE.md (image, audio, video)
 - All module folders and progress tracking
+- **NEW (March 21, 2026)**: Module 3.5 (PyTorch & TensorFlow) 🆕
+- **NEW (March 21, 2026)**: Module 3 Lesson 7 (AutoGrad) 🆕
+- **NEW (March 21, 2026)**: Module 5 Lesson 3 (nanoGPT) 🆕
 
 **You now have**:
-- ✅ 23 total modules defined
-- ✅ Clear progression path
+- ✅ 24 total modules defined 🆕
+- ✅ Clear progression path with modern frameworks 🆕
 - ✅ Realistic timelines
 - ✅ Career milestones
 - ✅ Multiple learning paths
 - ✅ Current status tracking
+- ✅ AutoGrad understanding (foundation for frameworks) 🆕
+- ✅ nanoGPT implementation (GPT from scratch) 🆕
 
-**Next Action**: Complete Modules 4 & 6, then start Module 8 (Prompt Engineering)
+**Next Action**: Start Module 3.5 (PyTorch & TensorFlow), then complete Modules 4 & 6 🆕
 
-**Remember**: You don't need all 23 modules to be job-ready. Modules 1-11 + 13-14 = highly employable!
+**Remember**: You don't need all 24 modules to be job-ready. Modules 1-3.5, 5, 7-11, 13-14 = highly employable! 🆕
 
 ---
 
 **Created**: March 17, 2026
-**Status**: FINAL COMPREHENSIVE VERSION
-**Total Modules**: 23
-**Current Progress**: 7/23 (30.4%)
+**Updated**: March 21, 2026
+**Status**: FINAL COMPREHENSIVE VERSION (with PyTorch/TensorFlow) 🆕
+**Total Modules**: 24 🆕
+**Current Progress**: 7/24 (29.2%) 🆕
+
+**Latest Additions** (March 21, 2026):
+- ✅ Module 3, Lesson 7: AutoGrad from Scratch
+- ⬜ Module 3.5: Deep Learning Frameworks (PyTorch & TensorFlow) - NEW MODULE
+- ✅ Module 5, Lesson 3: nanoGPT (Karpathy's 200-line implementation)
 
 **Let's build amazing AI systems!** 🚀
+
+---
+
+## 🎯 CAPSTONE PROJECTS INTEGRATED
+
+### Two Major Portfolio Projects
+
+As part of your learning journey, you will build **2 comprehensive capstone projects** that demonstrate mastery of LLM engineering. These are real-world applications that will significantly strengthen your portfolio.
+
+**📄 Full Details**: See [CAPSTONE_PROJECTS_PLAN.md](./CAPSTONE_PROJECTS_PLAN.md) for complete 50+ page implementation guide.
+
+---
+
+### PROJECT 1: AI Chat Assistant with Web Search
+
+**Type**: Conversational AI with Real-time Information Retrieval
+**Similar To**: ChatGPT, Claude, Perplexity AI
+**Complexity**: ⭐⭐⭐ Medium
+**Timeline**: 6-8 weeks
+
+#### What It Does
+- Answers questions using LLM knowledge
+- Automatically detects when it lacks information
+- Searches Google for real-time data (top 5 results)
+- Extracts and processes web content
+- Synthesizes coherent answers with source citations
+- Maintains conversation history
+
+#### Prerequisites
+**Must Complete**: Modules 8-11 (Prompt Engineering → LangChain)
+**When to Start**: Month 7 (July 2026)
+**Training Required**: ❌ No (uses pre-trained models)
+
+#### Technology Stack
+- LLM: OpenAI GPT-3.5/4 or Claude
+- Orchestration: LangChain/LangGraph
+- Vector DB: ChromaDB or Pinecone
+- Web Search: SerpAPI or DuckDuckGo
+- Frontend: Streamlit or Gradio
+- Backend: FastAPI
+
+#### Cost
+- Development: $10-20
+- Monthly Running: $10-30
+- **Total**: ~$140-380/year
+
+#### Career Value
+- Demonstrates RAG architecture (most in-demand skill)
+- Portfolio project for interviews
+- Applicable to 80% of AI jobs
+- **Salary Impact**: +$20K-40K
+
+---
+
+### PROJECT 2: Stock Analysis LLM for Indian Markets
+
+**Type**: Domain-Specific Financial Analysis AI
+**Similar To**: Bloomberg Terminal AI, FinChat.io
+**Complexity**: ⭐⭐⭐⭐⭐ Very High
+**Timeline**: 10-12 weeks
+
+#### What It Does
+- Analyzes Indian stocks (NSE, BSE) and mutual funds
+- Tracks company fundamentals (P/E, ROE, growth)
+- Monitors latest financial news and sentiment
+- Performs technical + fundamental analysis
+- Provides buy/sell/hold recommendations with reasoning
+- Real-time market data integration
+
+#### Prerequisites
+**Must Complete**: Modules 8-14 (includes Fine-tuning + Security)
+**When to Start**: Month 11 (December 2026)
+**Training Required**: ✅ Yes (fine-tuning on financial data)
+
+#### Technology Stack
+- Base Model: Mistral 7B or Llama 3.1 (fine-tuned)
+- Fine-tuning: PEFT, LoRA, QLoRA
+- Financial Data: yfinance, NSE API, Screener.in
+- News: Moneycontrol, Economic Times
+- Vector DB: Qdrant
+- Backend: FastAPI + PostgreSQL
+- Frontend: Streamlit + Plotly
+
+#### Data Requirements ⚠️
+**Critical**: Extensive data collection required
+
+| Data Type | Quantity | Time |
+|-----------|----------|------|
+| Financial Reports | 10,000+ | 2-3 weeks |
+| Stock Analysis Examples | 5,000+ | 3-4 weeks (manual!) |
+| News Articles | 50,000+ | 1 week |
+| Training Q&A Pairs | 1,000+ | 2-3 weeks (manual!) |
+
+**Data Preparation**: 150-200 hours (most challenging part!)
+
+#### Cost
+- Fine-tuning: $50-100 (GPU)
+- Data Collection: $0-50
+- Monthly Running: $50-200
+- **Total**: ~$670-2,500/year
+
+#### Career Value
+- Demonstrates fine-tuning mastery
+- FinTech pays premium salaries
+- Shows end-to-end ML engineering
+- **Salary Impact**: +$40K-60K
+
+---
+
+### Projects Timeline Integration
+
+```
+CURRENT → Month 7: Foundation Building
+├── Module 8: Prompt Engineering ⭐
+├── Module 9: Vector Databases
+├── Module 10: RAG
+└── Module 11: LangChain
+    └── ✨ PROJECT 1 STARTS (Month 7)
+
+Month 7-9: Project 1 Development
+├── Week 1-2: Basic chat + LLM
+├── Week 3-4: Web search integration
+├── Week 5-6: RAG implementation
+└── Week 7-8: Polish & deploy
+    └── ✅ PROJECT 1 COMPLETE (Month 9)
+
+Month 9-11: Advanced Training
+├── Module 12: Fine-tuning & LoRA
+├── Module 13: LLM APIs in Production
+└── Module 14: Security
+    └── ✨ PROJECT 2 STARTS (Month 11)
+
+Month 11-14: Project 2 Development
+├── Week 1-6: Data collection (CRITICAL!)
+├── Week 7-8: Model fine-tuning
+├── Week 9-10: Real-time integration
+└── Week 11-12: Frontend & deploy
+    └── ✅ PROJECT 2 COMPLETE (Month 14)
+```
+
+---
+
+### Why Build These Projects?
+
+#### Project 1 Benefits
+1. **Most Practical**: RAG powers 80% of production AI
+2. **Fast Results**: No training, see it work quickly
+3. **Low Cost**: ~$20 to build
+4. **Portfolio Gold**: Impresses every interviewer
+5. **Job Ready**: After this + Module 11
+
+#### Project 2 Benefits
+1. **Advanced Skills**: Demonstrates fine-tuning
+2. **Domain Expertise**: Shows specialized AI capability
+3. **High Value**: FinTech pays premium
+4. **Differentiation**: Most candidates don't have this
+5. **Senior Ready**: After this project
+
+---
+
+### Career Impact Summary
+
+**After Project 1** (Month 9):
+- **Job Titles**: Junior AI Engineer, LLM Engineer
+- **Salary Range**: $80K-130K
+- **Job Ready**: ✅ YES
+- **Interview Performance**: ⭐⭐⭐⭐ Strong
+
+**After Project 2** (Month 14):
+- **Job Titles**: AI Engineer, ML Engineer, FinTech AI Specialist
+- **Salary Range**: $100K-160K
+- **Job Ready**: ✅ Competitive for senior roles
+- **Interview Performance**: ⭐⭐⭐⭐⭐ Excellent
+
+---
+
+### Quick Comparison
+
+| Aspect | Project 1 | Project 2 |
+|--------|-----------|-----------|
+| Complexity | Medium | Very High |
+| Prerequisites | Modules 8-11 | Modules 8-14 |
+| Training | ❌ No | ✅ Yes |
+| Time | 6-8 weeks | 10-12 weeks |
+| Cost | $10-30/mo | $50-200/mo |
+| Data Collection | Easy | Hard (150-200h) |
+| Job Market | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+
+---
+
+### Next Steps for Projects
+
+#### This Week
+1. ✅ Read [CAPSTONE_PROJECTS_PLAN.md](./CAPSTONE_PROJECTS_PLAN.md) (complete guide)
+2. ✅ Continue Module 8: Prompt Engineering
+3. ✅ Set up OpenAI API account
+4. ✅ Create GitHub repositories
+
+#### Next 3 Months
+1. Complete Modules 9-11
+2. Experiment with small RAG prototype
+3. Start collecting financial data (background task)
+
+#### Month 7: Start Project 1
+- Build AI chat assistant with web search
+- Portfolio piece #1 complete
+
+#### Month 11: Start Project 2
+- Build stock analysis LLM
+- Portfolio piece #2 complete
+
+---
+
+## UPDATED ROADMAP SUMMARY
+
+Your complete learning journey now includes:
+- ✅ **24 Core Modules** (Foundations → Advanced) 🆕
+- ✅ **Modern Frameworks** (PyTorch & TensorFlow) 🆕
+- ✅ **AutoGrad Understanding** (Foundation for DL frameworks) 🆕
+- ✅ **nanoGPT from Scratch** (GPT in 200 lines) 🆕
+- ✅ **2 Major Capstone Projects** (Real-world portfolio)
+- ✅ **Clear Timeline** (0-15 months to competitive positions) 🆕
+- ✅ **Cost Estimates** (Total: ~$800-2,900)
+- ✅ **Career Milestones** ($80K → $160K+ positions)
+
+**Job Ready**: After Module 3.5 + Project 1 (Month 10) 🆕
+**Senior Ready**: After Project 2 (Month 15) 🆕
+**Total Investment**: 15 months, ~$1,000 total cost 🆕
+
+**Expected ROI**: First month of AI engineer salary pays back entire investment!
+**Salary Boost from Module 3.5**: +$20K-40K 🆕
+
+---
+
+**Document Created**: March 17, 2026
+**Last Updated**: March 21, 2026 🆕
+**Latest Addition**: Module 3.5 (PyTorch & TensorFlow), AutoGrad, nanoGPT 🆕
+**Previous Update**: March 20, 2026 (Capstone Projects)
+
+**See Also**:
+- [CAPSTONE_PROJECTS_PLAN.md](./CAPSTONE_PROJECTS_PLAN.md) - 50+ page implementation guide
+- [NEW_ADDITIONS_SUMMARY.md](./NEW_ADDITIONS_SUMMARY.md) - March 21 additions summary 🆕
+- [PROGRESS_UPDATE_2026_03_21.md](./PROGRESS_UPDATE_2026_03_21.md) - Latest progress 🆕
