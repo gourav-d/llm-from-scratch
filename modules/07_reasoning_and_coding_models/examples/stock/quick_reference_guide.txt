@@ -1,0 +1,325 @@
+================================================================================
+QUICK REFERENCE GUIDE - STOCK INVESTMENT CHECKLIST
+================================================================================
+
+BEFORE BUYING ANY STOCK - THE 5-MINUTE CHECK:
+==============================================
+
+1. FINANCIALS (30 seconds):
+   [ ] PE < 15 (not overvalued)
+   [ ] Debt/Equity < 1 (low debt)
+   [ ] ROE > 15% (profitable)
+
+2. PRICE ACTION (30 seconds):
+   [ ] Down 30%+ from 52-week high (discounted)
+   [ ] Price > Rs. 20 (avoid penny stocks)
+   [ ] Good trading volume (can sell easily)
+
+3. PROMOTER CHECK (1 minute):
+   [ ] Holding > 40% (skin in game)
+   [ ] Pledging = 0% (no desperation)
+   [ ] No recent selling by insiders
+
+4. RECENT RESULTS (2 minutes):
+   [ ] Read last quarter summary
+   [ ] Check profit growth trend
+   [ ] Any red flags in commentary
+
+5. NEWS CHECK (1 minute):
+   [ ] Google: "[Stock name] news"
+   [ ] Any legal issues? Scams? Frauds?
+   [ ] Recent management changes?
+
+
+POSITION SIZING FORMULA:
+========================
+
+For Rs. 20,000 portfolio:
+- Min per stock: Rs. 2,000 (10%)
+- Max per stock: Rs. 5,000 (25%)
+- Ideal: 4-5 stocks of Rs. 3,000-5,000 each
+
+Never exceed 25% in one stock!
+
+
+STOP-LOSS CALCULATION:
+======================
+
+Long-term stocks:
+Stop-Loss = Buy Price × 0.85 (15% below)
+Example: Bought at Rs. 100 → Stop-Loss = Rs. 85
+
+Swing trades:
+Stop-Loss = Buy Price × 0.92 (8% below)
+Example: Bought at Rs. 100 → Stop-Loss = Rs. 92
+
+
+TARGET CALCULATION:
+===================
+
+Conservative Target:
+Target = Buy Price × 1.20 (20% profit)
+
+Aggressive Target:
+Target = Buy Price × 1.40 (40% profit)
+
+Always maintain 2:1 reward-to-risk ratio!
+
+
+PORTFOLIO REBALANCING TRIGGERS:
+================================
+
+Rebalance when:
+1. Any stock > 40% of portfolio
+2. Quarterly review shows weak fundamentals
+3. Stock hits target price
+4. Better opportunity available
+5. Sector allocation > 50%
+
+
+SECTOR ALLOCATION LIMITS:
+=========================
+
+For Rs. 20,000 portfolio:
+
+Safe allocation:
+- Banking: Max 25%
+- IT: Max 20%
+- Pharma: Max 20%
+- Auto: Max 15%
+- Chemicals: Max 15%
+- Others: Max 5% each
+
+Never put >40% in one sector!
+
+
+SWING TRADING RULES:
+====================
+
+Entry Conditions (ALL must be YES):
+[ ] Stock in overall uptrend
+[ ] Currently pulling back (RSI 30-45)
+[ ] Good volume (avg > 100,000 shares/day)
+[ ] Clear support level visible
+[ ] No major event/results in next 2 weeks
+
+Exit Conditions (ANY ONE is YES):
+[ ] 15-20% profit achieved
+[ ] 7-10% loss (stop-loss hit)
+[ ] 3 months passed (re-evaluate)
+[ ] Fundamentals deteriorated
+[ ] Better opportunity found
+
+Max holding: 2 swing trades at a time
+Max per trade: Rs. 5,000
+
+
+WHEN TO SELL - THE EXIT CHECKLIST:
+===================================
+
+SELL IMMEDIATELY if:
+1. Stop-loss triggered (no emotions!)
+2. Promoter pledging > 20%
+3. Major fraud/scam news
+4. Auditor resignation
+5. Debt increased sharply (>50% in one quarter)
+
+CONSIDER SELLING if:
+1. Target price achieved
+2. 2 consecutive quarters of profit decline
+3. Stock becomes >40% of portfolio
+4. Sector faces long-term headwinds
+5. Found better opportunity
+
+NEVER SELL because:
+1. Stock fell 5-10% (normal volatility)
+2. Market panic (unless fundamentals changed)
+3. Friend/expert said so (do your research)
+4. Boredom (give time to thesis)
+
+
+AVERAGING DOWN RULES:
+=====================
+
+Only average down if:
+[ ] Fundamentals still strong
+[ ] Quarterly results still good
+[ ] Fall due to market, not company-specific
+[ ] Have conviction for 2+ years
+[ ] Not already >25% of portfolio
+
+How much to average:
+- 1st average: 50% of original position
+- 2nd average: 25% of original position
+- Never average more than twice
+
+Example:
+Bought 20 shares @ Rs. 100 = Rs. 2,000
+Stock falls to Rs. 80
+1st average: 10 shares @ Rs. 80 = Rs. 800
+New average: Rs. 93.33
+
+
+SCREENER SHORTCUTS:
+===================
+
+Copy-paste these directly into screener.in:
+
+SAFEST STOCKS:
+Market Capitalization > 2000 AND PE < 12 AND Debt to Equity < 0.5 AND ROE > 18% AND Current Price < 52 Week High * 0.65
+
+BALANCED:
+Market Capitalization > 500 AND PE < 15 AND Debt to Equity < 1 AND ROE > 15% AND Current Price < 52 Week High * 0.7
+
+GROWTH:
+Market Capitalization > 300 AND PE < 20 AND Profit growth 3Years > 20% AND Current Price < 52 Week High * 0.75
+
+SWING:
+Market Capitalization > 1000 AND Average Volume > 100000 AND Current Price < 52 Week High * 0.8 AND Price > 50
+
+
+RED FLAGS - NEVER BUY IF:
+=========================
+
+1. Promoter pledging > 20%
+2. Declining promoter holding (selling stake)
+3. Frequent auditor changes
+4. Related-party transactions > 20% of revenue
+5. Negative operating cash flow for 2+ quarters
+6. Debt/Equity > 3 (except banks)
+7. Frequent bonus/split announcements (red flag)
+8. Stock in T2T segment (trade-to-trade)
+9. Price < Rs. 10 (penny stock)
+10. No trading volume (< 10,000 shares/day)
+
+
+DAILY ROUTINE (5 MINUTES):
+==========================
+
+Morning (before market opens):
+1. Check SGX Nifty (indicates market direction)
+2. Scan financial news headlines
+3. Check any company-specific news for your holdings
+
+During Market Hours:
+1. Place limit orders (never market orders)
+2. Don't panic on 2-3% moves
+3. Only check prices 2-3 times (avoid overtrading)
+
+Evening (after market close):
+1. Update portfolio tracker if any transactions
+2. Set price alerts for next day
+3. Check if any stop-loss/target hit
+
+
+WEEKLY ROUTINE (30 MINUTES):
+============================
+
+Every Sunday:
+1. Update current prices in tracker (5 min)
+2. Run screener query for new ideas (10 min)
+3. Read news for portfolio stocks (10 min)
+4. Plan next week's actions (5 min)
+
+
+MONTHLY ROUTINE (2 HOURS):
+==========================
+
+Last Sunday of month:
+1. Calculate monthly return (10 min)
+2. Review each holding individually (60 min)
+3. Check quarterly results if released (30 min)
+4. Rebalance if needed (20 min)
+
+
+USEFUL WEBSITES:
+================
+
+Screening: screener.in
+Charts: tradingview.com
+News: moneycontrol.com, economictimes.com
+Results: screener.in (Quarterly Results section)
+Annual Reports: bseindia.com or company website
+
+
+BROKER TIPS:
+============
+
+1. Use LIMIT orders, not MARKET orders
+2. Set GTD (Good Till Day) orders
+3. Enable price alerts for your stocks
+4. Check brokerage charges (should be <1%)
+5. Use bracket orders for swing trades (auto stop-loss)
+
+
+COMMON MISTAKES TO AVOID:
+=========================
+
+1. Buying without research (FOMO)
+2. Not setting stop-loss
+3. Averaging down on falling knife
+4. Selling winners, keeping losers
+5. Checking prices every 5 minutes
+6. Trading on tips/rumors
+7. Investing borrowed money
+8. Putting all money at once
+9. Ignoring quarterly results
+10. Emotional attachment to stocks
+
+
+PORTFOLIO HEALTH CHECK:
+=======================
+
+Monthly check - Your portfolio should have:
+
+[ ] 4-6 stocks (diversification)
+[ ] No stock > 30% allocation
+[ ] No sector > 40% allocation
+[ ] 10-15% cash reserve
+[ ] All stocks have stop-loss set
+[ ] All stocks fundamentally sound
+[ ] At least 3 different sectors
+[ ] Mix of large/mid caps
+
+
+MOTIVATION REMINDERS:
+=====================
+
+1. "Time in market > Timing the market"
+2. Patience is your biggest weapon
+3. Small consistent gains > home runs
+4. 20% annual return = excellent (don't be greedy)
+5. Learn from mistakes, keep notes
+6. Focus on process, not just profits
+7. Sleep-well-at-night portfolio is best
+8. You don't need to trade every day
+9. Cash is also a position
+10. Compound interest is magic (give it time)
+
+
+EMERGENCY CONTACTS:
+===================
+
+Broker Helpline: _______________
+Demat Support: _______________
+Investment Advisor: _______________
+
+
+GOAL TRACKING:
+==============
+
+Starting Capital: Rs. 20,000
+Date: ___________
+
+Year 1 Target: Rs. _________ (20% = Rs. 24,000)
+Year 3 Target: Rs. _________ (72% = Rs. 34,400)
+Year 5 Target: Rs. _________ (148% = Rs. 49,600)
+
+Review every 6 months and stay disciplined!
+
+
+================================================================================
+REMEMBER: Good stocks + Patience + Discipline = Wealth
+================================================================================
+
+Print this guide and keep it near your workspace!

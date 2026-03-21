@@ -1,0 +1,2 @@
+Stock Name,Sector,Buy Date,Buy Price,Quantity,Total Investment,Current Price,Current Value,Profit/Loss,Profit/Loss %,Stop Loss Price,Target Price,Strategy,Status,Notes
+Example Stock Ltd,IT,2026-03-19,250,20,5000,250,5000,0,0.00%,225,325,Long-term,Active,Demo entry

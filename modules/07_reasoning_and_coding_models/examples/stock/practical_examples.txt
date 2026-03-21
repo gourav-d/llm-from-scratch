@@ -1,0 +1,550 @@
+================================================================================
+PRACTICAL EXAMPLES - HOW TO USE THE SCREENER QUERIES
+================================================================================
+
+This file contains step-by-step examples of how to find and analyze stocks
+using the queries provided. Follow along to understand the complete process.
+
+
+================================================================================
+EXAMPLE 1: FINDING A SAFE BANKING STOCK FOR LONG-TERM
+================================================================================
+
+STEP 1: RUN THE QUERY
+--------------------
+Go to screener.in → "Create New Screen"
+Paste this query:
+
+Market Capitalization > 1000 AND
+Market Capitalization < 30000 AND
+PE < 12 AND
+Price to Book Value < 1.5 AND
+Return on Assets > 1% AND
+Gross NPA < 3% AND
+Net NPA < 1% AND
+Current Price < 52 Week High * 0.7 AND
+Dividend Yield > 1.5% AND
+Price > 50
+
+Click "Run Screen"
+
+STEP 2: ANALYZE RESULTS
+----------------------
+Let's say the query returns these stocks:
+1. Federal Bank - Rs. 142
+2. Karnataka Bank - Rs. 185
+3. City Union Bank - Rs. 120
+4. South Indian Bank - Rs. 18
+5. RBL Bank - Rs. 156
+
+STEP 3: ELIMINATE RED FLAGS
+---------------------------
+South Indian Bank: Price Rs. 18 (too low, risky) - ELIMINATE
+RBL Bank: Check news - recent management issues - ELIMINATE
+
+Shortlist: Federal Bank, Karnataka Bank, City Union Bank
+
+STEP 4: DEEP DIVE (Use Banking Template)
+----------------------------------------
+Federal Bank:
+- CASA Ratio: 34% (Good)
+- Gross NPA: 1.8% (Excellent)
+- Net NPA: 0.5% (Excellent)
+- ROA: 1.3% (Good)
+- Branch network: Strong in South India
+- Digital initiatives: Good mobile app ratings
+- Recent news: Clean, no issues
+SCORE: 8/10
+
+Karnataka Bank:
+- CASA Ratio: 32% (Decent)
+- Gross NPA: 2.9% (Acceptable)
+- Net NPA: 0.9% (Good)
+- ROA: 1.0% (Acceptable)
+- Smaller network than Federal
+SCORE: 6/10
+
+City Union Bank:
+- CASA Ratio: 28% (Average)
+- Gross NPA: 2.5% (Good)
+- Strong dividend history
+- Conservative lending
+SCORE: 7/10
+
+STEP 5: TECHNICAL ANALYSIS
+--------------------------
+Federal Bank:
+- 52W High: Rs. 210
+- Current: Rs. 142 (32% down - good discount)
+- Support visible at Rs. 135
+- Good volume
+
+Karnataka Bank:
+- 52W High: Rs. 250
+- Current: Rs. 185 (26% down)
+- Lower volumes
+
+STEP 6: DECISION
+---------------
+WINNER: Federal Bank
+- Best fundamentals
+- Good discount from high
+- Strong CASA and low NPA
+- Better volume for swing trades too
+
+INVESTMENT PLAN:
+- Allocate: Rs. 5,000
+- Buy at: Rs. 142 or below Rs. 140
+- Quantity: 35 shares (Rs. 4,900)
+- Stop-loss: Rs. 120 (15% below)
+- Target 1: Rs. 170 (20% profit)
+- Target 2: Rs. 198 (40% profit)
+- Time horizon: 12-18 months
+
+
+================================================================================
+EXAMPLE 2: FINDING A SWING TRADING OPPORTUNITY IN IT SECTOR
+================================================================================
+
+STEP 1: RUN SWING TRADING + IT QUERY
+------------------------------------
+Market Capitalization > 1000 AND
+Market Capitalization < 20000 AND
+PE < 25 AND
+Return on Equity > 10% AND
+Debt to Equity < 2 AND
+Average Volume > 100000 AND
+Current Price < 52 Week High * 0.8 AND
+Price > 50 AND
+Price < 1000 AND
+Operating Profit Margin > 8%
+
+Add manual filter: Industry = "IT Software"
+
+STEP 2: RESULTS ANALYSIS
+-----------------------
+Results show:
+1. Persistent Systems - Rs. 4,500 (Too expensive, skip)
+2. Mastek - Rs. 2,800 (Too expensive)
+3. Sonata Software - Rs. 520
+4. Cyient - Rs. 1,450 (Too expensive)
+5. KPIT Technologies - Rs. 1,200 (Too expensive)
+
+Only Sonata Software fits budget!
+
+STEP 3: QUICK CHECK
+------------------
+Sonata Software at Rs. 520:
+- P/E: 22 (reasonable for IT)
+- ROE: 18% (good)
+- Debt/Equity: 0.1 (very low, safe)
+- Recent results: Profit up 25% YoY
+- No debt issues
+- Good international presence
+
+STEP 4: CHART ANALYSIS FOR SWING TRADE
+--------------------------------------
+- 52W High: Rs. 680
+- Current: Rs. 520 (23% down)
+- RSI: 38 (oversold territory - good for entry)
+- Support: Rs. 500
+- Resistance: Rs. 560, Rs. 600
+- Volume: Recently increased (buyers coming in)
+- MACD: Showing bullish crossover
+
+SWING TRADE SETUP:
+-----------------
+- Entry: Rs. 520 (or Rs. 510-515 on dip)
+- Quantity: 9 shares (Rs. 4,680)
+- Stop-loss: Rs. 478 (8% below - swing trade)
+- Target 1: Rs. 598 (15% profit) - SELL 50%
+- Target 2: Rs. 650 (25% profit) - SELL remaining
+- Time horizon: 4-8 weeks
+- Trail stop-loss after Target 1
+
+EXIT STRATEGY:
+- If hits Rs. 598 in Week 2-3: Sell 50%, move SL to Rs. 540
+- If hits Rs. 650: Exit fully
+- If falls to Rs. 478: Exit fully (take 8% loss)
+- If nothing happens in 8 weeks: Re-evaluate
+
+
+================================================================================
+EXAMPLE 3: BUILDING A DIVERSIFIED PORTFOLIO WITH RS. 20,000
+================================================================================
+
+GOAL: Create a balanced portfolio for 5-year investment
+
+STEP 1: SECTOR ALLOCATION PLAN
+------------------------------
+Banking: 25% (Rs. 5,000)
+Pharma: 20% (Rs. 4,000)
+IT: 20% (Rs. 4,000)
+Chemicals: 15% (Rs. 3,000)
+Auto Components: 15% (Rs. 3,000)
+Cash Reserve: 5% (Rs. 1,000)
+
+STEP 2: FIND STOCKS FOR EACH SECTOR
+-----------------------------------
+
+A. BANKING (Rs. 5,000):
+Run banking query → Found: Federal Bank at Rs. 142
+Buy: 35 shares = Rs. 4,970
+
+B. PHARMA (Rs. 4,000):
+Run pharma query → Found options:
+- Laurus Labs: Rs. 385 (Good fundamentals, FDA compliant)
+- Suven Pharma: Rs. 520
+Choose: Laurus Labs
+Buy: 10 shares = Rs. 3,850
+
+C. IT (Rs. 4,000):
+Run IT query → Found: Persistent Systems too costly
+Alternative: Mastek at Rs. 2,800 or Sonata at Rs. 520
+Choose: Sonata Software (better budget fit)
+Buy: 7 shares = Rs. 3,640
+
+D. CHEMICALS (Rs. 3,000):
+Run chemicals query → Found:
+- Aarti Industries: Rs. 580
+- Alkyl Amines: Rs. 2,100 (too costly)
+- Vinati Organics: Rs. 1,850 (too costly)
+Choose: Aarti Industries
+Buy: 5 shares = Rs. 2,900
+
+E. AUTO COMPONENTS (Rs. 3,000):
+Run auto query → Found:
+- Suprajit Engineering: Rs. 420
+- Motherson Sumi: Rs. 95
+- Minda Industries: Rs. 780
+Choose: Suprajit Engineering (good export profile)
+Buy: 7 shares = Rs. 2,940
+
+FINAL PORTFOLIO:
+---------------
+Stock                    Shares  Price   Investment  %
+Federal Bank             35      142     4,970       24.8%
+Laurus Labs              10      385     3,850       19.3%
+Sonata Software          7       520     3,640       18.2%
+Aarti Industries         5       580     2,900       14.5%
+Suprajit Engineering     7       420     2,940       14.7%
+Cash Reserve             -       -       1,700       8.5%
+                                        -------     ------
+TOTAL                                   20,000      100%
+
+DIVERSIFICATION CHECK:
+- 5 stocks ✓
+- 5 sectors ✓
+- No stock > 25% ✓
+- No sector > 25% ✓
+- Cash reserve ✓
+
+RISK MANAGEMENT:
+Stock                    Stop-Loss    Target (20%)
+Federal Bank             120          170
+Laurus Labs              327          462
+Sonata Software          442          624
+Aarti Industries         493          696
+Suprajit Engineering     357          504
+
+
+================================================================================
+EXAMPLE 4: MONTHLY MONITORING & REBALANCING
+================================================================================
+
+SCENARIO: After 3 months, portfolio performance is:
+
+Stock                    Buy Price  Current Price  P/L %   Value
+Federal Bank             142        165            16.2%   5,775
+Laurus Labs              385        420            9.1%    4,200
+Sonata Software          520        610            17.3%   4,270
+Aarti Industries         580        550            -5.2%   2,750
+Suprajit Engineering     420        385            -8.3%   2,695
+Cash                     -          -              0%      1,700
+                                                          -------
+TOTAL                                              6.6%    21,390
+
+MONTHLY REVIEW ACTIONS:
+----------------------
+
+1. FEDERAL BANK (16.2% profit, near 20% target):
+   Action: Hold for now, set alert at Rs. 170
+   If hits Rs. 170: Sell 50%, book Rs. 980 profit
+   Remaining can run towards Rs. 198
+
+2. LAURUS LABS (9.1% profit):
+   Check quarterly results: Strong growth continues
+   Action: Hold, long-term investment
+   No action needed
+
+3. SONATA SOFTWARE (17.3% profit):
+   This was swing trade target!
+   Action: SELL 50% (3-4 shares) at Rs. 610
+   Booked profit: ~Rs. 270
+   Move stop-loss on remaining to Rs. 550 (protect profit)
+
+4. AARTI INDUSTRIES (-5.2% loss):
+   Check why: Chemical sector under pressure
+   Fundamentals: Still strong, no company-specific issues
+   Action: Hold, add to watchlist for averaging if falls to Rs. 520
+
+5. SUPRAJIT ENGINEERING (-8.3% loss):
+   Check: Auto sector slowdown
+   Stop-loss at Rs. 357 not hit (current Rs. 385)
+   Fundamentals: Order book still healthy
+   Action: Hold, monitor closely
+
+REBALANCING DECISION:
+--------------------
+Profit from Sonata sale: Rs. 270
+Add to: Aarti Industries (if falls to Rs. 520)
+Or: Keep cash for new opportunity
+
+
+================================================================================
+EXAMPLE 5: DEALING WITH A FALLING STOCK
+================================================================================
+
+SCENARIO: You bought Federal Bank at Rs. 142 for Rs. 5,000
+Stock falls to Rs. 128 (10% down)
+
+PANIC RESPONSE (WRONG):
+"Stock is falling! Everyone says market will crash! SELL NOW!"
+Result: Book 10% loss, regret later when it bounces
+
+CORRECT RESPONSE:
+Step 1: CHECK STOP-LOSS
+- Your stop-loss: Rs. 120
+- Current price: Rs. 128
+- Status: ABOVE stop-loss
+Action: Don't panic sell
+
+Step 2: CHECK FUNDAMENTALS
+- Any bad news about Federal Bank? NO
+- Quarterly results deteriorated? NO
+- NPA increased? NO
+- Management issue? NO
+- Industry-wide fall? YES (all banks down 8-12%)
+
+Step 3: CHECK REASONS FOR FALL
+- RBI increased interest rates (temporary market reaction)
+- Entire banking sector down
+- Not specific to Federal Bank
+
+Step 4: DECISION
+This is MARKET CORRECTION, not stock-specific issue.
+
+OPTIONS:
+A. Hold and wait (if no fresh cash)
+   - Keep stop-loss at Rs. 120
+   - Review again next week
+
+B. Average down (if have extra Rs. 2,000):
+   - Buy 14 more shares at Rs. 128 = Rs. 1,792
+   - New average: (142×35 + 128×14) ÷ 49 = Rs. 138
+   - New stop-loss: Rs. 117 (15% below Rs. 138)
+   - Lower average means faster recovery
+
+CHOSEN ACTION: Average down with Rs. 1,792
+- Total investment now: Rs. 6,762
+- Average price: Rs. 138
+- If stock goes to Rs. 165: Profit = 19.5% (vs 16% without averaging)
+
+3 MONTHS LATER:
+Federal Bank at Rs. 172
+Without averaging: Profit = (172-142)/142 = 21%
+With averaging: Profit = (172-138)/138 = 24.6%
+
+Averaging down WORKED because fundamentals were strong!
+
+
+================================================================================
+EXAMPLE 6: WHEN TO SELL (DIFFICULT DECISION)
+================================================================================
+
+SCENARIO: Laurus Labs bought at Rs. 385, now at Rs. 550 (43% profit)
+
+DECISION TREE:
+-------------
+
+Question 1: Did fundamentals deteriorate?
+- NPA increased? (For banks)
+- Profit declining? (For all stocks)
+- Debt increased sharply?
+- Management issues?
+- FDA warning? (For pharma)
+
+Answer: NO - All fundamentals still strong
+
+Question 2: Did stock hit target price?
+- Your target was Rs. 462 (20% profit)
+- Current: Rs. 550 (43% profit)
+- Exceeded target!
+
+Answer: YES - Exceeded target by 23%
+
+Question 3: Is stock >40% of portfolio?
+- Your portfolio value: Rs. 25,000
+- This stock value: Rs. 5,500 (22%)
+
+Answer: NO - Still within limits
+
+Question 4: Any better opportunity available?
+- Found another stock with 30% undervaluation?
+- Need cash for urgent investment?
+
+Answer: NO - No urgent need
+
+DECISION MATRIX:
+---------------
+Fundamentals: Strong ✓
+Exceeded target: Yes
+Over-allocated: No
+Better opportunity: No
+
+ACTION: Partial Exit Strategy
+- SELL 50% (5 shares) at Rs. 550
+- Book profit: (550-385)×5 = Rs. 825
+- Remaining 5 shares: Let it run
+- Move stop-loss to Rs. 480 (protect profit on remaining)
+- New target for remaining: Rs. 650
+
+BENEFITS:
+- Booked Rs. 825 profit (secure gains)
+- Still have 5 shares for further upside
+- Protected remaining with trailing stop-loss
+- Can use Rs. 2,750 from sale for new opportunity
+
+
+================================================================================
+EXAMPLE 7: QUARTERLY RESULTS REVIEW
+================================================================================
+
+SCENARIO: Federal Bank declared Q3 results
+
+BEFORE RESULTS:
+Your holding: 35 shares at Rs. 142
+Current price: Rs. 165
+
+RESULTS ANNOUNCED:
+- Net Profit: Rs. 750 Cr (vs Rs. 650 Cr last quarter) - UP 15% ✓
+- NII Growth: 18% YoY - GOOD ✓
+- CASA Ratio: 34.5% (vs 34% last Q) - IMPROVED ✓
+- Gross NPA: 1.8% (vs 1.9% last Q) - IMPROVED ✓
+- Net NPA: 0.5% (same as last Q) - STABLE ✓
+- Guidance: Expects 12-15% loan growth - POSITIVE ✓
+
+MARKET REACTION:
+Stock jumps to Rs. 178 next day (+7.8%)
+
+YOUR ACTION:
+------------
+Results are EXCELLENT!
+
+Decision: HOLD and revise targets upward
+- Old target: Rs. 170 (already crossed)
+- New target 1: Rs. 198 (40% from buy price)
+- New target 2: Rs. 212 (50% from buy price)
+- Stop-loss: Move to Rs. 155 (protect profit)
+
+Set alerts:
+- Rs. 198: Consider partial exit
+- Rs. 155: Stop-loss alert
+
+
+COUNTER-SCENARIO: Bad Results
+If results showed:
+- Profit down 10%
+- NPA increased to 2.5%
+- CASA ratio falling
+
+ACTION:
+- Stock would likely fall
+- If fundamentals deteriorating: EXIT immediately
+- Don't wait for stop-loss if trend is bad
+- Book whatever profit available
+
+
+================================================================================
+EXAMPLE 8: USING SCREENER FOR SECTOR ROTATION
+================================================================================
+
+SCENARIO: After 6 months, you notice:
+- Banking sector stocks up 25%
+- IT sector stocks down 15%
+- Market seems to be rotating from banking to IT
+
+STRATEGY: Sector Rotation (Book profits in hot sector, buy cold sector)
+
+STEP 1: CHECK YOUR BANKING STOCK
+Federal Bank:
+- Buy price: Rs. 142
+- Current: Rs. 182 (28% profit)
+- Fundamentals: Still good
+- Valuation: P/E now 11 (was 8.5 at purchase)
+
+STEP 2: RUN IT SECTOR QUERY
+Find: Stocks down 20-30% but fundamentals intact
+Results show: Coforge at Rs. 4,800 (down 25% from Rs. 6,400)
+- Strong quarterly results
+- Good client additions
+- PE now attractive at 18 (was 24 at peak)
+
+STEP 3: ROTATION DECISION
+Option A: Full rotation
+- Sell all Federal Bank: 35 shares at Rs. 182 = Rs. 6,370
+- Buy Coforge: 1 share at Rs. 4,800
+- Cash left: Rs. 1,570
+
+Option B: Partial rotation
+- Sell 50% Federal Bank: 17 shares at Rs. 182 = Rs. 3,094
+- Keep 18 shares Federal Bank (let winners run)
+- Buy Persistent or alternative mid-cap IT
+- More diversification
+
+CHOSEN: Option B (Partial)
+- Book profit on Federal: Rs. 680 (17 shares × Rs. 40 profit)
+- Buy Sonata Software: 5 shares at Rs. 520
+- Diversified across banking + IT
+- Protected some profits
+
+
+================================================================================
+KEY LEARNINGS FROM EXAMPLES
+================================================================================
+
+1. PATIENCE PAYS:
+   Federal Bank: From Rs. 142 to Rs. 182 took 6 months
+   Don't expect overnight riches
+
+2. FUNDAMENTALS MATTER:
+   Averaging down worked because fundamentals were strong
+   Would have failed on weak stock
+
+3. PARTIAL EXITS ARE SMART:
+   Sell 50% at target, let rest run
+   Protects profits while capturing upside
+
+4. STOP-LOSS IS SACRED:
+   If it hits, exit without emotions
+   Saves you from bigger losses
+
+5. QUARTERLY REVIEWS ARE CRITICAL:
+   Results showed Federal was still strong
+   Justified holding despite 28% gain
+
+6. SECTOR ROTATION WORKS:
+   Banking up 25% → Book some profits
+   IT down 15% → Buy opportunity
+
+7. DIVERSIFICATION SAVES:
+   When auto fell, pharma protected portfolio
+   No single stock decides your fate
+
+8. CASH IS A POSITION:
+   Keeping 5-10% cash helps grab opportunities
+   Don't be 100% invested always
+
+
+Follow these examples and adapt to your specific stocks!
+Good luck with your investing journey!

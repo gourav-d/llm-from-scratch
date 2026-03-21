@@ -1,0 +1,254 @@
+================================================================================
+PORTFOLIO TRACKER - INSTRUCTIONS
+================================================================================
+
+Open stock_tracker.csv in Excel/Google Sheets and use these formulas:
+
+COLUMN FORMULAS:
+---------------
+
+Column H (Current Value):
+=G2*C2
+
+Column I (Profit/Loss):
+=H2-F2
+
+Column J (Profit/Loss %):
+=(I2/F2)*100
+
+Column K (Days Held):
+=TODAY()-C2
+
+
+ADDITIONAL SHEETS TO CREATE:
+----------------------------
+
+SHEET 2: PORTFOLIO SUMMARY
+--------------------------
+Total Investment:           =SUM(stock_tracker!F:F)
+Current Portfolio Value:    =SUM(stock_tracker!H:H)
+Total Profit/Loss:          =SUM(stock_tracker!I:I)
+Total Profit/Loss %:        =(Total_PL/Total_Investment)*100
+Cash Available:             20000 - Total_Investment
+
+Asset Allocation:
+Conservative Stocks:        =SUMIF(stock_tracker!M:M,"Long-term",stock_tracker!H:H)
+Swing Trading:              =SUMIF(stock_tracker!M:M,"Swing",stock_tracker!H:H)
+
+Sector Diversification:
+Banking:                    =SUMIF(stock_tracker!B:B,"Banking",stock_tracker!H:H)
+IT:                         =SUMIF(stock_tracker!B:B,"IT",stock_tracker!H:H)
+Pharma:                     =SUMIF(stock_tracker!B:B,"Pharma",stock_tracker!H:H)
+[Add other sectors as needed]
+
+
+SHEET 3: WATCHLIST
+------------------
+Stock Name | Sector | Screener Query Used | Date Added | Target Buy Price | Why Interested | Priority
+
+
+SHEET 4: TRANSACTION LOG
+------------------------
+Date | Type (Buy/Sell) | Stock Name | Quantity | Price | Total Amount | Brokerage | Net Amount | Notes
+
+
+SHEET 5: QUARTERLY REVIEW
+-------------------------
+Stock Name | Q1 Results | Q2 Results | Q3 Results | Q4 Results | Action Required | Review Date
+
+
+SHEET 6: PERFORMANCE ANALYSIS
+-----------------------------
+Month | Portfolio Value | Monthly Return % | Best Performer | Worst Performer | Nifty Return % | Alpha
+
+
+================================================================================
+COLOR CODING SYSTEM (Conditional Formatting)
+================================================================================
+
+Profit/Loss % (Column J):
+- Green: > 10%
+- Light Green: 0% to 10%
+- Light Red: 0% to -10%
+- Dark Red: < -10%
+
+Status (Column N):
+- Green: Active
+- Blue: Monitoring (near target)
+- Yellow: Warning (near stop-loss)
+- Red: Sold
+
+Days Held:
+- Red: < 7 days (too early to judge)
+- Yellow: 7-30 days
+- Green: > 30 days (long-term holding)
+
+
+================================================================================
+WEEKLY REVIEW CHECKLIST
+================================================================================
+
+Every Sunday:
+[ ] Update current prices for all holdings
+[ ] Check if any stock hit stop-loss or target
+[ ] Review news for portfolio companies
+[ ] Check sector rotation trends
+[ ] Identify new opportunities from screener
+[ ] Rebalance if needed (any stock > 40% of portfolio)
+[ ] Update watchlist with new stocks
+
+
+================================================================================
+MONTHLY REVIEW CHECKLIST
+================================================================================
+
+Last day of month:
+[ ] Calculate total portfolio return
+[ ] Compare with Nifty 50 index return
+[ ] Review each stock's performance
+[ ] Check quarterly results (if released)
+[ ] Analyze sector allocation
+[ ] Identify underperformers (sell if fundamentals weak)
+[ ] Plan next month's buys with available cash
+
+
+================================================================================
+RISK METRICS TO TRACK
+================================================================================
+
+1. Portfolio Concentration:
+   Max allocation per stock: 25%
+   Max allocation per sector: 40%
+
+2. Volatility:
+   Track max daily drop in portfolio value
+   If > 10% in a day, review stop-losses
+
+3. Cash Reserve:
+   Always keep 10-15% in cash for opportunities
+
+4. Win Rate:
+   Closed Profitable Trades / Total Closed Trades
+   Target: > 60%
+
+5. Average Holding Period:
+   Long-term: Should be > 6 months
+   Swing: Should be 1-12 weeks
+
+
+================================================================================
+STOCK ANALYSIS TEMPLATE (Add as Sheet 7)
+================================================================================
+
+For each stock before buying, fill this:
+
+STOCK NAME: _______________
+SECTOR: _______________
+MARKET CAP: _______________
+
+FINANCIAL METRICS:
+PE Ratio: _____
+PB Ratio: _____
+Debt to Equity: _____
+ROE: _____
+ROCE: _____
+Profit Growth 3Y: _____
+Sales Growth 3Y: _____
+
+TECHNICAL LEVELS:
+52-Week High: _____
+52-Week Low: _____
+Current Price: _____
+Discount from High: _____%
+Support Level: _____
+Resistance Level: _____
+
+ENTRY PLAN:
+Target Buy Price: _____
+Quantity to Buy: _____
+Investment Amount: _____
+Stop-Loss: _____ (15% below buy price)
+Target 1: _____ (20% profit)
+Target 2: _____ (40% profit)
+
+THESIS:
+Why buying: ________________________________
+Catalysts: ________________________________
+Risk factors: ________________________________
+Time horizon: _____ months/years
+
+QUARTERLY TRACKING:
+Q1: _____ (Revenue/Profit)
+Q2: _____
+Q3: _____
+Q4: _____
+
+
+================================================================================
+AUTOMATED ALERTS SETUP (Manual Tracking)
+================================================================================
+
+Set price alerts in your broker app for:
+
+1. Stop-Loss Alert:
+   - Triggered when stock falls 12% (before 15% stop-loss)
+
+2. Target Alert:
+   - Triggered at 18% profit (before 20% target)
+
+3. Weekly High Alert:
+   - Helps identify swing trading exits
+
+4. Support Level Alert:
+   - For averaging down opportunities
+
+
+================================================================================
+TAX PLANNING NOTES
+================================================================================
+
+Long-Term Capital Gains (LTCG):
+- Holding period: > 12 months
+- Tax: 12.5% above Rs. 1.25 lakh profit per year
+- Strategy: Plan exit to optimize tax
+
+Short-Term Capital Gains (STCG):
+- Holding period: < 12 months
+- Tax: 20%
+- For swing trades, factor this into profit calculations
+
+Dividend Income:
+- Added to your income, taxed as per slab
+
+Tip: Keep track of holding period for each stock
+
+
+================================================================================
+SAMPLE PORTFOLIO ALLOCATION (Rs. 20,000)
+================================================================================
+
+CONSERVATIVE APPROACH:
+Stock 1 (Banking - Large Cap):      Rs. 6,000 (30%)
+Stock 2 (FMCG - Large Cap):         Rs. 5,000 (25%)
+Stock 3 (Pharma - Mid Cap):         Rs. 4,000 (20%)
+Stock 4 (IT - Mid Cap):             Rs. 3,000 (15%)
+Cash Reserve:                        Rs. 2,000 (10%)
+
+BALANCED APPROACH:
+Stock 1 (Banking - Mid Cap):        Rs. 5,000 (25%)
+Stock 2 (Chemicals - Mid Cap):      Rs. 4,000 (20%)
+Stock 3 (Auto Components):          Rs. 4,000 (20%)
+Stock 4 (Infrastructure):           Rs. 3,500 (17.5%)
+Swing Trading Position:             Rs. 2,500 (12.5%)
+Cash Reserve:                        Rs. 1,000 (5%)
+
+GROWTH APPROACH:
+Stock 1 (Mid Cap - High Growth):    Rs. 5,000 (25%)
+Stock 2 (Mid Cap - High Growth):    Rs. 4,000 (20%)
+Stock 3 (Small Cap - Growth):       Rs. 3,500 (17.5%)
+Swing Trade 1:                       Rs. 3,500 (17.5%)
+Swing Trade 2:                       Rs. 3,000 (15%)
+Cash Reserve:                        Rs. 1,000 (5%)
+
+
+Good luck with your investing journey!

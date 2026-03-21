@@ -1,0 +1,803 @@
+ # Indian share market is down. I would like to find the good stocks which are available on cheap or discounted price.
+To identify the stock, there is an app called "Screener". I would like to create a query which list out the cheap,
+discounted, good, safe stocks. I use that query  to filterout the stock for the investment.
+
+# I have low budget for the investment...like Rs. 20,000
+# I want to be safe investment
+# I am long term investor of 5 year.
+# I am also swind trader
+
+● I'll help you create a Screener query to find undervalued, safe stocks suitable for your budget and investment style.
+
+  Recommended Screener Query for Safe, Discounted Stocks
+
+  Here's a comprehensive query for screener.in:
+
+  Market Capitalization > 500 AND
+  Market Capitalization < 10000 AND
+  PE < 15 AND
+  Price to Book Value < 2 AND
+  Debt to Equity < 1 AND
+  Return on Equity > 15% AND
+  Sales growth 3Years > 8% AND
+  Profit growth 3Years > 10% AND
+  Interest Coverage Ratio > 3 AND
+  Current Price < 52 Week High * 0.7 AND
+  Dividend Yield > 1% AND
+  Price > 20
+
+  What Each Criteria Means:
+
+  1. Market Cap 500-10,000 Cr: Mid-cap range - safer than small caps, better growth than large caps
+  2. PE < 15: Stock is trading cheap compared to earnings
+  3. P/B < 2: Trading below or near book value (discounted)
+  4. Debt to Equity < 1: Low debt = safer company
+  5. ROE > 15%: Company efficiently generates profits
+  6. Sales/Profit Growth > 8-10%: Consistent business growth
+  7. Interest Coverage > 3: Can easily pay debt obligations
+  8. Current Price < 70% of 52-week high: Stock has fallen 30%+ (discount indicator)
+  9. Dividend Yield > 1%: Provides some income while you wait
+  10. Price > Rs. 20: Avoids penny stocks (too risky)
+
+  For Swing Trading Variation:
+
+  If you want stocks with better price movement for swing trading, modify:
+
+  Market Capitalization > 1000 AND
+  Market Capitalization < 15000 AND
+  PE < 20 AND
+  Return on Equity > 12% AND
+  Debt to Equity < 1.5 AND
+  Average Volume > 100000 AND
+  Current Price < 52 Week High * 0.75 AND
+  Price > 50 AND
+  Price < 1000
+
+  Investment Strategy with Rs. 20,000:
+
+  1. Diversify: Buy 3-4 stocks (Rs. 5,000 each) to reduce risk
+  2. Avoid very low-priced stocks: Stick to Rs. 50+ to avoid junk
+  3. Check manually: After screening, read annual reports and quarterly results
+  4. Set stop-loss: For swing trades, use 7-10% stop-loss
+  5. SIP approach: If possible, invest in tranches rather than all at once
+
+  Additional Filters to Consider:
+
+  - Promoter Holding > 50%: Skin in the game
+  - No promoter pledge: Safer management
+  - ROCE > 15%: Capital efficiency
+  - Operating Cash Flow > 0: Real cash generation
+
+  Would you like me to:
+  1. Create a more aggressive or conservative version?
+  2. Help you analyze specific sectors (banking, pharma, IT, etc.)?
+  3. Build a tracking spreadsheet for the filtered stocks?
+
+✻ Worked for 32s
+
+> do all
+
+● I'll create comprehensive screener queries for different risk profiles, sector-specific filters, and a tracking
+  spreadsheet for you.
+
+● Write(screener_queries.txt)
+
+● Write(stock_tracker.csv)
+
+● Write(portfolio_management.xlsx.txt)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Create file
+ screener_queries.txt
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+ ================================================================================
+ SCREENER.IN QUERIES FOR INDIAN STOCK MARKET
+ Budget: Rs. 20,000 | Investment Horizon: 5 Years | Style: Long-term + Swing Trading
+ ================================================================================
+
+ ================================================================================
+ 1. CONSERVATIVE (SAFEST - For 60% of your portfolio)
+ ================================================================================
+ Best for: Core long-term holdings, sleep-well-at-night stocks
+
+ Query:
+ ------
+ Market Capitalization > 2000 AND
+ Market Capitalization < 50000 AND
+ PE < 12 AND
+ Price to Book Value < 1.5 AND
+ Debt to Equity < 0.5 AND
+ Return on Equity > 18% AND
+ Return on Capital Employed > 20% AND
+ Sales growth 3Years > 10% AND
+ Profit growth 3Years > 12% AND
+ Interest Coverage Ratio > 5 AND
+ Current Price < 52 Week High * 0.65 AND
+ Dividend Yield > 2% AND
+ Promoter holding > 50% AND
+ Promoter holding pledged percentage = 0 AND
+ Operating Profit Margin > 15% AND
+ Price > 50
+
+ Characteristics:
+ - Large-cap to upper mid-cap stocks
+ - Very low debt (safe in downturns)
+ - Proven track record (high ROE & ROCE)
+ - Promoters committed (no pledging)
+ - Good dividend for passive income
+ - Stock down 35%+ from peak (discounted)
+
+
+ ================================================================================
+ 2. BALANCED (RECOMMENDED - For 70% of portfolio)
+ ================================================================================
+ Best for: Good balance of safety and growth potential
+
+ Query:
+ ------
+ Market Capitalization > 500 AND
+ Market Capitalization < 10000 AND
+ PE < 15 AND
+ Price to Book Value < 2 AND
+ Debt to Equity < 1 AND
+ Return on Equity > 15% AND
+ Return on Capital Employed > 15% AND
+ Sales growth 3Years > 8% AND
+ Profit growth 3Years > 10% AND
+ Interest Coverage Ratio > 3 AND
+ Current Price < 52 Week High * 0.7 AND
+ Dividend Yield > 1% AND
+ Promoter holding > 40% AND
+ Operating Profit Margin > 10% AND
+ Price > 20 AND
+ Price < 2000
+
+ Characteristics:
+ - Mid-cap stocks with growth potential
+ - Reasonable valuations (not overpriced)
+ - Healthy financials (low debt, good margins)
+ - Stock down 30%+ from peak
+ - Affordable for small investors
+
+
+ ================================================================================
+ 3. AGGRESSIVE (HIGHER RISK - Max 30% of portfolio)
+ ================================================================================
+ Best for: Swing trading and higher growth potential
+
+ Query:
+ ------
+ Market Capitalization > 300 AND
+ Market Capitalization < 5000 AND
+ PE < 20 AND
+ Price to Book Value < 3 AND
+ Debt to Equity < 1.5 AND
+ Return on Equity > 12% AND
+ Sales growth 3Years > 15% AND
+ Profit growth 3Years > 20% AND
+ Interest Coverage Ratio > 2 AND
+ Current Price < 52 Week High * 0.75 AND
+ Average Volume > 50000 AND
+ Promoter holding > 30% AND
+ Price > 30 AND
+ Price < 1500
+
+ Characteristics:
+ - Smaller mid-cap stocks (higher volatility)
+ - Fast-growing companies (>20% profit growth)
+ - Better for swing trading (good volume)
+ - More upside potential, more risk
+ - Stock down 25%+ from peak
+
+
+ ================================================================================
+ 4. SWING TRADING SPECIFIC
+ ================================================================================
+ Best for: Short to medium-term trades (1 week to 3 months)
+
+ Query:
+ ------
+ Market Capitalization > 1000 AND
+ Market Capitalization < 20000 AND
+ PE < 25 AND
+ Return on Equity > 10% AND
+ Debt to Equity < 2 AND
+ Average Volume > 100000 AND
+ Current Price < 52 Week High * 0.8 AND
+ Price > 50 AND
+ Price < 1000 AND
+ Operating Profit Margin > 8%
+
+ Additional Manual Checks for Swing Trading:
+ - Check RSI (below 40 is oversold - good entry)
+ - Check MACD crossover signals
+ - Look for stocks near support levels
+ - Avoid stocks in strong downtrend
+ - Set 7-10% stop-loss
+ - Target 15-20% profit for swing trades
+
+
+ ================================================================================
+ 5. SECTOR-SPECIFIC QUERIES
+ ================================================================================
+
+ A. BANKING & FINANCIAL SERVICES
+ --------------------------------
+ Market Capitalization > 1000 AND
+ Market Capitalization < 30000 AND
+ PE < 12 AND
+ Price to Book Value < 1.5 AND
+ Return on Assets > 1% AND
+ Gross NPA < 3% AND
+ Net NPA < 1% AND
+ Current Price < 52 Week High * 0.7 AND
+ Dividend Yield > 1.5% AND
+ Price > 50
+
+ Key Metrics for Banks:
+ - NPA (Non-Performing Assets): Lower is better
+ - ROA (Return on Assets): Should be >1% for banks
+ - CASA Ratio: Higher is better (check manually)
+
+
+ B. PHARMACEUTICALS
+ ------------------
+ Market Capitalization > 500 AND
+ Market Capitalization < 15000 AND
+ PE < 18 AND
+ Debt to Equity < 0.8 AND
+ Return on Equity > 18% AND
+ Operating Profit Margin > 20% AND
+ Sales growth 3Years > 12% AND
+ Current Price < 52 Week High * 0.7 AND
+ Price > 50 AND
+ Price < 3000
+
+ What to Check Manually:
+ - US FDA approvals (growth catalyst)
+ - Export revenue percentage
+ - R&D spending (should be 8-10% of sales)
+ - Patent expiry risks
+
+
+ C. IT & SOFTWARE
+ ----------------
+ Market Capitalization > 1000 AND
+ Market Capitalization < 25000 AND
+ PE < 20 AND
+ Debt to Equity < 0.3 AND
+ Return on Equity > 20% AND
+ Operating Profit Margin > 18% AND
+ Sales growth 3Years > 10% AND
+ Current Price < 52 Week High * 0.7 AND
+ Price > 50
+
+ What to Check:
+ - Client concentration (diversified is safer)
+ - Attrition rate (lower is better)
+ - Dollar revenue growth
+ - Digital transformation deals
+
+
+ D. FMCG (Fast Moving Consumer Goods)
+ ------------------------------------
+ Market Capitalization > 1000 AND
+ Market Capitalization < 20000 AND
+ PE < 25 AND
+ Debt to Equity < 0.5 AND
+ Return on Equity > 25% AND
+ Operating Profit Margin > 12% AND
+ Sales growth 3Years > 8% AND
+ Dividend Yield > 1.5% AND
+ Current Price < 52 Week High * 0.7 AND
+ Price > 100
+
+ Key Points:
+ - FMCG stocks are typically expensive (higher PE)
+ - Very stable and defensive
+ - Good for conservative investors
+ - Strong brand moats
+
+
+ E. AUTOMOBILE & AUTO COMPONENTS
+ -------------------------------
+ Market Capitalization > 500 AND
+ Market Capitalization < 15000 AND
+ PE < 15 AND
+ Debt to Equity < 1.2 AND
+ Return on Equity > 12% AND
+ Sales growth 3Years > 8% AND
+ Current Price < 52 Week High * 0.65 AND
+ Price > 30
+
+ What to Check:
+ - EV transition plans
+ - Export revenue
+ - OEM vs. replacement market mix
+ - Margin trends (commodity price impact)
+
+
+ F. INFRASTRUCTURE & CONSTRUCTION
+ --------------------------------
+ Market Capitalization > 800 AND
+ Market Capitalization < 12000 AND
+ PE < 18 AND
+ Debt to Equity < 1.5 AND
+ Return on Equity > 15% AND
+ Sales growth 3Years > 15% AND
+ Current Price < 52 Week High * 0.7 AND
+ Interest Coverage Ratio > 2.5 AND
+ Price > 40
+
+ Key Checks:
+ - Order book to revenue ratio (>2x is good)
+ - Execution track record
+ - Government projects exposure
+ - Working capital cycle
+
+
+ G. CHEMICALS & SPECIALTY CHEMICALS
+ ----------------------------------
+ Market Capitalization > 500 AND
+ Market Capitalization < 10000 AND
+ PE < 20 AND
+ Debt to Equity < 1 AND
+ Return on Equity > 18% AND
+ Operating Profit Margin > 15% AND
+ Sales growth 3Years > 15% AND
+ Current Price < 52 Week High * 0.7 AND
+ Price > 50
+
+ Focus Areas:
+ - China+1 beneficiaries
+ - Specialty vs. commodity chemicals
+ - Long-term customer contracts
+ - Environmental compliance
+
+
+ H. METALS & MINING
+ ------------------
+ Market Capitalization > 1000 AND
+ Market Capitalization < 20000 AND
+ PE < 10 AND
+ Debt to Equity < 0.8 AND
+ Return on Equity > 12% AND
+ Current Price < 52 Week High * 0.6 AND
+ Price > 50
+
+ Cyclical Sector - Use with Caution:
+ - Check commodity price trends
+ - Look for cost leadership
+ - Integrated players are safer
+ - Best bought in downturns
+
+
+ ================================================================================
+ 6. SPECIAL SITUATIONS
+ ================================================================================
+
+ A. DIVIDEND ARISTOCRATS (For Income + Growth)
+ ---------------------------------------------
+ Market Capitalization > 1000 AND
+ Dividend Yield > 3% AND
+ Debt to Equity < 0.8 AND
+ Return on Equity > 15% AND
+ Operating Profit Margin > 12% AND
+ Current Price < 52 Week High * 0.7 AND
+ Price > 50
+
+ Check: 5+ years of consistent dividend payments
+
+
+ B. TURNAROUND CANDIDATES (Higher Risk)
+ --------------------------------------
+ Market Capitalization > 500 AND
+ Market Capitalization < 8000 AND
+ PE < 15 AND
+ Debt to Equity < 2 AND
+ Sales growth 3Years < 5% AND
+ Quarterly profit growth > 25% AND
+ Current Price < 52 Week High * 0.5 AND
+ Price > 20
+
+ Warning: Check WHY stock fell, ensure turnaround is real
+
+
+ C. EXPORT-ORIENTED (Dollar Earnings)
+ ------------------------------------
+ Market Capitalization > 500 AND
+ PE < 18 AND
+ Debt to Equity < 1 AND
+ Return on Equity > 15% AND
+ Operating Profit Margin > 12% AND
+ Current Price < 52 Week High * 0.7 AND
+ Price > 50
+
+ Manually Check: >50% revenue from exports
+
+
+ ================================================================================
+ HOW TO USE THESE QUERIES
+ ================================================================================
+
+ STEP 1: Go to screener.in
+ STEP 2: Click "Create New Screen"
+ STEP 3: Copy-paste the query that matches your goal
+ STEP 4: Run the query and get the list
+
+ STEP 5: MANUAL CHECKS (CRITICAL!)
+ ---------------------------------
+ For each stock in results:
+ 1. Read latest quarterly results (Q3 or Q4)
+ 2. Check promoter holding trend (increasing is good)
+ 3. Read management commentary
+ 4. Check any recent news/controversies
+ 5. Verify no major pending litigations
+ 6. Check pledging percentage (0% is best)
+ 7. Look at price chart for support/resistance
+
+ STEP 6: PORTFOLIO CONSTRUCTION (For Rs. 20,000)
+ -----------------------------------------------
+ Option A (Conservative):
+ - 2-3 conservative stocks: Rs. 15,000 (Rs. 5,000-7,500 each)
+ - 1-2 balanced stocks: Rs. 5,000 (Rs. 2,500 each)
+
+ Option B (Balanced):
+ - 3-4 balanced stocks: Rs. 15,000 (Rs. 3,750-5,000 each)
+ - 1 aggressive/swing: Rs. 5,000
+
+ Option C (Growth-Focused):
+ - 2 balanced stocks: Rs. 10,000 (Rs. 5,000 each)
+ - 2-3 aggressive stocks: Rs. 10,000 (Rs. 3,333-5,000 each)
+
+
+ ================================================================================
+ RISK MANAGEMENT RULES
+ ================================================================================
+
+ 1. NEVER put all money in one stock
+ 2. SET stop-loss at 15% for long-term, 7-10% for swing trades
+ 3. REBALANCE if any stock exceeds 40% of portfolio
+ 4. REVIEW quarterly results - sell if fundamentals deteriorate
+ 5. AVOID stocks with pledged promoter holdings
+ 6. DON'T buy if you don't understand the business
+ 7. KEEP 10-15% cash for averaging down or opportunities
+
+
+ ================================================================================
+ SWING TRADING TIPS (For 20-30% of your Rs. 20,000)
+ ================================================================================
+
+ 1. Entry Signals:
+    - Stock in uptrend but pulling back
+    - RSI between 30-40 (oversold)
+    - Positive MACD crossover
+    - Breaking above resistance with volume
+
+ 2. Exit Signals:
+    - Hit 15-20% profit target
+    - 7-10% stop-loss triggered
+    - RSI above 70 (overbought)
+    - Negative divergence
+
+ 3. Position Sizing:
+    - Max Rs. 5,000 per swing trade
+    - Trade only 1-2 stocks at a time
+    - Never average down on swing trades
+
+ 4. Best Timeframe:
+    - Hold 1 week to 3 months
+    - Use daily charts for analysis
+    - Avoid trading during results season
+
+
+ ================================================================================
+ RED FLAGS - AVOID THESE STOCKS
+ ================================================================================
+
+ 1. Pledged promoter holding > 20%
+ 2. Declining promoter holding for 2+ quarters
+ 3. Debt to Equity > 3 (except banks)
+ 4. Negative cash flow from operations
+ 5. Auditor qualifications in annual report
+ 6. Frequent related-party transactions
+ 7. Promoter/management legal issues
+ 8. Penny stocks < Rs. 10
+ 9. Stocks with trading restrictions/T2T segment
+ 10. Very low liquidity (avg. volume < 10,000)
+
+
+ ================================================================================
+ FINAL CHECKLIST BEFORE BUYING
+ ================================================================================
+
+ [ ] Stock passed screener query
+ [ ] Checked last 3 quarterly results
+ [ ] Read management commentary
+ [ ] Promoter holding > 40% and not pledged
+ [ ] No major red flags in news
+ [ ] Understood the business model
+ [ ] Checked price support levels
+ [ ] Calculated position size (max 25% of portfolio)
+ [ ] Set stop-loss price
+ [ ] Set target price (at least 2:1 reward:risk)
+ [ ] Diversified across sectors
+ [ ] Kept emergency cash reserve
+
+
+ ================================================================================
+ USEFUL SCREENER.IN TIPS
+ ================================================================================
+
+ 1. Save your favorite queries for quick access
+ 2. Set up alerts when stocks meet your criteria
+ 3. Export results to Excel for comparison
+ 4. Use "Compare" feature for shortlisted stocks
+ 5. Check "Peers" tab to find similar companies
+ 6. Use "Quarterly Results" for recent performance
+ 7. Download annual reports from "Documents" section
+
+
+ Good luck with your investing! Remember: Patience and discipline beat timing.
+
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+ Do you want to create screener_queries.txt?
+   1. Yes
+ > 2. Yes, allow all edits during this session (shift+tab)
+   3. No
+
+ Esc to cancel
+╭─── Claude Code v2.1.79 ───────────────────────────────────────────────────────────────────╮
+│                                    │ Tips for getting started                             │
+│            Welcome back!           │ Ask Claude to create a new app or clone a repository │
+│                                    │ ──────────────────────────────────────────────────── │
+│               ▐▛███▜▌              │ Recent activity                                      │
+│              ▝▜█████▛▘             │ No recent activity                                   │
+│                ▘▘ ▝▝               │                                                      │
+│                                    │                                                      │
+│   Sonnet 4.5 · API Usage Billing   │                                                      │
+│           C:\Temp\stock            │                                                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+
+> # Indian share market is down. I would like to find the good stocks which are available on cheap or discounted price.
+To identify the stock, there is an app called "Screener". I would like to create a query which list out the cheap,
+discounted, good, safe stocks. I use that query  to filterout the stock for the investment.
+
+# I have low budget for the investment...like Rs. 20,000
+# I want to be safe investment
+# I am long term investor of 5 year.
+# I am also swind trader
+
+● I'll help you create a Screener query to find undervalued, safe stocks suitable for your budget and investment style.
+
+  Recommended Screener Query for Safe, Discounted Stocks
+
+  Here's a comprehensive query for screener.in:
+
+  Market Capitalization > 500 AND
+  Market Capitalization < 10000 AND
+  PE < 15 AND
+  Price to Book Value < 2 AND
+  Debt to Equity < 1 AND
+  Return on Equity > 15% AND
+  Sales growth 3Years > 8% AND
+  Profit growth 3Years > 10% AND
+  Interest Coverage Ratio > 3 AND
+  Current Price < 52 Week High * 0.7 AND
+  Dividend Yield > 1% AND
+  Price > 20
+
+  What Each Criteria Means:
+
+  1. Market Cap 500-10,000 Cr: Mid-cap range - safer than small caps, better growth than large caps
+  2. PE < 15: Stock is trading cheap compared to earnings
+  3. P/B < 2: Trading below or near book value (discounted)
+  4. Debt to Equity < 1: Low debt = safer company
+  5. ROE > 15%: Company efficiently generates profits
+  6. Sales/Profit Growth > 8-10%: Consistent business growth
+  7. Interest Coverage > 3: Can easily pay debt obligations
+  8. Current Price < 70% of 52-week high: Stock has fallen 30%+ (discount indicator)
+  9. Dividend Yield > 1%: Provides some income while you wait
+  10. Price > Rs. 20: Avoids penny stocks (too risky)
+
+  For Swing Trading Variation:
+
+  If you want stocks with better price movement for swing trading, modify:
+
+  Market Capitalization > 1000 AND
+  Market Capitalization < 15000 AND
+  PE < 20 AND
+  Return on Equity > 12% AND
+  Debt to Equity < 1.5 AND
+  Average Volume > 100000 AND
+  Current Price < 52 Week High * 0.75 AND
+  Price > 50 AND
+  Price < 1000
+
+  Investment Strategy with Rs. 20,000:
+
+  1. Diversify: Buy 3-4 stocks (Rs. 5,000 each) to reduce risk
+  2. Avoid very low-priced stocks: Stick to Rs. 50+ to avoid junk
+  3. Check manually: After screening, read annual reports and quarterly results
+  4. Set stop-loss: For swing trades, use 7-10% stop-loss
+  5. SIP approach: If possible, invest in tranches rather than all at once
+
+  Additional Filters to Consider:
+
+  - Promoter Holding > 50%: Skin in the game
+  - No promoter pledge: Safer management
+  - ROCE > 15%: Capital efficiency
+  - Operating Cash Flow > 0: Real cash generation
+
+  Would you like me to:
+  1. Create a more aggressive or conservative version?
+  2. Help you analyze specific sectors (banking, pharma, IT, etc.)?
+  3. Build a tracking spreadsheet for the filtered stocks?
+
+✻ Worked for 32s
+
+> do all
+
+● I'll create comprehensive screener queries for different risk profiles, sector-specific filters, and a tracking
+  spreadsheet for you.
+
+● Write(screener_queries.txt)
+  ⎿  Wrote 449 lines to screener_queries.txt
+     ================================================================================
+     SCREENER.IN QUERIES FOR INDIAN STOCK MARKET
+     Budget: Rs. 20,000 | Investment Horizon: 5 Years | Style: Long-term + Swing Trading
+     ================================================================================
+
+     ================================================================================
+     1. CONSERVATIVE (SAFEST - For 60% of your portfolio)
+     ================================================================================
+     Best for: Core long-term holdings, sleep-well-at-night stocks
+
+     … +439 lines (ctrl+o to expand)
+
+● Write(stock_tracker.csv)
+  ⎿  Wrote 2 lines to stock_tracker.csv
+     Stock Name,Sector,Buy Date,Buy Price,Quantity,Total Investment,Current Price,Current
+     Value,Profit/Loss,Profit/Loss %,Stop Loss Price,Target Price,Strategy,Status,Notes
+     Example Stock Ltd,IT,2026-03-19,250,20,5000,250,5000,0,0.00%,225,325,Long-term,Active,Demo entry
+
+
+● Write(portfolio_management.xlsx.txt)
+  ⎿  Wrote 254 lines to portfolio_management.xlsx.txt
+     ================================================================================
+     PORTFOLIO TRACKER - INSTRUCTIONS
+     ================================================================================
+
+     Open stock_tracker.csv in Excel/Google Sheets and use these formulas:
+
+     COLUMN FORMULAS:
+     ---------------
+
+     Column H (Current Value):
+     … +244 lines (ctrl+o to expand)
+
+● Write(quick_reference_guide.txt)
+  ⎿  Wrote 325 lines to quick_reference_guide.txt
+     ================================================================================
+     QUICK REFERENCE GUIDE - STOCK INVESTMENT CHECKLIST
+     ================================================================================
+
+     BEFORE BUYING ANY STOCK - THE 5-MINUTE CHECK:
+     ==============================================
+
+     1. FINANCIALS (30 seconds):
+        [ ] PE < 15 (not overvalued)
+        [ ] Debt/Equity < 1 (low debt)
+     … +315 lines (ctrl+o to expand)
+
+● Write(sector_analysis_templates.txt)
+  ⎿  Wrote 652 lines to sector_analysis_templates.txt
+     ================================================================================
+     SECTOR-WISE STOCK ANALYSIS TEMPLATES
+     ================================================================================
+
+     Use these templates to analyze stocks from each sector systematically.
+     Fill out before making any purchase decision.
+
+
+     ================================================================================
+     TEMPLATE 1: BANKING & FINANCIAL SERVICES
+     … +642 lines (ctrl+o to expand)
+
+● Write(practical_examples.txt)
+  ⎿  Wrote 550 lines to practical_examples.txt
+     ================================================================================
+     PRACTICAL EXAMPLES - HOW TO USE THE SCREENER QUERIES
+     ================================================================================
+
+     This file contains step-by-step examples of how to find and analyze stocks
+     using the queries provided. Follow along to understand the complete process.
+
+
+     ================================================================================
+     EXAMPLE 1: FINDING A SAFE BANKING STOCK FOR LONG-TERM
+     … +540 lines (ctrl+o to expand)
+
+● Write(START_HERE.txt)
+  ⎿  Wrote 456 lines to START_HERE.txt
+     ================================================================================
+     START HERE - YOUR COMPLETE STOCK INVESTMENT GUIDE
+     ================================================================================
+
+     Welcome! This folder contains everything you need to invest Rs. 20,000 safely
+     in the Indian stock market for long-term wealth creation (5 years) with some
+     swing trading opportunities.
+
+     Your Profile:
+     - Budget: Rs. 20,000
+     … +446 lines (ctrl+o to expand)
+
+● Complete! Created Your Stock Investment Package
+
+  I've created 7 comprehensive files in C:\Temp\stock\ to help you find safe, discounted stocks with your Rs. 20,000
+  budget:
+
+  📁 Files Created:
+
+  1. START_HERE.txt ⭐ - Your complete roadmap
+    - 7-day action plan for beginners
+    - Quick 2-hour express version
+    - Safety checklists and common mistakes
+  2. screener_queries.txt - Ready-to-use Screener.in queries
+    - Conservative (safest stocks)
+    - Balanced (recommended for you)
+    - Aggressive (higher risk/reward)
+    - Swing trading specific
+    - 8 Sector-specific queries (Banking, IT, Pharma, FMCG, Auto, Chemicals, Infrastructure, Metals)
+    - Special situations (Dividend stocks, Turnarounds, Export-oriented)
+  3. quick_reference_guide.txt - Quick cheat sheet
+    - 5-minute check before buying any stock
+    - Stop-loss & target calculations
+    - Position sizing formulas
+    - Daily/weekly/monthly routines
+  4. stock_tracker.csv - Your portfolio tracker
+    - Open in Excel to track investments
+    - Pre-formatted columns for profit/loss tracking
+  5. portfolio_management.xlsx.txt - Excel setup instructions
+    - Formulas for automatic calculations
+    - Multiple sheets setup guide
+    - Performance analysis templates
+  6. sector_analysis_templates.txt - Deep-dive templates
+    - 8 sector-specific analysis frameworks
+    - What metrics to check for each sector
+    - Red flags specific to each industry
+  7. practical_examples.txt - Real scenarios
+    - Step-by-step examples
+    - Decision-making walkthroughs
+    - Monthly monitoring examples
+
+  🎯 Quick Start (Copy-Paste This Query Now):
+
+  Go to screener.in and paste:
+
+  Market Capitalization > 500 AND
+  Market Capitalization < 10000 AND
+  PE < 15 AND
+  Price to Book Value < 2 AND
+  Debt to Equity < 1 AND
+  Return on Equity > 15% AND
+  Current Price < 52 Week High * 0.7 AND
+  Dividend Yield > 1% AND
+  Price > 20
+
+  This will show you mid-cap stocks that are:
+  - Down 30%+ from peak (discounted!)
+  - Financially healthy (low debt)
+  - Profitable (ROE > 15%)
+  - Affordable (>Rs. 20)
+
+  💡 Recommended Portfolio for Rs. 20,000:
+
+  - Banking stock: Rs. 5,000 (25%)
+  - IT stock: Rs. 4,000 (20%)
+  - Pharma stock: Rs. 4,000 (20%)
+  - FMCG stock: Rs. 3,500 (17.5%)
+  - Swing trade: Rs. 2,500 (12.5%)
+  - Cash reserve: Rs. 1,000 (5%)
+
+  Each file has detailed instructions. Start with START_HERE.txt for your 7-day action plan!

@@ -1,0 +1,449 @@
+================================================================================
+SCREENER.IN QUERIES FOR INDIAN STOCK MARKET
+Budget: Rs. 20,000 | Investment Horizon: 5 Years | Style: Long-term + Swing Trading
+================================================================================
+
+================================================================================
+1. CONSERVATIVE (SAFEST - For 60% of your portfolio)
+================================================================================
+Best for: Core long-term holdings, sleep-well-at-night stocks
+
+Query:
+------
+Market Capitalization > 2000 AND
+Market Capitalization < 50000 AND
+PE < 12 AND
+Price to Book Value < 1.5 AND
+Debt to Equity < 0.5 AND
+Return on Equity > 18% AND
+Return on Capital Employed > 20% AND
+Sales growth 3Years > 10% AND
+Profit growth 3Years > 12% AND
+Interest Coverage Ratio > 5 AND
+Current Price < 52 Week High * 0.65 AND
+Dividend Yield > 2% AND
+Promoter holding > 50% AND
+Promoter holding pledged percentage = 0 AND
+Operating Profit Margin > 15% AND
+Price > 50
+
+Characteristics:
+- Large-cap to upper mid-cap stocks
+- Very low debt (safe in downturns)
+- Proven track record (high ROE & ROCE)
+- Promoters committed (no pledging)
+- Good dividend for passive income
+- Stock down 35%+ from peak (discounted)
+
+
+================================================================================
+2. BALANCED (RECOMMENDED - For 70% of portfolio)
+================================================================================
+Best for: Good balance of safety and growth potential
+
+Query:
+------
+Market Capitalization > 500 AND
+Market Capitalization < 10000 AND
+PE < 15 AND
+Price to Book Value < 2 AND
+Debt to Equity < 1 AND
+Return on Equity > 15% AND
+Return on Capital Employed > 15% AND
+Sales growth 3Years > 8% AND
+Profit growth 3Years > 10% AND
+Interest Coverage Ratio > 3 AND
+Current Price < 52 Week High * 0.7 AND
+Dividend Yield > 1% AND
+Promoter holding > 40% AND
+Operating Profit Margin > 10% AND
+Price > 20 AND
+Price < 2000
+
+Characteristics:
+- Mid-cap stocks with growth potential
+- Reasonable valuations (not overpriced)
+- Healthy financials (low debt, good margins)
+- Stock down 30%+ from peak
+- Affordable for small investors
+
+
+================================================================================
+3. AGGRESSIVE (HIGHER RISK - Max 30% of portfolio)
+================================================================================
+Best for: Swing trading and higher growth potential
+
+Query:
+------
+Market Capitalization > 300 AND
+Market Capitalization < 5000 AND
+PE < 20 AND
+Price to Book Value < 3 AND
+Debt to Equity < 1.5 AND
+Return on Equity > 12% AND
+Sales growth 3Years > 15% AND
+Profit growth 3Years > 20% AND
+Interest Coverage Ratio > 2 AND
+Current Price < 52 Week High * 0.75 AND
+Average Volume > 50000 AND
+Promoter holding > 30% AND
+Price > 30 AND
+Price < 1500
+
+Characteristics:
+- Smaller mid-cap stocks (higher volatility)
+- Fast-growing companies (>20% profit growth)
+- Better for swing trading (good volume)
+- More upside potential, more risk
+- Stock down 25%+ from peak
+
+
+================================================================================
+4. SWING TRADING SPECIFIC
+================================================================================
+Best for: Short to medium-term trades (1 week to 3 months)
+
+Query:
+------
+Market Capitalization > 1000 AND
+Market Capitalization < 20000 AND
+PE < 25 AND
+Return on Equity > 10% AND
+Debt to Equity < 2 AND
+Average Volume > 100000 AND
+Current Price < 52 Week High * 0.8 AND
+Price > 50 AND
+Price < 1000 AND
+Operating Profit Margin > 8%
+
+Additional Manual Checks for Swing Trading:
+- Check RSI (below 40 is oversold - good entry)
+- Check MACD crossover signals
+- Look for stocks near support levels
+- Avoid stocks in strong downtrend
+- Set 7-10% stop-loss
+- Target 15-20% profit for swing trades
+
+
+================================================================================
+5. SECTOR-SPECIFIC QUERIES
+================================================================================
+
+A. BANKING & FINANCIAL SERVICES
+--------------------------------
+Market Capitalization > 1000 AND
+Market Capitalization < 30000 AND
+PE < 12 AND
+Price to Book Value < 1.5 AND
+Return on Assets > 1% AND
+Gross NPA < 3% AND
+Net NPA < 1% AND
+Current Price < 52 Week High * 0.7 AND
+Dividend Yield > 1.5% AND
+Price > 50
+
+Key Metrics for Banks:
+- NPA (Non-Performing Assets): Lower is better
+- ROA (Return on Assets): Should be >1% for banks
+- CASA Ratio: Higher is better (check manually)
+
+
+B. PHARMACEUTICALS
+------------------
+Market Capitalization > 500 AND
+Market Capitalization < 15000 AND
+PE < 18 AND
+Debt to Equity < 0.8 AND
+Return on Equity > 18% AND
+Operating Profit Margin > 20% AND
+Sales growth 3Years > 12% AND
+Current Price < 52 Week High * 0.7 AND
+Price > 50 AND
+Price < 3000
+
+What to Check Manually:
+- US FDA approvals (growth catalyst)
+- Export revenue percentage
+- R&D spending (should be 8-10% of sales)
+- Patent expiry risks
+
+
+C. IT & SOFTWARE
+----------------
+Market Capitalization > 1000 AND
+Market Capitalization < 25000 AND
+PE < 20 AND
+Debt to Equity < 0.3 AND
+Return on Equity > 20% AND
+Operating Profit Margin > 18% AND
+Sales growth 3Years > 10% AND
+Current Price < 52 Week High * 0.7 AND
+Price > 50
+
+What to Check:
+- Client concentration (diversified is safer)
+- Attrition rate (lower is better)
+- Dollar revenue growth
+- Digital transformation deals
+
+
+D. FMCG (Fast Moving Consumer Goods)
+------------------------------------
+Market Capitalization > 1000 AND
+Market Capitalization < 20000 AND
+PE < 25 AND
+Debt to Equity < 0.5 AND
+Return on Equity > 25% AND
+Operating Profit Margin > 12% AND
+Sales growth 3Years > 8% AND
+Dividend Yield > 1.5% AND
+Current Price < 52 Week High * 0.7 AND
+Price > 100
+
+Key Points:
+- FMCG stocks are typically expensive (higher PE)
+- Very stable and defensive
+- Good for conservative investors
+- Strong brand moats
+
+
+E. AUTOMOBILE & AUTO COMPONENTS
+-------------------------------
+Market Capitalization > 500 AND
+Market Capitalization < 15000 AND
+PE < 15 AND
+Debt to Equity < 1.2 AND
+Return on Equity > 12% AND
+Sales growth 3Years > 8% AND
+Current Price < 52 Week High * 0.65 AND
+Price > 30
+
+What to Check:
+- EV transition plans
+- Export revenue
+- OEM vs. replacement market mix
+- Margin trends (commodity price impact)
+
+
+F. INFRASTRUCTURE & CONSTRUCTION
+--------------------------------
+Market Capitalization > 800 AND
+Market Capitalization < 12000 AND
+PE < 18 AND
+Debt to Equity < 1.5 AND
+Return on Equity > 15% AND
+Sales growth 3Years > 15% AND
+Current Price < 52 Week High * 0.7 AND
+Interest Coverage Ratio > 2.5 AND
+Price > 40
+
+Key Checks:
+- Order book to revenue ratio (>2x is good)
+- Execution track record
+- Government projects exposure
+- Working capital cycle
+
+
+G. CHEMICALS & SPECIALTY CHEMICALS
+----------------------------------
+Market Capitalization > 500 AND
+Market Capitalization < 10000 AND
+PE < 20 AND
+Debt to Equity < 1 AND
+Return on Equity > 18% AND
+Operating Profit Margin > 15% AND
+Sales growth 3Years > 15% AND
+Current Price < 52 Week High * 0.7 AND
+Price > 50
+
+Focus Areas:
+- China+1 beneficiaries
+- Specialty vs. commodity chemicals
+- Long-term customer contracts
+- Environmental compliance
+
+
+H. METALS & MINING
+------------------
+Market Capitalization > 1000 AND
+Market Capitalization < 20000 AND
+PE < 10 AND
+Debt to Equity < 0.8 AND
+Return on Equity > 12% AND
+Current Price < 52 Week High * 0.6 AND
+Price > 50
+
+Cyclical Sector - Use with Caution:
+- Check commodity price trends
+- Look for cost leadership
+- Integrated players are safer
+- Best bought in downturns
+
+
+================================================================================
+6. SPECIAL SITUATIONS
+================================================================================
+
+A. DIVIDEND ARISTOCRATS (For Income + Growth)
+---------------------------------------------
+Market Capitalization > 1000 AND
+Dividend Yield > 3% AND
+Debt to Equity < 0.8 AND
+Return on Equity > 15% AND
+Operating Profit Margin > 12% AND
+Current Price < 52 Week High * 0.7 AND
+Price > 50
+
+Check: 5+ years of consistent dividend payments
+
+
+B. TURNAROUND CANDIDATES (Higher Risk)
+--------------------------------------
+Market Capitalization > 500 AND
+Market Capitalization < 8000 AND
+PE < 15 AND
+Debt to Equity < 2 AND
+Sales growth 3Years < 5% AND
+Quarterly profit growth > 25% AND
+Current Price < 52 Week High * 0.5 AND
+Price > 20
+
+Warning: Check WHY stock fell, ensure turnaround is real
+
+
+C. EXPORT-ORIENTED (Dollar Earnings)
+------------------------------------
+Market Capitalization > 500 AND
+PE < 18 AND
+Debt to Equity < 1 AND
+Return on Equity > 15% AND
+Operating Profit Margin > 12% AND
+Current Price < 52 Week High * 0.7 AND
+Price > 50
+
+Manually Check: >50% revenue from exports
+
+
+================================================================================
+HOW TO USE THESE QUERIES
+================================================================================
+
+STEP 1: Go to screener.in
+STEP 2: Click "Create New Screen"
+STEP 3: Copy-paste the query that matches your goal
+STEP 4: Run the query and get the list
+
+STEP 5: MANUAL CHECKS (CRITICAL!)
+---------------------------------
+For each stock in results:
+1. Read latest quarterly results (Q3 or Q4)
+2. Check promoter holding trend (increasing is good)
+3. Read management commentary
+4. Check any recent news/controversies
+5. Verify no major pending litigations
+6. Check pledging percentage (0% is best)
+7. Look at price chart for support/resistance
+
+STEP 6: PORTFOLIO CONSTRUCTION (For Rs. 20,000)
+-----------------------------------------------
+Option A (Conservative):
+- 2-3 conservative stocks: Rs. 15,000 (Rs. 5,000-7,500 each)
+- 1-2 balanced stocks: Rs. 5,000 (Rs. 2,500 each)
+
+Option B (Balanced):
+- 3-4 balanced stocks: Rs. 15,000 (Rs. 3,750-5,000 each)
+- 1 aggressive/swing: Rs. 5,000
+
+Option C (Growth-Focused):
+- 2 balanced stocks: Rs. 10,000 (Rs. 5,000 each)
+- 2-3 aggressive stocks: Rs. 10,000 (Rs. 3,333-5,000 each)
+
+
+================================================================================
+RISK MANAGEMENT RULES
+================================================================================
+
+1. NEVER put all money in one stock
+2. SET stop-loss at 15% for long-term, 7-10% for swing trades
+3. REBALANCE if any stock exceeds 40% of portfolio
+4. REVIEW quarterly results - sell if fundamentals deteriorate
+5. AVOID stocks with pledged promoter holdings
+6. DON'T buy if you don't understand the business
+7. KEEP 10-15% cash for averaging down or opportunities
+
+
+================================================================================
+SWING TRADING TIPS (For 20-30% of your Rs. 20,000)
+================================================================================
+
+1. Entry Signals:
+   - Stock in uptrend but pulling back
+   - RSI between 30-40 (oversold)
+   - Positive MACD crossover
+   - Breaking above resistance with volume
+
+2. Exit Signals:
+   - Hit 15-20% profit target
+   - 7-10% stop-loss triggered
+   - RSI above 70 (overbought)
+   - Negative divergence
+
+3. Position Sizing:
+   - Max Rs. 5,000 per swing trade
+   - Trade only 1-2 stocks at a time
+   - Never average down on swing trades
+
+4. Best Timeframe:
+   - Hold 1 week to 3 months
+   - Use daily charts for analysis
+   - Avoid trading during results season
+
+
+================================================================================
+RED FLAGS - AVOID THESE STOCKS
+================================================================================
+
+1. Pledged promoter holding > 20%
+2. Declining promoter holding for 2+ quarters
+3. Debt to Equity > 3 (except banks)
+4. Negative cash flow from operations
+5. Auditor qualifications in annual report
+6. Frequent related-party transactions
+7. Promoter/management legal issues
+8. Penny stocks < Rs. 10
+9. Stocks with trading restrictions/T2T segment
+10. Very low liquidity (avg. volume < 10,000)
+
+
+================================================================================
+FINAL CHECKLIST BEFORE BUYING
+================================================================================
+
+[ ] Stock passed screener query
+[ ] Checked last 3 quarterly results
+[ ] Read management commentary
+[ ] Promoter holding > 40% and not pledged
+[ ] No major red flags in news
+[ ] Understood the business model
+[ ] Checked price support levels
+[ ] Calculated position size (max 25% of portfolio)
+[ ] Set stop-loss price
+[ ] Set target price (at least 2:1 reward:risk)
+[ ] Diversified across sectors
+[ ] Kept emergency cash reserve
+
+
+================================================================================
+USEFUL SCREENER.IN TIPS
+================================================================================
+
+1. Save your favorite queries for quick access
+2. Set up alerts when stocks meet your criteria
+3. Export results to Excel for comparison
+4. Use "Compare" feature for shortlisted stocks
+5. Check "Peers" tab to find similar companies
+6. Use "Quarterly Results" for recent performance
+7. Download annual reports from "Documents" section
+
+
+Good luck with your investing! Remember: Patience and discipline beat timing.

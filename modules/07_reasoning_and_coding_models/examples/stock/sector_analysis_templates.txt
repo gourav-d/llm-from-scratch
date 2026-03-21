@@ -1,0 +1,652 @@
+================================================================================
+SECTOR-WISE STOCK ANALYSIS TEMPLATES
+================================================================================
+
+Use these templates to analyze stocks from each sector systematically.
+Fill out before making any purchase decision.
+
+
+================================================================================
+TEMPLATE 1: BANKING & FINANCIAL SERVICES
+================================================================================
+
+STOCK NAME: _______________________
+CURRENT PRICE: Rs. _______
+MARKET CAP: Rs. _______ Cr
+
+BANK-SPECIFIC METRICS:
+---------------------
+CASA Ratio: _______% (Higher is better, >40% is good)
+Net Interest Margin (NIM): _______% (>3% is good)
+Gross NPA: _______% (Should be <3%)
+Net NPA: _______% (Should be <1%)
+Return on Assets (ROA): _______% (>1% is good for banks)
+Capital Adequacy Ratio: _______% (>12% is safe)
+Credit Growth YoY: _______%
+Deposit Growth YoY: _______%
+
+GENERAL METRICS:
+---------------
+P/E Ratio: _______
+P/B Ratio: _______ (Should be <1.5 for banks)
+ROE: _______%
+Debt/Equity: N/A (Banks have different structure)
+
+LOAN PORTFOLIO MIX:
+------------------
+Retail Loans: _______%
+Corporate Loans: _______%
+MSME Loans: _______%
+Agricultural Loans: _______%
+
+HIGH-RISK EXPOSURES:
+-------------------
+Real Estate Exposure: _______% (Lower is safer)
+Infrastructure Exposure: _______%
+Restructured Loans: _______% (Should be minimal)
+
+TRIGGERS FOR GROWTH:
+-------------------
+[ ] Branch expansion plan
+[ ] Digital banking initiatives
+[ ] Cross-selling products
+[ ] Merger/acquisition plans
+[ ] Focus on fee income
+
+RED FLAGS:
+---------
+[ ] Rising NPA trend
+[ ] CASA ratio declining
+[ ] Frequent management changes
+[ ] RBI penalties/actions
+[ ] High exposure to weak sectors
+
+VERDICT: BUY / HOLD / AVOID
+NOTES: _________________________________
+
+
+================================================================================
+TEMPLATE 2: INFORMATION TECHNOLOGY
+================================================================================
+
+STOCK NAME: _______________________
+CURRENT PRICE: Rs. _______
+MARKET CAP: Rs. _______ Cr
+
+IT-SPECIFIC METRICS:
+-------------------
+Revenue (USD Million): _______
+YoY Revenue Growth (USD): _______%
+YoY Revenue Growth (INR): _______%
+EBITDA Margin: _______% (>20% is good)
+Operating Margin: _______% (>18% is good)
+Employee Count: _______
+Attrition Rate: _______% (Lower is better, <15% is good)
+Revenue per Employee: Rs. _______ Lakhs
+
+CLIENT METRICS:
+--------------
+Number of Active Clients: _______
+Top Client Revenue %: _______% (Lower is better, <10% is safe)
+Top 5 Clients Revenue %: _______% (Should be <40%)
+Client Additions (Last Quarter): _______
+Million Dollar Clients: _______
+
+GEOGRAPHIC MIX:
+--------------
+North America: _______%
+Europe: _______%
+India: _______%
+Rest of World: _______%
+
+SERVICE MIX:
+-----------
+IT Services: _______%
+Consulting: _______%
+Products: _______%
+BPO/ITeS: _______%
+
+DIGITAL REVENUE:
+---------------
+Digital Revenue %: _______% (Higher is better)
+Cloud Revenue %: _______%
+AI/ML Projects %: _______%
+
+VERTICALS:
+---------
+BFSI: _______%
+Healthcare: _______%
+Retail: _______%
+Manufacturing: _______%
+Others: _______%
+
+GENERAL METRICS:
+---------------
+P/E Ratio: _______
+ROE: _______%
+Debt/Equity: _______ (Should be <0.3)
+
+TRIGGERS FOR GROWTH:
+-------------------
+[ ] Large deal wins (>$100M)
+[ ] Digital transformation deals
+[ ] Strategic acquisitions
+[ ] New client verticals
+[ ] Expansion in new geographies
+
+RED FLAGS:
+---------
+[ ] High client concentration
+[ ] Rising attrition (>20%)
+[ ] Declining margins
+[ ] Currency headwinds
+[ ] Losing major clients
+
+VERDICT: BUY / HOLD / AVOID
+NOTES: _________________________________
+
+
+================================================================================
+TEMPLATE 3: PHARMACEUTICALS
+================================================================================
+
+STOCK NAME: _______________________
+CURRENT PRICE: Rs. _______
+MARKET CAP: Rs. _______ Cr
+
+PHARMA-SPECIFIC METRICS:
+-----------------------
+Domestic Revenue: _______%
+Export Revenue: _______%
+US Revenue: _______%
+Europe Revenue: _______%
+ROW Revenue: _______%
+
+PRODUCT MIX:
+-----------
+Formulations: _______%
+APIs (Active Pharma Ingredients): _______%
+CRAMS/CMO: _______%
+
+REGULATORY STATUS:
+-----------------
+US FDA Approvals (Last 12M): _______
+ANDA Filings Pending: _______
+DMFs Filed: _______
+Manufacturing Sites: _______
+Recent FDA Inspections: Pass/Fail/OAI
+
+US FDA OBSERVATIONS:
+-------------------
+Form 483 Observations: _______ (Should be 0)
+Warning Letters: _______ (Should be 0)
+Import Alerts: _______ (Should be 0)
+
+R&D INVESTMENT:
+--------------
+R&D Spend: Rs. _______ Cr
+R&D as % of Sales: _______% (8-10% is good)
+Biosimilar Pipeline: _______
+NCE Pipeline: _______
+
+THERAPEUTIC AREAS:
+-----------------
+Cardiology: _______%
+Diabetes: _______%
+Oncology: _______%
+Anti-infectives: _______%
+Others: _______%
+
+GENERAL METRICS:
+---------------
+P/E Ratio: _______
+Operating Margin: _______% (>20% is good)
+ROE: _______%
+Debt/Equity: _______ (Should be <0.8)
+
+TRIGGERS FOR GROWTH:
+-------------------
+[ ] New ANDA approvals
+[ ] Biosimilar launches
+[ ] Specialty drug approvals
+[ ] New markets entry
+[ ] Patent expiry benefits
+
+RED FLAGS:
+---------
+[ ] FDA warning letters
+[ ] Generic competition
+[ ] Patent litigation
+[ ] Pricing pressure in US
+[ ] Quality compliance issues
+
+PATENT WATCH:
+------------
+Products facing patent expiry: _______
+Timeline: _______
+
+VERDICT: BUY / HOLD / AVOID
+NOTES: _________________________________
+
+
+================================================================================
+TEMPLATE 4: FMCG (CONSUMER GOODS)
+================================================================================
+
+STOCK NAME: _______________________
+CURRENT PRICE: Rs. _______
+MARKET CAP: Rs. _______ Cr
+
+FMCG-SPECIFIC METRICS:
+---------------------
+Volume Growth: _______%
+Value Growth: _______%
+Rural Revenue: _______%
+Urban Revenue: _______%
+Modern Trade: _______%
+General Trade: _______%
+E-commerce: _______%
+
+BRAND PORTFOLIO:
+---------------
+Number of Brands: _______
+Power Brands (Top 5): _________________
+New Launches (Last Year): _______
+
+DISTRIBUTION:
+------------
+Distribution Reach: _______ Towns/Villages
+Direct Distributors: _______
+Retail Outlets: _______ (millions)
+
+CATEGORIES:
+----------
+Category 1: _______ (______%)
+Category 2: _______ (______%)
+Category 3: _______ (______%)
+Category 4: _______ (______%)
+
+GENERAL METRICS:
+---------------
+P/E Ratio: _______ (FMCG typically higher, 25-40)
+Operating Margin: _______% (>12% is good)
+ROE: _______% (>25% is excellent)
+Debt/Equity: _______ (Should be <0.5)
+Ad Spend as % of Sales: _______%
+
+MARKET POSITION:
+---------------
+Market Share in Key Category: _______%
+Rank in Industry: _______
+Competitive Intensity: High/Medium/Low
+
+TRIGGERS FOR GROWTH:
+-------------------
+[ ] Rural penetration strategy
+[ ] Premium product launches
+[ ] Distribution expansion
+[ ] E-commerce growth
+[ ] International expansion
+
+RED FLAGS:
+---------
+[ ] Losing market share
+[ ] Margin pressure
+[ ] High commodity costs
+[ ] Strong competition
+[ ] Regulatory issues
+
+VERDICT: BUY / HOLD / AVOID
+NOTES: _________________________________
+
+
+================================================================================
+TEMPLATE 5: AUTOMOBILE & AUTO COMPONENTS
+================================================================================
+
+STOCK NAME: _______________________
+CURRENT PRICE: Rs. _______
+MARKET CAP: Rs. _______ Cr
+
+AUTO-SPECIFIC METRICS:
+---------------------
+Vehicle Sales (Units): _______
+YoY Growth: _______%
+Market Share: _______%
+Average Selling Price: Rs. _______
+Capacity Utilization: _______%
+
+PRODUCT MIX (For OEMs):
+----------------------
+2-Wheelers: _______%
+Passenger Vehicles: _______%
+Commercial Vehicles: _______%
+Electric Vehicles: _______%
+
+REVENUE MIX (For Components):
+----------------------------
+OEM Sales: _______%
+Aftermarket Sales: _______%
+Exports: _______%
+
+EV READINESS:
+------------
+EV Models Launched: _______
+EV Sales %: _______%
+Battery Technology: Own/Partner/_______
+Charging Infrastructure: Yes/No
+
+CLIENT BASE (For Components):
+----------------------------
+Top Client: _______ (______%)
+Top 5 Clients: _______%
+Number of Active Clients: _______
+Exports Markets: _______
+
+GENERAL METRICS:
+---------------
+P/E Ratio: _______
+Operating Margin: _______% (10-15% is good)
+ROE: _______%
+Debt/Equity: _______ (Should be <1.2)
+
+INVENTORY DAYS: _______ (Lower is better)
+Receivable Days: _______ (Lower is better)
+
+TRIGGERS FOR GROWTH:
+-------------------
+[ ] New model launches
+[ ] EV transition strategy
+[ ] Export growth
+[ ] Market share gains
+[ ] New client wins (components)
+
+RED FLAGS:
+---------
+[ ] Declining volumes
+[ ] High inventory
+[ ] Client concentration
+[ ] Commodity price pressure
+[ ] Regulatory emission norms
+
+VERDICT: BUY / HOLD / AVOID
+NOTES: _________________________________
+
+
+================================================================================
+TEMPLATE 6: CHEMICALS & SPECIALTY CHEMICALS
+================================================================================
+
+STOCK NAME: _______________________
+CURRENT PRICE: Rs. _______
+MARKET CAP: Rs. _______ Cr
+
+CHEMICALS-SPECIFIC METRICS:
+--------------------------
+Domestic Revenue: _______%
+Export Revenue: _______%
+Specialty Chemicals: _______%
+Commodity Chemicals: _______%
+
+PRODUCT PORTFOLIO:
+-----------------
+Product Categories: _______
+Number of SKUs: _______
+Value-Added Products %: _______%
+
+CLIENT METRICS:
+--------------
+Number of Clients: _______
+Top Client %: _______
+Top 5 Clients %: _______%
+Client Retention: _______%
+Long-term Contracts %: _______%
+
+END-USE INDUSTRIES:
+------------------
+Agrochemicals: _______%
+Pharmaceuticals: _______%
+Dyes & Pigments: _______%
+Polymers: _______%
+Others: _______%
+
+GEOGRAPHIC SPREAD:
+-----------------
+Domestic: _______%
+USA: _______%
+Europe: _______%
+China: _______%
+Others: _______%
+
+GENERAL METRICS:
+---------------
+P/E Ratio: _______
+EBITDA Margin: _______% (>15% is good)
+ROE: _______%
+ROCE: _______%
+Debt/Equity: _______ (Should be <1)
+
+CAPACITY & EXPANSION:
+--------------------
+Current Capacity Utilization: _______%
+CAPEX Planned: Rs. _______ Cr
+New Capacities Timeline: _______
+
+TRIGGERS FOR GROWTH:
+-------------------
+[ ] China+1 beneficiary
+[ ] Backward integration
+[ ] New product launches
+[ ] Capacity expansion
+[ ] Import substitution
+
+RED FLAGS:
+---------
+[ ] Environmental issues
+[ ] Client concentration
+[ ] Commodity price volatility
+[ ] Chinese competition
+[ ] Regulatory compliance
+
+SUSTAINABILITY:
+--------------
+ESG Rating: _______
+Pollution Control Measures: _______
+Renewable Energy Usage: _______%
+
+VERDICT: BUY / HOLD / AVOID
+NOTES: _________________________________
+
+
+================================================================================
+TEMPLATE 7: INFRASTRUCTURE & CONSTRUCTION
+================================================================================
+
+STOCK NAME: _______________________
+CURRENT PRICE: Rs. _______
+MARKET CAP: Rs. _______ Cr
+
+INFRASTRUCTURE-SPECIFIC METRICS:
+-------------------------------
+Order Book: Rs. _______ Cr
+Order Book/Revenue Ratio: _______x (>2x is good)
+Order Inflow (Last Quarter): Rs. _______ Cr
+Order Execution: _______%
+
+PROJECT MIX:
+-----------
+Roads & Highways: _______%
+Buildings: _______%
+Railways: _______%
+Urban Infrastructure: _______%
+Power: _______%
+Water/Irrigation: _______%
+
+CLIENT MIX:
+----------
+Government Projects: _______%
+PSU Projects: _______%
+Private Projects: _______%
+
+BUSINESS MODEL:
+--------------
+EPC (Engineering, Procurement, Construction): _______%
+HAM (Hybrid Annuity Model): _______%
+BOT (Build, Operate, Transfer): _______%
+Annuity: _______%
+
+GENERAL METRICS:
+---------------
+P/E Ratio: _______
+Operating Margin: _______% (8-12% is normal)
+ROE: _______%
+Debt/Equity: _______ (Should be <1.5)
+Interest Coverage: _______x (>2.5 is safe)
+
+WORKING CAPITAL:
+---------------
+Debtor Days: _______ (Lower is better)
+Inventory Days: _______
+Cash Conversion Cycle: _______ days
+
+EXECUTION TRACK RECORD:
+----------------------
+Projects Completed On Time: _______%
+Cost Overruns: Yes/No
+Delays: _______ months average
+
+TRIGGERS FOR GROWTH:
+-------------------
+[ ] Large order wins
+[ ] Government infra push
+[ ] New segment entry
+[ ] Asset monetization
+[ ] International projects
+
+RED FLAGS:
+---------
+[ ] High debt levels
+[ ] Execution delays
+[ ] Working capital issues
+[ ] Arbitration cases
+[ ] Management disputes
+
+VERDICT: BUY / HOLD / AVOID
+NOTES: _________________________________
+
+
+================================================================================
+TEMPLATE 8: METALS & MINING (USE WITH CAUTION - CYCLICAL)
+================================================================================
+
+STOCK NAME: _______________________
+CURRENT PRICE: Rs. _______
+MARKET CAP: Rs. _______ Cr
+
+METALS-SPECIFIC METRICS:
+-----------------------
+Metal Type: Steel/Aluminum/Copper/Zinc/_______
+Production Volume: _______ MT
+Capacity: _______ MT
+Capacity Utilization: _______%
+
+COST METRICS:
+------------
+Cost of Production per Ton: Rs. _______
+Industry Average Cost: Rs. _______
+Cost Position: Low/Medium/High
+Raw Material Security: Yes/No
+
+INTEGRATION:
+-----------
+Captive Mines: Yes/No
+Backward Integration: _______%
+Forward Integration: _______%
+
+REVENUE MIX:
+-----------
+Domestic Sales: _______%
+Export Sales: _______%
+
+GENERAL METRICS:
+---------------
+P/E Ratio: _______ (Should be <10 for metals)
+EV/EBITDA: _______
+ROE: _______%
+Debt/Equity: _______ (Should be <0.8)
+
+COMMODITY PRICES:
+----------------
+Current Metal Price: Rs. _______/ton
+52-Week High: Rs. _______
+52-Week Low: Rs. _______
+Long-term Average: Rs. _______
+Current Trend: Rising/Falling/Stable
+
+DEMAND DRIVERS:
+--------------
+Infrastructure Spending: Growing/Stable/Declining
+Auto Sector Demand: Growing/Stable/Declining
+Real Estate: Growing/Stable/Declining
+Export Demand: Growing/Stable/Declining
+
+TRIGGERS FOR GROWTH:
+-------------------
+[ ] Capacity expansion
+[ ] Cost reduction programs
+[ ] Value-added products
+[ ] Export markets
+[ ] Government policies
+
+RED FLAGS:
+---------
+[ ] Declining metal prices
+[ ] High debt levels
+[ ] Environmental issues
+[ ] Rising input costs
+[ ] Global oversupply
+
+CYCLICAL NOTES:
+--------------
+Buy during downturns (when PE < 8, prices low)
+Sell during peaks (when PE > 12, prices high)
+Current Cycle Stage: Bottom/Recovery/Peak
+
+VERDICT: BUY / HOLD / AVOID
+NOTES: _________________________________
+
+
+================================================================================
+HOW TO USE THESE TEMPLATES
+================================================================================
+
+STEP 1: Run screener query for desired sector
+STEP 2: Shortlist 5-10 stocks from results
+STEP 3: Fill out this template for each shortlisted stock
+STEP 4: Compare filled templates side-by-side
+STEP 5: Choose top 2-3 stocks with best metrics
+STEP 6: Do final price chart analysis
+STEP 7: Make purchase decision
+
+RATING SYSTEM:
+-------------
+For each metric, assign score:
+- Excellent: 3 points
+- Good: 2 points
+- Average: 1 point
+- Poor: 0 points
+
+Total Score > 25: Strong Buy
+Total Score 20-25: Buy
+Total Score 15-20: Hold/Watch
+Total Score < 15: Avoid
+
+
+SAVE THESE TEMPLATES:
+--------------------
+Create a folder for each stock you analyze.
+Keep filled templates for future reference.
+Update quarterly with new results.
+
+
+Good luck with your sector analysis!
