@@ -43,10 +43,17 @@ class TwoLayerNetwork:
             output_size: Number of output classes
         """
         # Layer 1: input → hidden
+        # np.random.randn(rows, cols) = matrix of random numbers (Gaussian distribution)
+        # Shape is (hidden_size, input_size) because: output_neurons × input_neurons
+        # * 0.01 = make weights very small at start (avoids exploding values early)
+        # C# analogy: new double[hiddenSize, inputSize] filled with small random values
         self.W1 = np.random.randn(hidden_size, input_size) * 0.01
+
+        # np.zeros((hidden_size, 1)) = column vector of zeros, one bias per hidden neuron
+        # Bias starts at 0 — network learns the right value during training
         self.b1 = np.zeros((hidden_size, 1))
 
-        # Layer 2: hidden → output
+        # Layer 2: hidden → output  (same pattern, different size)
         self.W2 = np.random.randn(output_size, hidden_size) * 0.01
         self.b2 = np.zeros((output_size, 1))
 
@@ -57,12 +64,27 @@ class TwoLayerNetwork:
         print(f"  b2 shape: {self.b2.shape}  (output × 1)")
 
     def relu(self, z):
-        """ReLU activation: max(0, z)"""
-        return np.maximum(0, z)
+        """
+        ReLU activation: max(0, z)
+        If input is negative → output 0  (neuron "off")
+        If input is positive → output as-is  (neuron "on")
+        C# equivalent: Math.Max(0, z)
+        """
+        return np.maximum(0, z)  # element-wise: for each value in z, keep max(0, value)
 
     def softmax(self, z):
-        """Softmax: converts scores → probabilities"""
+        """
+        Softmax: converts raw scores → probabilities that SUM to 1.0
+        Used in output layer when predicting one of multiple classes.
+
+        Example: scores [2.0, 1.0, 0.5] → probabilities [0.59, 0.24, 0.17]
+        """
+        # Subtract max for numerical stability (prevents huge numbers with exp)
+        # axis=0 = work column by column (one column = one example in batch)
+        # keepdims=True = keep the shape the same after the operation
         exp_z = np.exp(z - np.max(z, axis=0, keepdims=True))
+
+        # Divide each value by the column sum → all values in a column sum to 1.0
         return exp_z / np.sum(exp_z, axis=0, keepdims=True)
 
     def forward(self, x, verbose=False):
@@ -79,17 +101,26 @@ class TwoLayerNetwork:
         if verbose:
             print(f"\n  Input x shape: {x.shape}")
 
-        # Layer 1: Linear → ReLU
+        # Layer 1: Linear transformation → ReLU activation
+        # Step 1: z1 = W1 @ x + b1   (the "@" is matrix multiply, like dot product)
+        #   W1 shape: (10, 5), x shape: (5, 1) → result z1 shape: (10, 1)
+        #   Think of it as: each of the 10 hidden neurons calculates its "score"
         z1 = self.W1 @ x + self.b1
-        a1 = self.relu(z1)
+
+        # Step 2: Apply ReLU — neurons with negative scores are "switched off" (→ 0)
+        a1 = self.relu(z1)  # a1 = "activation of layer 1"
 
         if verbose:
             print(f"  After layer 1:")
             print(f"    z1 = W1@x + b1, shape: {z1.shape}")
             print(f"    a1 = ReLU(z1), shape: {a1.shape}")
 
-        # Layer 2: Linear → Softmax
+        # Layer 2: Linear transformation → Softmax activation
+        # Now a1 (output of layer 1) becomes the INPUT to layer 2
+        # W2 shape: (3, 10), a1 shape: (10, 1) → result z2 shape: (3, 1)
         z2 = self.W2 @ a1 + self.b2
+
+        # Softmax converts raw scores into probabilities (all 3 values sum to 1.0)
         y = self.softmax(z2)
 
         if verbose:
@@ -147,14 +178,23 @@ class ThreeLayerNetwork:
         self.weights = {}
         self.biases = {}
 
-        # Initialize each layer
+        # Initialize each layer using a loop
+        # range(len(layer_sizes) - 1) → e.g. for [784,128,64,10] → range(3) → 0,1,2
+        # We subtract 1 because we're initializing CONNECTIONS between layers (not layers themselves)
         for i in range(len(layer_sizes) - 1):
-            layer_num = i + 1
-            input_dim = layer_sizes[i]
-            output_dim = layer_sizes[i + 1]
+            layer_num = i + 1          # Label layers as W1, W2, W3 (not W0)
+            input_dim = layer_sizes[i]     # Size of this layer
+            output_dim = layer_sizes[i + 1]  # Size of next layer
 
-            # Xavier initialization (better than random!)
+            # Xavier initialization — smarter than just * 0.01
+            # np.sqrt(2.0 / input_dim) scales weights based on layer size
+            # Bigger input → smaller weights → keeps signal balanced across layers
+            # This prevents the "vanishing gradient" problem
+            # C# analogy: new Random().NextDouble() * Math.Sqrt(2.0 / inputDim)
             self.weights[f'W{layer_num}'] = np.random.randn(output_dim, input_dim) * np.sqrt(2.0 / input_dim)
+
+            # f'W{layer_num}' is an f-string (like C# $"W{layerNum}") → creates "W1", "W2", "W3"
+            # This stores weights in a dictionary: weights["W1"], weights["W2"], etc.
             self.biases[f'b{layer_num}'] = np.zeros((output_dim, 1))
 
         print(f"\nCreated network: {' → '.join(map(str, layer_sizes))}")
@@ -180,26 +220,36 @@ class ThreeLayerNetwork:
             y: Final predictions
             intermediates: (optional) Dict of layer outputs
         """
+        # Store all layer outputs in a dictionary
+        # 'a0' = input layer (no transformation yet)
+        # C# analogy: var activations = new Dictionary<string, double[,]>()
         activations = {'a0': x}  # Input is "activation 0"
 
-        # Forward through all layers
+        # Loop through each layer and compute output
+        # range(1, len(self.layer_sizes)) → for [784,128,64,10] → 1,2,3
         for i in range(1, len(self.layer_sizes)):
             layer_num = i
+
+            # Get the output from the PREVIOUS layer as input to THIS layer
+            # First iteration: prev = raw input (a0)
+            # Second iteration: prev = hidden layer 1 output (a1)
             prev_activation = activations[f'a{i-1}']
 
-            # Linear transformation
+            # Linear transformation: z = W @ prev_output + bias
+            # This is the "weighted sum" — the core of a neuron's computation
             z = self.weights[f'W{layer_num}'] @ prev_activation + self.biases[f'b{layer_num}']
 
-            # Activation function
+            # Apply activation function:
             if i < len(self.layer_sizes) - 1:
-                # Hidden layers: ReLU
+                # Hidden layers → use ReLU (adds non-linearity so network can learn complex patterns)
                 a = self.relu(z)
             else:
-                # Output layer: Softmax
+                # Output layer → use Softmax (converts scores into probabilities)
                 a = self.softmax(z)
 
-            activations[f'z{i}'] = z
-            activations[f'a{i}'] = a
+            # Save both the raw score (z) and activated output (a) for this layer
+            activations[f'z{i}'] = z   # Raw weighted sum (before activation)
+            activations[f'a{i}'] = a   # After activation (this becomes next layer's input)
 
         if return_intermediates:
             return activations[f'a{len(self.layer_sizes)-1}'], activations
@@ -251,62 +301,123 @@ class XORNetwork:
     """
 
     def __init__(self):
-        # Layer 1: 2 → 4
+        # Layer 1: 2 inputs → 4 hidden neurons
+        # Shape (4, 2): 4 rows (neurons), 2 cols (one per input feature)
+        # * 0.5 = start with slightly larger random weights than before (helps XOR learn)
         self.W1 = np.random.randn(4, 2) * 0.5
-        self.b1 = np.zeros((4, 1))
+        self.b1 = np.zeros((4, 1))    # 4 biases — one per hidden neuron
 
-        # Layer 2: 4 → 1
+        # Layer 2: 4 hidden → 1 output
+        # Shape (1, 4): 1 output neuron, receives input from all 4 hidden neurons
         self.W2 = np.random.randn(1, 4) * 0.5
-        self.b2 = np.zeros((1, 1))
+        self.b2 = np.zeros((1, 1))    # 1 bias — for the single output neuron
 
     def sigmoid(self, z):
-        """Sigmoid: 1 / (1 + e^(-z))"""
-        return 1 / (1 + np.exp(-np.clip(z, -500, 500)))  # Clip for numerical stability
+        """
+        Sigmoid activation: squishes any value into range (0, 1)
+        Good for binary output (0 or 1) because output is always between 0 and 1.
+        Formula: 1 / (1 + e^(-z))
+
+        np.clip(z, -500, 500) = limit z to range [-500, 500] BEFORE taking exp()
+        Without this, exp(-(-9999)) = exp(9999) = INFINITY → crashes Python!
+        C# analogy: Math.Clamp(z, -500, 500)
+        """
+        return 1 / (1 + np.exp(-np.clip(z, -500, 500)))
 
     def forward(self, x):
-        """Forward pass"""
-        # Layer 1
-        self.z1 = self.W1 @ x + self.b1
-        self.a1 = self.sigmoid(self.z1)
+        """
+        Forward pass — run input through both layers.
+        We save z1 and a1 as self.z1 / self.a1 so train_step() can access them later.
+        """
+        # Layer 1: weighted sum → sigmoid → hidden layer output
+        self.z1 = self.W1 @ x + self.b1    # shape: (4, 4) — 4 neurons, 4 XOR examples
+        self.a1 = self.sigmoid(self.z1)     # each value → squished to (0,1)
 
-        # Layer 2
-        self.z2 = self.W2 @ self.a1 + self.b2
-        self.a2 = self.sigmoid(self.z2)
+        # Layer 2: takes hidden output as input → weighted sum → sigmoid → final prediction
+        self.z2 = self.W2 @ self.a1 + self.b2  # shape: (1, 4) — 1 output, 4 examples
+        self.a2 = self.sigmoid(self.z2)         # final prediction: value between 0 and 1
 
-        return self.a2
+        return self.a2  # > 0.5 → predict 1, < 0.5 → predict 0
 
     def train_step(self, x, y, learning_rate=0.5):
         """
         One training iteration (simplified backpropagation).
 
-        Don't worry about details - you'll learn in Lesson 4!
+        Don't worry about all details - you'll learn in Lesson 4!
+        Here we focus on understanding what each line DOES, not why.
         """
-        # Forward pass
-        predictions = self.forward(x)
+        # ---------------------------------------------------------------
+        # STEP 1: Forward pass — run the input through the network
+        # ---------------------------------------------------------------
+        predictions = self.forward(x)  # shape: (1, 4) — one prediction per XOR input
 
-        # Loss
+        # ---------------------------------------------------------------
+        # STEP 2: Calculate Loss (how WRONG are we?)
+        # ---------------------------------------------------------------
+        # Let's break this down piece by piece:
+        #
+        #   predictions - y
+        #       → Difference between predicted value and actual answer
+        #       → Example: predicted=0.8, actual=1.0 → difference = -0.2
+        #
+        #   (predictions - y) ** 2
+        #       → Square each difference (removes negatives, punishes big errors more)
+        #       → Example: (-0.2)**2 = 0.04
+        #       → C# equivalent: Math.Pow(diff, 2)
+        #
+        #   np.mean(...)
+        #       → Average all squared errors across ALL 4 XOR examples
+        #       → If errors are [0.04, 0.01, 0.01, 0.09], mean = (0.04+0.01+0.01+0.09)/4 = 0.0375
+        #       → C# equivalent: errors.Average()
+        #
+        # Together this is called "Mean Squared Error" (MSE) loss.
+        # Lower MSE = network is doing better!
         loss = np.mean((predictions - y) ** 2)
 
-        # Backpropagation (simplified)
-        m = x.shape[1]  # Number of examples
+        # ---------------------------------------------------------------
+        # STEP 3: Backpropagation — figure out HOW to fix the weights
+        # ---------------------------------------------------------------
+        # Think of this as asking: "which weight caused the most error?"
+        # Then we nudge each weight slightly in the right direction.
+        # You'll learn the full math in Lesson 4!
 
-        # Output layer gradients
+        m = x.shape[1]  # m = number of training examples (4 for XOR)
+                        # We divide by m so the update is an AVERAGE, not a SUM
+
+        # --- Output layer (Layer 2) gradients ---
+        # dz2 = "how much did Layer 2's raw output contribute to the error?"
+        # The formula includes sigmoid's derivative: predictions * (1 - predictions)
         dz2 = (predictions - y) * predictions * (1 - predictions)
+
+        # dW2 = gradient for W2 (how much to change each weight in Layer 2)
+        # (1/m) averages the update across all 4 examples
+        # self.a1.T = transpose of Layer 1's output (needed for matrix math to work)
         dW2 = (1 / m) * (dz2 @ self.a1.T)
+
+        # db2 = gradient for bias b2 (average the dz2 values)
         db2 = (1 / m) * np.sum(dz2, axis=1, keepdims=True)
 
-        # Hidden layer gradients
+        # --- Hidden layer (Layer 1) gradients ---
+        # dz1 = "how much did Layer 1's raw output contribute to the error?"
+        # self.W2.T @ dz2 = pass the error BACKWARD through Layer 2's weights
+        # * self.a1 * (1 - self.a1) = sigmoid's derivative for Layer 1
         dz1 = (self.W2.T @ dz2) * self.a1 * (1 - self.a1)
-        dW1 = (1 / m) * (dz1 @ x.T)
-        db1 = (1 / m) * np.sum(dz1, axis=1, keepdims=True)
 
-        # Update weights
+        dW1 = (1 / m) * (dz1 @ x.T)   # gradient for W1
+        db1 = (1 / m) * np.sum(dz1, axis=1, keepdims=True)  # gradient for b1
+
+        # ---------------------------------------------------------------
+        # STEP 4: Update weights — move in the direction that reduces loss
+        # ---------------------------------------------------------------
+        # -= means: current weight MINUS (learning_rate × gradient)
+        # learning_rate controls how big each step is (0.5 = moderate step)
+        # C# analogy: weight = weight - learningRate * gradient
         self.W2 -= learning_rate * dW2
         self.b2 -= learning_rate * db2
         self.W1 -= learning_rate * dW1
         self.b1 -= learning_rate * db1
 
-        return loss
+        return loss  # Return loss so we can track progress over epochs
 
 
 # Train XOR network
