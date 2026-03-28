@@ -75,6 +75,8 @@ That's it! Everything else is just engineering and math to make this work well.
 ├── 04_backpropagation.md             ← Lesson 4: How learning works
 ├── 05_training_loop.md               ← Lesson 5: Putting it together
 ├── 06_optimizers.md                  ← Lesson 6: Learning faster
+├── 07_autograd.md                    ← Lesson 7: Automatic differentiation
+├── 08_types_of_neural_networks.md    ← Lesson 8: ANN vs CNN vs RNN & the full family tree
 │
 ├── examples/
 │   ├── example_01_perceptron.py              ← Build your first neuron
@@ -107,6 +109,8 @@ After completing this module, you will:
 - [ ] Describe how backpropagation works
 - [ ] Explain the role of learning rate
 - [ ] Compare different optimizers
+- [ ] Distinguish ANN, CNN, RNN and know when to use each
+- [ ] Understand the full neural network family (GAN, Autoencoder, Transformer, etc.)
 
 ### Practical Skills
 - [ ] Build a perceptron from scratch

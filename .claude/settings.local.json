@@ -18,7 +18,8 @@
       "Bash(dir modules\\\\04_transformers:*)",
       "Bash(mkdir:*)",
       "Bash(wc:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(pip install:*)"
     ]
   }
 }

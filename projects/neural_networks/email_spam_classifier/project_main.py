@@ -804,7 +804,9 @@ def main():
     print()
 
     # Step 5: Build network
-    network = SpamClassifier(config['vocab_size'], config['hidden_size'])
+    # Use actual vocabulary size (may be smaller than config['vocab_size'] if dataset is small)
+    actual_vocab_size = len(vocabulary)
+    network = SpamClassifier(actual_vocab_size, config['hidden_size'])
 
     # Step 6: Train
     history = train(
