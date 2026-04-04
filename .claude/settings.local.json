@@ -19,7 +19,8 @@
       "Bash(mkdir:*)",
       "Bash(wc:*)",
       "Bash(find:*)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(rm:*)"
     ]
   }
 }
