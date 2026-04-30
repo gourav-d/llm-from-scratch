@@ -1,6 +1,6 @@
 # Learning Progress — LLM from Scratch
 
-**Last Updated:** April 23, 2026 (Module 10 added)
+**Last Updated:** April 30, 2026 (Module 09 completed)
 **Student:** .NET developer learning Python + LLMs simultaneously
 
 ---
@@ -18,8 +18,10 @@
 | 06 | Training & Fine-tuning | 6 | 7 | — | 4 | ✅ Complete |
 | 07 | Reasoning & Coding Models | 10 | 10 | — | 5 | ✅ Complete |
 | 08 | Prompt Engineering | 10 | 3 | 2 | — | ✅ Complete |
-| 09 | Production LLM Applications | 4 | 0 | 0 | 0 | Lessons only — examples/projects missing |
+| 09 | Production LLM Applications | 4 | 4 | 4 | 2 | ✅ Complete |
 | 10 | Vector Databases | 5 | 5 | 3 | 1 | Complete |
+| 11 | LLM Agents | 5 | 5 | 5 | 3 | ✅ Complete |
+| 12 | Fine-Tuning LLMs | 5 | 5 | 5 | 3 | ✅ Complete |
 
 \* Module 04 examples: 6 NumPy + 6 PyTorch + 6 TensorFlow (all in `examples/`, `examples/pytorch/`, `examples/tensorflow/`)
 
@@ -108,10 +110,41 @@
 
 ### Module 09 — Production LLM Applications
 - **Lessons:** API design (FastAPI, JWT, streaming) -> deployment (Docker, PostgreSQL, Redis, Kubernetes) -> monitoring (Prometheus, Grafana) -> security & cost optimization
-- **Examples:** None
-- **Exercises:** None
-- **Projects:** None
-- **Status:** Lessons are written. Code examples and projects need to be built.
+- **Examples:** 4 files (01: API design patterns, 02: deployment concepts, 03: monitoring & observability, 04: security & cost)
+- **Exercises:** 4 files (01: API validation/rate limiting/middleware, 02: cache/load balancer/health checks, 03: structured logging/metrics/alerts, 04: injection detection/PII/quota)
+- **Projects:** 2 files
+  - Production Chat API (8-step pipeline: auth, rate limit, quota, scan, session, LLM, stream, metrics)
+  - Multi-Tenant SaaS Platform (tenant isolation, billing engine, per-tier quotas, usage reports)
+- **Key topics:** JWT auth, rate limiting, connection pooling, LRU cache, load balancing, structured logging, p99 latency, Prometheus metrics, distributed tracing, prompt injection scanning, PII redaction, cost tracking, multi-tenancy
+- **Status:** Complete
+
+---
+
+### Module 11 — LLM Agents
+- **Lessons:** What are agents -> Tool use & function calling -> ReAct pattern -> Memory & state -> Multi-agent systems
+- **Examples:** 5 files (01: simple agent, 02: tool use + parallel, 03: full ReAct loop, 04: memory agent, 05: multi-agent orchestrator)
+- **Exercises:** 5 files (01: basic agent, 02: custom tools, 03: ReAct loop, 04: memory, 05: orchestration)
+- **Projects:** 3 files
+  - Personal Assistant (tools + memory + task list)
+  - Research Agent (ReAct + RAG with vector-like memory)
+  - Code Review Agent (multi-agent: BugAnalyzer + StyleChecker + Suggestions)
+- **Key topics:** ReAct pattern, tool calling, scratchpad, short/long-term memory, orchestrator-worker pattern
+- **Connects to:** Module 07 (Chain-of-Thought), Module 08 (prompting), Module 10 (vector DB memory)
+- **Status:** Complete
+
+---
+
+### Module 12 — Fine-Tuning LLMs
+- **Lessons:** What is fine-tuning -> Dataset preparation -> LoRA & PEFT -> Training loop -> Evaluation & inference
+- **Examples:** 5 files (01: fine-tuning concepts, 02: dataset prep + JSONL, 03: LoRA from scratch, 04: training loop with early stopping, 05: base vs fine-tuned comparison)
+- **Exercises:** 5 files (01: weight update magnitude + overfitting detection, 02: build JSONL dataset + splits, 03: LoRA layer from scratch, 04: batcher + EarlyStopper + LR scheduler, 05: accuracy/F1/confusion matrix/interpret results)
+- **Projects:** 3 files
+  - Sentiment Fine-Tuner (full pipeline: data -> train -> evaluate -> compare base vs fine-tuned)
+  - Instruction Tuner (Alpaca format, prompt templates, loss masking demo)
+  - Domain Chatbot Fine-Tuner (IT support knowledge base, intent classifier, response generator)
+- **Key topics:** Transfer learning, LoRA math (W = W_frozen + scale*(B@A)), PEFT, Alpaca template, cross-entropy loss masking, early stopping, cosine LR schedule, accuracy/precision/recall/F1, confusion matrix, A/B comparison
+- **Connects to:** Module 06 (training loops), Module 03 (neural net basics), Module 11 (using fine-tuned models in agents)
+- **Status:** Complete
 
 ---
 
@@ -136,22 +169,25 @@
 | Frameworks | NumPy, PyTorch (nn.Module, autograd), TensorFlow/Keras |
 | Production | FastAPI, Docker, Kubernetes, PostgreSQL, Redis, Prometheus, Grafana |
 | Vector DB | ChromaDB, cosine similarity, RAG pipeline, semantic search, search evaluation |
+| Agents | ReAct pattern, tool use, function calling, short/long-term memory, multi-agent orchestration |
+| Fine-Tuning | Transfer learning, LoRA/PEFT, dataset prep (JSONL/Alpaca), training loop, early stopping, evaluation metrics |
+| Production | JWT auth, rate limiting, connection pooling, caching, load balancing, monitoring, prompt injection scanning, PII redaction, multi-tenancy |
 
 ---
 
 ## What to Do Next
 
-### Option A — Module 11: LLM Agents (Recommended Next)
-- Tool use and function calling
-- ReAct pattern (Reason + Act)
-- Autonomous agents that use tools (including vector search!)
-- OpenAI/Anthropic function calling API
+### Option A — Module 13: RLHF and Alignment
+- Reinforcement Learning from Human Feedback (how ChatGPT was aligned)
+- Direct Preference Optimization (DPO) -- simpler alternative to RLHF
+- Constitutional AI (Claude's approach)
+- Reward model training
 
-### Option B — Complete Module 09
-Module 09 lessons are done but has **zero code**. Need:
-1. `examples/` -- 4 examples (one per lesson: API, Docker deploy, monitoring, security)
-2. `exercises/` -- hands-on practice files
-3. `projects/`: Production Chat API, Multi-Tenant SaaS Platform
+### Option B — Module 14: Deploying LLMs
+- Quantization (reduce model size: float32 -> int8)
+- ONNX export and inference optimization
+- API serving with FastAPI
+- Streaming responses
 
 ### Option C — Fill Gaps
 - Module 01: Add exercises
