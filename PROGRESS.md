@@ -1,6 +1,6 @@
 # Learning Progress — LLM from Scratch
 
-**Last Updated:** April 30, 2026 (Module 09 completed)
+**Last Updated:** April 30, 2026 (Module 09 completed; Module 13 started)
 **Student:** .NET developer learning Python + LLMs simultaneously
 
 ---
@@ -22,6 +22,7 @@
 | 10 | Vector Databases | 5 | 5 | 3 | 1 | Complete |
 | 11 | LLM Agents | 5 | 5 | 5 | 3 | ✅ Complete |
 | 12 | Fine-Tuning LLMs | 5 | 5 | 5 | 3 | ✅ Complete |
+| 13 | RLHF and Alignment | 4/5 | 0 | 0 | 0 | In Progress (lessons 1-4 done) |
 
 \* Module 04 examples: 6 NumPy + 6 PyTorch + 6 TensorFlow (all in `examples/`, `examples/pytorch/`, `examples/tensorflow/`)
 

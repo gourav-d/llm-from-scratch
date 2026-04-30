@@ -1,0 +1,16 @@
+{"text": "The login button does not work after entering password", "label": "BUG"}
+{"text": "Critical: database unreachable, all transactions failing", "label": "OUTAGE"}
+{"text": "How can I share a dashboard with a colleague", "label": "HOW_TO"}
+{"text": "How do I reset my API key", "label": "HOW_TO"}
+{"text": "All users cannot log in - service appears offline", "label": "OUTAGE"}
+{"text": "Dashboard shows wrong data for last month", "label": "BUG"}
+{"text": "Can we get keyboard shortcuts for common actions", "label": "FEATURE"}
+{"text": "EMERGENCY: data pipeline stopped processing", "label": "OUTAGE"}
+{"text": "Getting NullReferenceException when opening dashboard", "label": "BUG"}
+{"text": "URGENT: Production system is completely down", "label": "OUTAGE"}
+{"text": "Add support for multi-factor authentication", "label": "FEATURE"}
+{"text": "Would love to see bulk export functionality", "label": "FEATURE"}
+{"text": "Where do I update my notification preferences", "label": "HOW_TO"}
+{"text": "We need an API endpoint for this report", "label": "FEATURE"}
+{"text": "Website returns 503 error for everyone", "label": "OUTAGE"}
+{"text": "Export to CSV crashes the application", "label": "BUG"}

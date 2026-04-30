@@ -289,22 +289,20 @@ modules/09_production_llm_apps/
 │   └── 04_security_cost_optimization.md   # 8-10 hours
 │
 ├── examples/
-│   ├── example_01_simple_api.py           # Basic FastAPI app
-│   ├── example_02_with_auth.py            # Add authentication
-│   ├── example_03_with_db.py              # Add database
-│   ├── example_04_complete.py             # Full featured
-│   └── docker-compose.yml                 # Local development
+│   ├── example_01_api_design.py           # JWT, rate limiting, middleware, streaming
+│   ├── example_02_deployment_concepts.py  # Config, connection pool, cache, load balancer
+│   ├── example_03_monitoring.py           # Structured logging, metrics, tracing, alerting
+│   └── example_04_security.py            # Injection scan, PII, quota, audit log
 │
 ├── exercises/
-│   ├── exercise_01_build_api.md           # Build basic API
-│   ├── exercise_02_add_features.md        # Add features
-│   ├── exercise_03_deploy.md              # Deploy to cloud
-│   └── exercise_04_optimize.md            # Optimize & secure
+│   ├── exercise_01_api_design.py          # Validate, rate limit, middleware chain, streaming
+│   ├── exercise_02_deployment.py          # Cache, round-robin, health check, Dockerfile
+│   ├── exercise_03_monitoring.py          # log_event, percentile, MetricsSummary, alerts
+│   └── exercise_04_security.py           # Injection detect, PII redact, token count, quota
 │
 └── projects/
-    ├── 01_chat_api/                       # Simple chat API
-    ├── 02_saas_platform/                  # Multi-tenant SaaS
-    └── 03_enterprise_chatbot/             # Enterprise system
+    ├── project_01_production_chat_api.py  # Full 8-step request pipeline with users/sessions
+    └── project_02_saas_platform.py        # Multi-tenant platform with billing and isolation
 ```
 
 ---
