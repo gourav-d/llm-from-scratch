@@ -20,7 +20,9 @@
       "Bash(wc:*)",
       "Bash(find:*)",
       "Bash(pip install:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(xargs basename *)",
+      "Bash(git checkout *)"
     ]
   }
 }
