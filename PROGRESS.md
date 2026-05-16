@@ -1,6 +1,6 @@
 # Learning Progress — LLM from Scratch
 
-**Last Updated:** April 30, 2026 (Module 09 completed; Module 13 started)
+**Last Updated:** May 15, 2026 (Module 13 complete)
 **Student:** .NET developer learning Python + LLMs simultaneously
 
 ---
@@ -10,19 +10,24 @@
 | # | Module | Lessons | Examples | Exercises | Projects | Status |
 |---|--------|---------|----------|-----------|----------|--------|
 | 01 | Python Basics | 10 | 10 | 0 | — | Content ready, exercises missing |
+| 01.5 | Pandas & Data Handling | — | — | — | — | 📅 Planned |
 | 02 | NumPy & Math | 3 | 4 | 3 | — | ✅ Complete |
 | 03 | Neural Networks | 6 | 6 | 6 | 3 | ✅ Complete |
 | 03.5 | PyTorch & TensorFlow | 5 | 2 | 1 | 1 | ✅ Complete (minimal exercises) |
-| 04 | Transformers | 6 | 18 * | 3 | — | ✅ Complete |
+| 04 | Transformers | 9 | 18 * | 3 | — | ✅ Complete (L7–9 concept-only) |
 | 05 | Building Your LLM | 5 | 5 | 5 | 7 | ✅ Complete |
+| 05.5 | HuggingFace Tokenizers | — | — | — | — | 📅 Planned (optional) |
 | 06 | Training & Fine-tuning | 6 | 7 | — | 4 | ✅ Complete |
 | 07 | Reasoning & Coding Models | 10 | 10 | — | 5 | ✅ Complete |
 | 08 | Prompt Engineering | 10 | 3 | 2 | — | ✅ Complete |
 | 09 | Production LLM Applications | 4 | 4 | 4 | 2 | ✅ Complete |
-| 10 | Vector Databases | 5 | 5 | 3 | 1 | Complete |
+| 10 | Vector Databases | 5 | 5 | 3 | 2 | ✅ Complete |
+| 10.5 | RAG Without Vectors (BM25/TF-IDF) | — | — | — | — | 📅 Planned |
 | 11 | LLM Agents | 5 | 5 | 5 | 3 | ✅ Complete |
 | 12 | Fine-Tuning LLMs | 5 | 5 | 5 | 3 | ✅ Complete |
-| 13 | RLHF and Alignment | 4/5 | 0 | 0 | 0 | In Progress (lessons 1-4 done) |
+| 13 | RLHF and Alignment | 5 | 5 | 5 | 3 | ✅ Complete |
+| 14 | Deploying LLMs | — | — | — | — | 📅 Planned |
+| 14.5 | Gradio & Streamlit UIs | — | — | — | — | 📅 Planned (optional) |
 
 \* Module 04 examples: 6 NumPy + 6 PyTorch + 6 TensorFlow (all in `examples/`, `examples/pytorch/`, `examples/tensorflow/`)
 
@@ -65,12 +70,16 @@
 ---
 
 ### Module 04 — Transformers
-- **Lessons:** Attention → self-attention → multi-head → positional encoding → transformer block → GPT
+- **Lessons:** Attention → self-attention → multi-head → positional encoding → transformer block → GPT → BERT → T5 → GPT Family
 - **Examples (NumPy):** `examples/example_01` through `example_06`
 - **Examples (PyTorch):** `examples/pytorch/example_01` through `example_06`
 - **Examples (TensorFlow):** `examples/tensorflow/example_01` through `example_06`
 - **Exercises:** 3 files
 - **Key achievement:** Full transformer architecture with side-by-side NumPy / PyTorch / TF comparisons
+- **Lessons 7–9 (concept-only):**
+  - `07_bert.md` — BERT: encoder-only, bidirectional, MLM pre-training, [CLS]/[SEP] tokens
+  - `08_t5.md` — T5: encoder-decoder, text-to-text framework, task prefixes, span corruption, C4 dataset overview
+  - `09_gpt_family.md` — GPT-1 → GPT-4: causal LM, scaling laws, few-shot, RLHF, open-source variants
 
 ---
 
@@ -85,10 +94,11 @@
 ---
 
 ### Module 06 — Training & Fine-tuning
-- **Lessons:** Building GPT → text generation → training → fine-tuning → RLHF/alignment → deployment
+- **Lessons:** Building GPT → text generation → training → fine-tuning → RLHF/alignment → deployment → training datasets
 - **Examples:** 7 files
 - **Projects:** 4 files
 - **Key topics:** End-to-end GPT pipeline, RLHF (how ChatGPT was trained), optimization
+- **Lesson 7 (concept-only):** `07_training_datasets.md` — C4 dataset, Common Crawl, filtering pipeline, data quality vs quantity, knowledge cutoff, deduplication
 
 ---
 
@@ -153,8 +163,24 @@
 - **Lessons:** What are vectors -> Embeddings and similarity -> ChromaDB hands-on -> Building document search -> Real-world applications
 - **Examples:** 5 files (01: NumPy similarity, 02: embeddings from scratch, 03: ChromaDB basics, 04: document search engine, 05: full semantic search + RAG)
 - **Exercises:** 3 files (01: similarity math, 02: build mini vector store, 03: ChromaDB semantic search)
-- **Projects:** Document Search Engine (full RAG pipeline with evaluation)
+- **Projects:**
+  - Document Search Engine (full RAG pipeline with ChromaDB + evaluation)
+  - SQL Server as a Vector Database (existing table + VECTOR column + hybrid search + RAG)
 - **Key topics:** Cosine similarity, word embeddings, ChromaDB, RAG pattern, search evaluation
+- **Status:** Complete
+
+---
+
+### Module 13 — RLHF and Alignment
+- **Lessons:** What is RLHF -> Reward Models -> PPO for LLMs -> DPO -> Constitutional AI
+- **Examples:** 5 files (01: RLHF 3-phase pipeline, 02: reward model from scratch, 03: PPO training loop, 04: DPO training, 05: Constitutional AI self-critique)
+- **Exercises:** 5 files (01: preference data, 02: reward scoring, 03: PPO basics, 04: DPO loss, 05: alignment evaluation)
+- **Projects:** 3 files
+  - Reward Model Trainer (full pipeline: preference data → train → evaluate → rank responses)
+  - Full RLHF Pipeline (SFT → Reward Model → PPO, all 3 phases end-to-end)
+  - Alignment Evaluator (dashboard comparing base/SFT/RLHF/DPO models across 5 categories)
+- **Key topics:** RLHF 3-phase pipeline, Bradley-Terry loss, PPO clipping, KL divergence penalty, DPO log-ratio loss, Constitutional AI, RLAIF, self-critique loop, red-teaming, alignment metrics
+- **NumPy + PyTorch:** All 5 examples have both NumPy (from scratch) and PyTorch (nn.Module) implementations
 - **Status:** Complete
 
 ---
@@ -172,25 +198,69 @@
 | Vector DB | ChromaDB, cosine similarity, RAG pipeline, semantic search, search evaluation |
 | Agents | ReAct pattern, tool use, function calling, short/long-term memory, multi-agent orchestration |
 | Fine-Tuning | Transfer learning, LoRA/PEFT, dataset prep (JSONL/Alpaca), training loop, early stopping, evaluation metrics |
+| Alignment | RLHF 3-phase pipeline, Bradley-Terry loss, PPO clipping+KL penalty, DPO log-ratio loss, Constitutional AI, RLAIF, self-critique, red-teaming |
 | Production | JWT auth, rate limiting, connection pooling, caching, load balancing, monitoring, prompt injection scanning, PII redaction, multi-tenancy |
+
+---
+
+## New Modules (Planned — implement slowly)
+
+### Module 01.5 — Pandas & Data Handling
+**Why here:** Data cleaning is needed before NumPy/PyTorch touches training data. Also used in Module 06 (dataset prep) and Module 12 (JSONL building).
+- DataFrames: load CSV, JSON, JSONL files
+- Filter, sort, group (LINQ equivalents)
+- Missing data handling
+- Export: CSV, JSON, JSONL (for LLM training datasets)
+- Libraries: `pandas`, `matplotlib` (basic plots)
+- C# analogy: `DataTable` + `LINQ` + CSV helper in one
+
+### Module 05.5 — HuggingFace Tokenizers (Optional)
+**Why here:** After building BPE from scratch in Module 05, see how production tokenizers work.
+- BPE and WordPiece from HuggingFace `tokenizers` library
+- Load pretrained tokenizer (GPT-2, BERT)
+- Train custom tokenizer on your own corpus
+- Compare scratch-built vs HuggingFace output
+- Libraries: `tokenizers`, `datasets` (HuggingFace)
+
+### Module 10.5 — RAG Without Vectors (BM25 / TF-IDF)
+**Why here:** RAG concept before adding vector DB complexity. Works without GPU or embedding model.
+- TF-IDF retrieval (sklearn) — keyword frequency-based
+- BM25 search (`rank-bm25`) — smarter keyword ranking
+- Hybrid search: BM25 + dense vectors combined
+- When to use BM25 vs vector RAG (tradeoffs)
+- C# analogy: BM25 ≈ SQL full-text search; Vector RAG ≈ ML-powered semantic search
+- Libraries: `rank-bm25`, `sklearn`
+
+### Module 14 — Deploying LLMs
+**Why here:** After RLHF/alignment, deploy optimized models.
+- Quantization (float32 → int8, reduce model size 4x)
+- ONNX export and inference optimization
+- FastAPI streaming responses (SSE)
+- Local model serving (Ollama, llama.cpp)
+- Libraries: `onnx`, `fastapi`, `uvicorn`
+
+### Module 14.5 — Gradio & Streamlit UIs (Optional)
+**Why here:** Quick demo UIs for LLM projects — no frontend/React needed.
+- Gradio: chat interfaces, file upload, model demos
+- Streamlit: dashboards, data apps
+- Deploy to HuggingFace Spaces (free hosting)
+- C# analogy: Blazor without the complexity
+- Libraries: `gradio`, `streamlit`
 
 ---
 
 ## What to Do Next
 
-### Option A — Module 13: RLHF and Alignment
-- Reinforcement Learning from Human Feedback (how ChatGPT was aligned)
-- Direct Preference Optimization (DPO) -- simpler alternative to RLHF
-- Constitutional AI (Claude's approach)
-- Reward model training
+### Priority 1 — Module 14: Deploying LLMs
+- Quantization, ONNX, FastAPI serving, streaming
 
-### Option B — Module 14: Deploying LLMs
-- Quantization (reduce model size: float32 -> int8)
-- ONNX export and inference optimization
-- API serving with FastAPI
-- Streaming responses
+### Priority 3 — New Modules (any order)
+- Module 01.5 (Pandas) — good for data work
+- Module 10.5 (BM25/TF-IDF RAG) — practical, no GPU needed
+- Module 05.5 (HuggingFace Tokenizers) — optional deepdive
+- Module 14.5 (Gradio/Streamlit) — fun, quick wins
 
-### Option C — Fill Gaps
+### Priority 4 — Fill Gaps
 - Module 01: Add exercises
 - Module 03.5: Add more examples and exercises
 - Module 06/07: Add exercises

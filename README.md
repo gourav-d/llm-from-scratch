@@ -62,18 +62,27 @@ cd modules/09_production_llm_apps  # Or build production APIs
 ## 📊 Current Progress
 
 ```
-Module 1: Python Basics             ██████████ 100% ✅
-Module 2: NumPy & Math              ██████████ 100% ✅
-Module 3: Neural Networks           ██████████ 100% ✅
-Module 3.5: PyTorch & TensorFlow    ██████████ 100% ✅
-Module 4: Transformers              ██████████ 100% ✅
-Module 5: Building LLMs             ██████░░░░  70%  🔧
-Module 6: Training & Fine-tuning    ░░░░░░░░░░   0%  📅
-Module 7: Reasoning & Coding        ██████████ 100% ✅
-Module 8: Prompt Engineering        ██████████ 100% ✅
-Module 9: Production Apps           ██████████ 100% ✅ 🆕
+Module 1:    Python Basics              ██████████ 100% ✅
+Module 1.5:  Pandas & Data Handling     ░░░░░░░░░░   0% 📅 NEW
+Module 2:    NumPy & Math               ██████████ 100% ✅
+Module 3:    Neural Networks            ██████████ 100% ✅
+Module 3.5:  PyTorch & TensorFlow       ██████████ 100% ✅
+Module 4:    Transformers               ██████████ 100% ✅
+Module 5:    Building LLMs              ██████████ 100% ✅
+Module 5.5:  HuggingFace Tokenizers     ░░░░░░░░░░   0% 📅 NEW (optional)
+Module 6:    Training & Fine-tuning     ██████████ 100% ✅
+Module 7:    Reasoning & Coding         ██████████ 100% ✅
+Module 8:    Prompt Engineering         ██████████ 100% ✅
+Module 9:    Production Apps            ██████████ 100% ✅
+Module 10:   Vector Databases           ██████████ 100% ✅
+Module 10.5: RAG Without Vectors        ░░░░░░░░░░   0% 📅 NEW
+Module 11:   LLM Agents                 ██████████ 100% ✅
+Module 12:   Fine-Tuning LLMs           ██████████ 100% ✅
+Module 13:   RLHF & Alignment           ████░░░░░░  40% 🔧
+Module 14:   Deploying LLMs             ░░░░░░░░░░   0% 📅
+Module 14.5: Gradio & Streamlit UIs     ░░░░░░░░░░   0% 📅 NEW (optional)
 
-Overall Completion:                 ████████░░  82%
+Overall (core modules):                 ████████░░  85%
 ```
 
 **Legend:**
@@ -100,6 +109,25 @@ Learn Python from a C# perspective with side-by-side comparisons.
 - File I/O and error handling
 
 **Best for:** .NET developers new to Python
+
+---
+
+### Module 1.5: Pandas & Data Handling 📅 NEW
+**Status:** 📅 Planned | **Time:** 8-10 hours
+
+Excel-in-code. Load, clean, and transform data before feeding it to ML models.
+
+**Topics:**
+- DataFrames and Series (like `DataTable` + LINQ in C#)
+- Loading CSV, JSON, JSONL files
+- Filter, sort, group operations — LINQ equivalents
+- Handling missing data
+- Exporting JSONL for LLM training datasets
+- Basic plots with Matplotlib
+
+**Libraries:** `pandas`, `matplotlib`
+
+**Why here:** Dataset prep happens before NumPy or PyTorch. LLM training needs clean JSONL files — Pandas builds them.
 
 ---
 
@@ -189,8 +217,25 @@ Build a complete GPT model from scratch.
 
 ---
 
+### Module 5.5: HuggingFace Tokenizers (Optional) 📅 NEW
+**Status:** 📅 Planned | **Time:** 6-8 hours
+
+After building BPE from scratch in Module 5, see how production tokenizers work.
+
+**Topics:**
+- HuggingFace `tokenizers` library — BPE and WordPiece
+- Load pretrained tokenizer (GPT-2, BERT)
+- Train custom tokenizer on your own text corpus
+- Compare: scratch-built vs HuggingFace output side-by-side
+
+**Libraries:** `tokenizers`, `datasets` (HuggingFace)
+
+**Why optional:** Deep-dive for those who want production tokenizer skills. Safe to skip and return later.
+
+---
+
 ### Module 6: Training & Fine-tuning
-**Status:** 📅 Planned | **Time:** 25-35 hours
+**Status:** ✅ Complete | **Time:** 25-35 hours
 
 Train and fine-tune LLMs for custom tasks.
 
@@ -311,6 +356,72 @@ Master the art and science of communicating with LLMs - 10x your AI results over
 - Freelancing: $150-300/hour rates
 
 **Why this module:** Most practical, career-focused content in entire curriculum!
+
+---
+
+### Module 10.5: RAG Without Vectors (BM25 / TF-IDF) 📅 NEW
+**Status:** 📅 Planned | **Time:** 8-10 hours
+
+Build RAG pipelines without any GPU, embedding model, or vector database.
+
+**Topics:**
+- TF-IDF retrieval (sklearn) — keyword frequency scoring
+- BM25 search (`rank-bm25`) — smarter keyword ranking (used by Elasticsearch)
+- Hybrid search: BM25 + dense vectors combined
+- Tradeoffs: BM25 vs vector RAG — when to use each
+
+**Libraries:** `rank-bm25`, `sklearn`
+
+**C# analogy:** BM25 ≈ SQL full-text search. Vector RAG ≈ ML-powered semantic search.
+
+**Why here:** Teaches RAG fundamentals without the complexity of embeddings + vector DBs. Great for small corpora or GPU-free environments.
+
+---
+
+### Module 13: RLHF and Alignment 🔧
+**Status:** 🔧 In Progress (4/5 lessons done) | **Time:** 20-28 hours
+
+How ChatGPT was aligned — reward models, human feedback, and safety.
+
+**Topics:**
+- Reinforcement Learning from Human Feedback (RLHF)
+- Direct Preference Optimization (DPO) — simpler RLHF alternative
+- Constitutional AI (how Claude works)
+- Reward model training
+- Preference datasets
+
+---
+
+### Module 14: Deploying LLMs 📅
+**Status:** 📅 Planned | **Time:** 18-24 hours
+
+Shrink models, speed up inference, and serve them in production.
+
+**Topics:**
+- Quantization: float32 → int8 (4x smaller model, same quality)
+- ONNX export and inference optimization
+- FastAPI streaming responses (Server-Sent Events)
+- Local model serving with Ollama / llama.cpp
+
+**Libraries:** `onnx`, `fastapi`, `uvicorn`
+
+---
+
+### Module 14.5: Gradio & Streamlit UIs (Optional) 📅 NEW
+**Status:** 📅 Planned | **Time:** 6-8 hours
+
+Build chat interfaces and demos in minutes — no frontend skills needed.
+
+**Topics:**
+- Gradio: chat UI, file upload, model demos
+- Streamlit: dashboards, data exploration apps
+- Deploy to HuggingFace Spaces (free hosting)
+
+**Libraries:** `gradio`, `streamlit`
+
+**C# analogy:** Like Blazor but 10 lines of code instead of 100.
+
+**Why here:** Instantly showcase LLM projects. Great for portfolio demos.
 
 ---
 
@@ -437,16 +548,25 @@ After completing this curriculum:
 | Module | Status | Time | Lines of Code | Difficulty |
 |--------|--------|------|---------------|------------|
 | 1. Python Basics | ✅ | 8-10h | 1,500+ | Beginner |
+| 1.5 Pandas & Data | 📅 NEW | 8-10h | TBD | Beginner |
 | 2. NumPy & Math | ✅ | 12-14h | 2,000+ | Beginner |
 | 3. Neural Networks | ✅ | 35-45h | 6,900+ | Medium |
 | 3.5 PyTorch/TF | ✅ | 36-52h | 3,000+ | Medium |
 | 4. Transformers | ✅ | 22-34h | 4,500+ | Medium-Hard |
-| 5. Building LLMs | 🔧 | 20-30h | 3,000+ | Medium |
-| 6. Training | 📅 | 25-35h | TBD | Hard |
+| 5. Building LLMs | ✅ | 20-30h | 3,000+ | Medium |
+| 5.5 HuggingFace Tokenizers | 📅 NEW | 6-8h | TBD | Medium |
+| 6. Training & Fine-tuning | ✅ | 25-35h | TBD | Hard |
 | 7. Reasoning & Coding | ✅ | 30-40h | 23,000+ | Advanced |
 | 8. Prompt Engineering | ✅ | 25-30h | 5,000+ | Medium |
 | 9. Production Apps | ✅ | 34-42h | 4,900+ | Advanced |
-| **Total** | **82%** | **248-332h** | **54,800+** | **Comprehensive** |
+| 10. Vector Databases | ✅ | 15-20h | TBD | Medium |
+| 10.5 RAG Without Vectors | 📅 NEW | 8-10h | TBD | Medium |
+| 11. LLM Agents | ✅ | 20-25h | TBD | Advanced |
+| 12. Fine-Tuning LLMs | ✅ | 20-25h | TBD | Advanced |
+| 13. RLHF & Alignment | 🔧 | 20-28h | TBD | Hard |
+| 14. Deploying LLMs | 📅 | 18-24h | TBD | Advanced |
+| 14.5 Gradio & Streamlit | 📅 NEW | 6-8h | TBD | Beginner |
+| **Total** | **85% core** | **350-450h** | **54,800+** | **Comprehensive** |
 
 ---
 
@@ -528,15 +648,24 @@ After completing this curriculum:
 llm-from-scratch/
 ├── modules/
 │   ├── 01_python_basics/          ✅ Complete
+│   ├── 01.5_pandas_data/          📅 Planned (NEW)
 │   ├── 02_numpy_math/             ✅ Complete
-│   ├── 03_neural_networks/        ✅ Complete (100%)
-│   ├── 03.5_pytorch_tensorflow/   ✅ Complete (100%)
-│   ├── 04_transformers/           ✅ Complete (100%)
-│   ├── 05_building_llm/           🔧 In Development (70%)
-│   ├── 06_training_finetuning/    📅 Planned
-│   ├── 07_reasoning_and_coding/   ✅ Complete (100%)
-│   ├── 08_prompt_engineering/     ✅ Complete (100%)
-│   └── 09_production_llm_apps/    ✅ Complete (100%) 🆕
+│   ├── 03_neural_networks/        ✅ Complete
+│   ├── 03.5_pytorch_tensorflow/   ✅ Complete
+│   ├── 04_transformers/           ✅ Complete
+│   ├── 05_building_llm/           ✅ Complete
+│   ├── 05.5_huggingface_tokenizers/ 📅 Planned (NEW, optional)
+│   ├── 06_training_finetuning/    ✅ Complete
+│   ├── 07_reasoning_and_coding/   ✅ Complete
+│   ├── 08_prompt_engineering/     ✅ Complete
+│   ├── 09_production_llm_apps/    ✅ Complete
+│   ├── 10_vector_databases/       ✅ Complete
+│   ├── 10.5_rag_without_vectors/  📅 Planned (NEW)
+│   ├── 11_llm_agents/             ✅ Complete
+│   ├── 12_fine_tuning/            ✅ Complete
+│   ├── 13_rlhf_alignment/         🔧 In Progress
+│   ├── 14_deploying_llms/         📅 Planned
+│   └── 14.5_gradio_streamlit/     📅 Planned (NEW, optional)
 │
 ├── projects/                       # Capstone projects
 ├── references/                     # Additional reading

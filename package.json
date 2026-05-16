@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@starbased/ccstatusline": "^2.0.21"
+  }
+}

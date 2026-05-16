@@ -186,6 +186,63 @@ Before starting Module 4, you should have completed:
 
 ---
 
+### Lesson 7: BERT — Bidirectional Encoder Representations from Transformers
+**File:** `07_bert.md`
+
+**What you'll learn:**
+- Encoder-only transformer architecture
+- How bidirectionality differs from GPT
+- Masked Language Modeling (MLM) pre-training
+- Next Sentence Prediction (NSP)
+- Special tokens: [CLS], [SEP], [MASK], [PAD]
+- When to use BERT vs GPT
+
+**Time:** 2-3 hours
+
+**Key insight:**
+> BERT reads left AND right simultaneously. Best for understanding tasks (classification, Q&A). Cannot generate text.
+
+---
+
+### Lesson 8: T5 — Text-to-Text Transfer Transformer
+**File:** `08_t5.md`
+
+**What you'll learn:**
+- Encoder-decoder transformer (full architecture)
+- The text-to-text framework: every task = text in → text out
+- Task prefixes ("translate:", "summarize:", "sentiment:")
+- Span corruption pre-training
+- C4 dataset overview
+- BERT vs GPT vs T5 comparison
+
+**Time:** 2-3 hours
+
+**Key insight:**
+> T5 uses one model for every NLP task. Just change the input prefix.
+
+---
+
+### Lesson 9: The GPT Family — GPT-1 through GPT-4
+**File:** `09_gpt_family.md`
+
+**What you'll learn:**
+- GPT architecture: decoder-only, masked self-attention
+- Causal language modeling training objective
+- GPT-1 (117M): pre-train + fine-tune
+- GPT-2 (1.5B): zero-shot prompting
+- GPT-3 (175B): few-shot learning, emergent abilities
+- InstructGPT / ChatGPT: RLHF addition
+- GPT-4: multimodal, 128K context
+- Scaling laws: why bigger = better
+- Open-source alternatives (LLaMA, Mistral)
+
+**Time:** 2-3 hours
+
+**Key insight:**
+> GPT-1 → GPT-4 is a story of scale. Same core architecture, 10,000x more parameters, fundamentally new capabilities emerged.
+
+---
+
 ## 🛠️ What You'll Build
 
 ### Example 1: Simple Attention
@@ -539,6 +596,9 @@ modules/04_transformers/
 ├── 04_positional_encoding.md           ← Lesson 4
 ├── 05_feedforward_networks.md          ← Lesson 5
 ├── 06_transformer_architecture.md      ← Lesson 6
+├── 07_bert.md                          ← Lesson 7: BERT
+├── 08_t5.md                            ← Lesson 8: T5
+├── 09_gpt_family.md                    ← Lesson 9: GPT-1 → GPT-4
 ├── examples/
 │   ├── example_01_attention.py
 │   ├── example_02_self_attention.py
