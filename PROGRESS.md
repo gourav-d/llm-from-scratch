@@ -1,6 +1,6 @@
 # Learning Progress — LLM from Scratch
 
-**Last Updated:** May 15, 2026 (Module 13 complete)
+**Last Updated:** May 19, 2026 (Module 10.8 complete)
 **Student:** .NET developer learning Python + LLMs simultaneously
 
 ---
@@ -23,6 +23,7 @@
 | 09 | Production LLM Applications | 4 | 4 | 4 | 2 | ✅ Complete |
 | 10 | Vector Databases | 5 | 5 | 3 | 2 | ✅ Complete |
 | 10.5 | RAG Without Vectors (BM25/TF-IDF) | — | — | — | — | 📅 Planned |
+| 10.8 | Semantic Search Systems | 6 | 6 | 5 | 1 | ✅ Complete |
 | 11 | LLM Agents | 5 | 5 | 5 | 3 | ✅ Complete |
 | 12 | Fine-Tuning LLMs | 5 | 5 | 5 | 3 | ✅ Complete |
 | 13 | RLHF and Alignment | 5 | 5 | 5 | 3 | ✅ Complete |
@@ -128,6 +129,18 @@
   - Multi-Tenant SaaS Platform (tenant isolation, billing engine, per-tier quotas, usage reports)
 - **Key topics:** JWT auth, rate limiting, connection pooling, LRU cache, load balancing, structured logging, p99 latency, Prometheus metrics, distributed tracing, prompt injection scanning, PII redaction, cost tracking, multi-tenancy
 - **Status:** Complete
+
+---
+
+### Module 10.8 -- Semantic Search Systems
+- **Lessons:** 6 files (keyword vs semantic, bi-encoder, cross-encoder/re-ranking, FAISS/ANN, hybrid search, full pipeline)
+- **Examples:** 6 files (01: keyword vs semantic failure, 02: bi-encoder search, 03: cross-encoder rerank, 04: FAISS index, 05: hybrid search, 06: full pipeline)
+- **Exercises:** 5 files (01: encode and search, 02: reranker, 03: FAISS basics, 04: hybrid search, 05: full pipeline)
+- **Projects:** mini_search_engine (4 files: indexer, searcher, reranker, main console loop over 50 Wikipedia summaries)
+- **Key topics:** Vocabulary mismatch problem, bi-encoder (fast retrieval), cross-encoder (accurate re-ranking), HNSW index, ANN search, BM25+semantic hybrid, Reciprocal Rank Fusion, NDCG/MRR/Precision@K
+- **All examples:** NumPy-only primary (no install needed). Part B sections (commented) show sentence-transformers + faiss-cpu.
+- **Connects to:** M10 (vector DBs/cosine similarity), M10.5 (BM25 keyword search), M07 (code semantic search project)
+- **Status:** Complete (2026-05-19)
 
 ---
 
