@@ -1,6 +1,6 @@
 # Learning Progress — LLM from Scratch
 
-**Last Updated:** May 19, 2026 (Module 10.8 complete)
+**Last Updated:** 2026-05-24 (Added 3 standalone capstone projects to roadmap)
 **Student:** .NET developer learning Python + LLMs simultaneously
 
 ---
@@ -10,7 +10,7 @@
 | # | Module | Lessons | Examples | Exercises | Projects | Status |
 |---|--------|---------|----------|-----------|----------|--------|
 | 01 | Python Basics | 10 | 10 | 0 | — | Content ready, exercises missing |
-| 01.5 | Pandas & Data Handling | — | — | — | — | 📅 Planned |
+| 01.5 | Pandas & Data Handling | 5 | 5 | 5 | — | ✅ Complete |
 | 02 | NumPy & Math | 3 | 4 | 3 | — | ✅ Complete |
 | 03 | Neural Networks | 6 | 6 | 6 | 3 | ✅ Complete |
 | 03.5 | PyTorch & TensorFlow | 5 | 2 | 1 | 1 | ✅ Complete (minimal exercises) |
@@ -22,12 +22,12 @@
 | 08 | Prompt Engineering | 10 | 3 | 2 | — | ✅ Complete |
 | 09 | Production LLM Applications | 4 | 4 | 4 | 2 | ✅ Complete |
 | 10 | Vector Databases | 5 | 5 | 3 | 2 | ✅ Complete |
-| 10.5 | RAG Without Vectors (BM25/TF-IDF) | — | — | — | — | 📅 Planned |
+| 10.5 | RAG Without Vectors (BM25/TF-IDF) | 5 | — | — | — | ✅ Complete (theory only) |
 | 10.8 | Semantic Search Systems | 6 | 6 | 5 | 1 | ✅ Complete |
 | 11 | LLM Agents | 5 | 5 | 5 | 3 | ✅ Complete |
 | 12 | Fine-Tuning LLMs | 5 | 5 | 5 | 3 | ✅ Complete |
 | 13 | RLHF and Alignment | 5 | 5 | 5 | 3 | ✅ Complete |
-| 14 | Deploying LLMs | — | — | — | — | 📅 Planned |
+| 14 | Deploying LLMs | 6 | 6 | 6 | — | ✅ Complete |
 | 14.5 | Gradio & Streamlit UIs | — | — | — | — | 📅 Planned (optional) |
 
 \* Module 04 examples: 6 NumPy + 6 PyTorch + 6 TensorFlow (all in `examples/`, `examples/pytorch/`, `examples/tensorflow/`)
@@ -245,12 +245,25 @@
 - Libraries: `rank-bm25`, `sklearn`
 
 ### Module 14 — Deploying LLMs
-**Why here:** After RLHF/alignment, deploy optimized models.
-- Quantization (float32 → int8, reduce model size 4x)
-- ONNX export and inference optimization
-- FastAPI streaming responses (SSE)
-- Local model serving (Ollama, llama.cpp)
-- Libraries: `onnx`, `fastapi`, `uvicorn`
+- **Lessons:** 6 files (quantization concepts, GGUF format, TorchAO, ONNX export, Ollama+FastAPI, KV Cache & Inference Optimization)
+- **Examples:** 5 files (L1–L5 done; L6 example pending)
+  - 01: INT8/INT4 quantization from scratch, group quantization, memory math
+  - 02: GGUF file structure, magic number check, llama-cpp-python load + chat
+  - 03: TorchAO quantize_() API, INT8/INT4, memory measurement, fp32 vs INT8 comparison
+  - 04: ONNX export, dynamic axes, ONNX Runtime inference, PyTorch vs ORT verification, C# integration
+  - 05: Ollama 3 call methods, FastAPI server with streaming/auth/rate limiting/logging
+  - 06: KV cache simulation (manual K/V store, reuse vs recompute, memory cost formula), paged attention concept, INT8 KV cache
+- **Key topics:** PTQ, group quantization, GGUF Q4_K_M, llama.cpp, TorchAO, ONNX Runtime,
+  OpenAI-compatible API, FastAPI Pydantic models, SSE streaming, rate limiting,
+  KV cache (past_key_values), memory cost formula, paged attention, INT8 KV cache quantization
+- **All examples:** Part A = numpy/stdlib only. Part B = real library with graceful fallback.
+- **Exercises:** 5 files
+  - 01: Model size calc, INT8 symmetric, asymmetric zero-point, group quantization
+  - 02: GGUF file validator (magic bytes + version), quantization advisor, multi-turn chat
+  - 03: Per-column INT8 quant, model_size_mb(), apply TorchAO, inspect quantized layers
+  - 04: Concept questions, export with correct params, verify ORT vs PyTorch, fix dynamic axes bug
+  - 05: OllamaClient class, prompt templates, FastAPI with Pydantic, rate limiter, streaming
+- **Status:** ✅ Complete (2026-05-29). All 6 lessons, 6 examples, 6 exercises done.
 
 ### Module 14.5 — Gradio & Streamlit UIs (Optional)
 **Why here:** Quick demo UIs for LLM projects — no frontend/React needed.
@@ -264,8 +277,8 @@
 
 ## What to Do Next
 
-### Priority 1 — Module 14: Deploying LLMs
-- Quantization, ONNX, FastAPI serving, streaming
+### Priority 1 — Module 15: Advanced LLM Training
+- Flash Attention, ZeRO optimizer, bf16, Chinchilla scaling laws, distillation, dataset streaming
 
 ### Priority 3 — New Modules (any order)
 - Module 01.5 (Pandas) — good for data work
@@ -277,3 +290,177 @@
 - Module 01: Add exercises
 - Module 03.5: Add more examples and exercises
 - Module 06/07: Add exercises
+
+---
+
+## Standalone Capstone Projects (Post-Course)
+
+Build these AFTER all modules (M01–M17 + LLM Capstone) are complete.
+Each project is self-contained and reinforces a different ML discipline.
+
+---
+
+### Project A — Beginner: House Price Prediction
+**Unlock after:** M01.5 (Pandas), M02 (NumPy), M03 (Neural Networks)
+**Status:** 🔒 Locked
+
+**Goal:** Build a model that predicts house prices from structured data.
+
+| Topic | What You Learn |
+|-------|---------------|
+| Data cleaning | Handle missing values, outliers, wrong types |
+| Feature engineering | Create new features (price_per_sqft, age of house), encode categoricals |
+| Regression | Linear regression, polynomial regression, decision tree regressor |
+| Model building | Train/test split, cross-validation, hyperparameter tuning |
+| Evaluation | MAE, RMSE, R² score — what they mean and how to improve them |
+
+**Dataset features:**
+- `bedrooms` (int), `bathrooms` (float), `sqft_living` (int), `sqft_lot` (int)
+- `floors` (float), `waterfront` (0/1), `view` (0–4), `condition` (1–5)
+- `grade` (1–13), `zipcode` (categorical), `yr_built`, `yr_renovated`
+- `lat`/`long` (geolocation), `price` (target variable)
+
+**Build plan:**
+```
+1. Load & explore   -- pandas, describe(), missing value heatmap
+2. Clean data       -- fill nulls, remove outliers (z-score or IQR)
+3. Feature engineer -- log(price), price_per_sqft, house_age, is_renovated
+4. Encode           -- one-hot zipcode, ordinal grade/condition
+5. Split            -- 80/20 train/test, stratified by price bucket
+6. Baseline model   -- Linear regression (sklearn)
+7. Better model     -- Gradient boosting (XGBoost or sklearn GBR)
+8. Neural network   -- PyTorch MLP regressor (connects to M03)
+9. Evaluate         -- compare all 3 models on test set
+10. Visualize       -- actual vs predicted scatter, feature importance
+```
+
+**Libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `sklearn`, `torch`
+
+---
+
+### Project B — Intermediate: Movie Recommendation System
+**Unlock after:** M05 (Embeddings), M10 (Vector DBs), M02 (NumPy)
+**Status:** 🔒 Locked
+
+**Goal:** Build a system that recommends movies a user will likely enjoy.
+
+| Topic | What You Learn |
+|-------|---------------|
+| Matrix factorization | Decompose user×movie rating matrix into latent factors |
+| Collaborative filtering | "Users who liked X also liked Y" |
+| Content-based filtering | Recommend by movie similarity (genre, director, cast) |
+| Vector similarity | Cosine similarity between user/movie embedding vectors |
+| Evaluation | Precision@K, Recall@K, NDCG — standard recommender metrics |
+
+**Dataset:** MovieLens (free, publicly available)
+- `ratings.csv` — (userId, movieId, rating, timestamp)
+- `movies.csv` — (movieId, title, genres)
+- Small version: 100K ratings, 9K movies, 600 users
+
+**Build plan:**
+```
+Part A: Collaborative Filtering
+1. Load MovieLens ratings into user×movie matrix
+2. Compute user-user similarity (cosine similarity matrix)
+3. Predict: weighted average of similar users' ratings
+4. Evaluate: Precision@10 on held-out test ratings
+
+Part B: Matrix Factorization (SVD)
+1. Decompose rating matrix R ≈ U × S × Vt  (numpy.linalg.svd)
+2. User embedding = row of U matrix
+3. Movie embedding = row of V matrix
+4. Predict rating = user_embedding · movie_embedding
+5. Compare accuracy vs Part A
+
+Part C: Neural Matrix Factorization
+1. Build PyTorch model with nn.Embedding for users and movies
+2. Train on (user, movie, rating) triplets with MSE loss
+3. After training, user/movie embeddings are learned latent factors
+4. Recommendation = top-K movies by dot product with user embedding
+5. Connection to M10: store movie embeddings in ChromaDB for fast search
+
+Part D: Content-Based (bonus)
+1. TF-IDF on movie titles + genres
+2. Cosine similarity between movie vectors
+3. "If you liked movie X, you'll like movies similar to X"
+```
+
+**Libraries:** `pandas`, `numpy`, `torch`, `sklearn`, `chromadb`
+**Key insight:** The movie embedding table in Part C is IDENTICAL to the token
+embedding table in GPT. Same nn.Embedding, different domain.
+
+---
+
+### Project C — Advanced: Real-Time Object Detection System
+**Unlock after:** M03.5 (PyTorch), M04 (Transformers), M14 (Deploying LLMs)
+**Status:** 🔒 Locked
+
+**Goal:** Build a system that detects and labels objects in images or video in real time.
+
+| Topic | What You Learn |
+|-------|---------------|
+| Computer vision | How images become tensors, convolutions, feature maps |
+| Object detection | Bounding boxes, anchor boxes, IoU (Intersection over Union) |
+| Pre-trained models | YOLO, DETR (Detection Transformer) — fine-tune vs use as-is |
+| Real-time processing | Webcam input, FPS optimization, frame buffering |
+| Model optimization | INT8 quantization for speed (M14), TorchAO, ONNX export |
+
+**Build plan:**
+```
+Part A: Vision Fundamentals
+1. Image as tensor -- load with PIL/OpenCV, convert to (C, H, W) tensor
+2. Convolution from scratch -- NumPy 2D convolution, edge detection filters
+3. Feature maps -- visualize what CNN layers "see"
+4. Object detection concepts -- bounding boxes, IoU, NMS (non-max suppression)
+
+Part B: Use a Pre-Trained Detector
+1. Load YOLOv8 (ultralytics) or DETR (HuggingFace transformers)
+2. Run on sample images -- get bounding boxes + class labels + confidence
+3. Draw boxes on image with matplotlib/OpenCV
+4. Benchmark: images/second on CPU vs GPU
+
+Part C: Real-Time Webcam Detection
+1. OpenCV VideoCapture for webcam input
+2. Per-frame detection loop -- feed frame to model, draw results
+3. FPS counter -- measure actual real-time performance
+4. Optimization: resize frames, skip frames, batch frames
+
+Part D: Model Optimization (connects to M14)
+1. Export to ONNX -- run ONNX Runtime vs PyTorch, compare speed
+2. INT8 quantization with TorchAO -- measure FPS improvement
+3. Optional: deploy as FastAPI service with image upload endpoint
+
+Part E: Fine-Tune on Custom Data (advanced bonus)
+1. Label custom images with LabelImg tool
+2. Fine-tune YOLO on custom classes (e.g., detect your own objects)
+3. Evaluate: mAP (mean Average Precision) on test set
+```
+
+**Libraries:** `torch`, `torchvision`, `opencv-python`, `ultralytics` (YOLOv8),
+             `transformers` (DETR), `onnx`, `onnxruntime`, `torchao`, `PIL`
+
+**Key connections to course:**
+| This project | Module it connects to |
+|---|---|
+| Image tensors (C, H, W) | M02 NumPy arrays, M03.5 PyTorch tensors |
+| Attention in DETR | M04 Transformer architecture |
+| Fine-tuning YOLO | M12 Fine-tuning techniques + LoRA |
+| INT8/ONNX export | M14 Deploying LLMs (same techniques!) |
+| FastAPI endpoint | M09 Production LLM Apps |
+
+---
+
+## Full Project Roadmap (All Capstones)
+
+```
+After M03           --> Project A: House Price Prediction (beginner ML)
+After M10/M05       --> Project B: Movie Recommendation (intermediate ML)
+After M14/M17       --> Project C: Object Detection (advanced CV)
+After ALL modules   --> LLM Capstone: Chat with Codebase (offline RAG app)
+```
+
+All 4 projects together = full-stack ML portfolio covering:
+- Classical ML (regression, recommender systems)
+- Computer vision (detection, real-time)
+- LLM applications (RAG, local deployment)
+
