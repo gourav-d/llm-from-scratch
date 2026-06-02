@@ -1,6 +1,6 @@
 # Learning Progress — LLM from Scratch
 
-**Last Updated:** 2026-05-24 (Added 3 standalone capstone projects to roadmap)
+**Last Updated:** 2026-05-31 (M16 Modern Architectures + M17 Evaluation concepts complete)
 **Student:** .NET developer learning Python + LLMs simultaneously
 
 ---
@@ -29,6 +29,10 @@
 | 13 | RLHF and Alignment | 5 | 5 | 5 | 3 | ✅ Complete |
 | 14 | Deploying LLMs | 6 | 6 | 6 | — | ✅ Complete |
 | 14.5 | Gradio & Streamlit UIs | — | — | — | — | 📅 Planned (optional) |
+| 15 | Advanced LLM Training | 6 | 6 | 6 | — | ✅ Complete (2026-05-30) |
+| 16 | Modern LLM Architectures | 5 | — | — | — | 📖 Concepts only (examples/exercises pending) |
+| 17 | LLM Evaluation & Benchmarks | 5 | — | — | — | 📖 Concepts only (examples/exercises pending) |
+| 18 | Qwen3.5 LLM from Scratch (PyTorch) | 5 | — | — | 1 | 📅 Planned |
 
 \* Module 04 examples: 6 NumPy + 6 PyTorch + 6 TensorFlow (all in `examples/`, `examples/pytorch/`, `examples/tensorflow/`)
 
@@ -91,6 +95,18 @@
 - **Projects:** 7 files
   - Shakespeare Generator, Custom Chatbot, Smart Autocomplete, Email Subject Generator,
     SQL Query Completer, Log Anomaly Detector, Company Name Generator
+- **Model Evolution Lab:** `model_evolution/` — 8-step hands-on series (added 2026-06-02)
+  - 11 files: `download_data.py`, `shared.py`, `step_00` through `step_07`
+  - Step 0: Bigram (lookup table, val loss ~2.4, 1 min CPU)
+  - Step 1: MLP with 16-char context window (val loss ~2.0, 3 min)
+  - Step 2: Single-head self-attention + positional embedding (val loss ~1.7, 5 min)
+  - Step 3: Multi-head attention (4 heads) + FeedForward (val loss ~1.5, 7 min)
+  - Step 4: Full NanoGPT — 3 stacked blocks + LayerNorm + residuals (val loss ~1.3, 10 min)
+  - Step 5: Group-Query Attention — fewer KV heads, 50% KV memory saved
+  - Step 6: KV Cache — 5-10x faster generation, tokens/sec benchmark printed
+  - Step 7: RoPE positional embeddings — no learned pos embed, better extrapolation (val loss ~1.2)
+  - Each step: before/after training text sample shown, full C# analogies, every line commented
+  - Final summary: shows full evolution from bigram → mini-Qwen equivalent
 
 ---
 
@@ -277,19 +293,110 @@
 
 ## What to Do Next
 
-### Priority 1 — Module 15: Advanced LLM Training
-- Flash Attention, ZeRO optimizer, bf16, Chinchilla scaling laws, distillation, dataset streaming
+### Priority 1 — Complete M16 + M17 (examples & exercises)
+- M16: 5 examples (AR limits, diffusion text, MDLM/SEDD/Plaid, ELBO loss, MTP)
+- M17: 5 examples (perplexity/loss curves, MMLU eval, GSM8K/HumanEval, BLEU/ROUGE/BERTScore, lm-eval harness)
+- M16: exercises pending
+- M17: exercises pending
 
-### Priority 3 — New Modules (any order)
-- Module 01.5 (Pandas) — good for data work
-- Module 10.5 (BM25/TF-IDF RAG) — practical, no GPU needed
-- Module 05.5 (HuggingFace Tokenizers) — optional deepdive
-- Module 14.5 (Gradio/Streamlit) — fun, quick wins
+### Priority 2 — Module 18: Qwen3.5 from Scratch
+- Unlocks after M16 + M17 complete (or in parallel)
+- 5 lessons + 5 examples + 5 exercises + 1 Mini-Qwen project
+- Sequence: RoPE → GQA → RLA → KV Cache → Full Decoder
 
-### Priority 4 — Fill Gaps
+### Priority 3 — Capstone: Chat with Codebase
+- Unlocks after M16 + M17 + M18 complete
+- Stack: Ollama + ChromaDB + Streamlit + custom code chunker
+- Build phases: indexer → query engine → console → web UI → re-index script
+
+### Priority 4 — Standalone Projects (unlocked)
+- Project A: House Price Prediction (unlock: M03 done ✅)
+- Project B: Movie Recommendation (unlock: M05 + M10 done ✅)
+- Project C: Object Detection (unlock: M14 done ✅)
+
+### Priority 5 — Fill Gaps
 - Module 01: Add exercises
 - Module 03.5: Add more examples and exercises
 - Module 06/07: Add exercises
+
+---
+
+### Module 15 — Advanced LLM Training
+- **Lessons:** 6 files (Chinchilla scaling laws, mixed precision bf16/fp16, Flash Attention, gradient checkpointing + ZeRO, dataset streaming, knowledge distillation)
+- **Examples:** 6 files (01: scaling laws + compute budget, 02: bf16/fp16 mixed precision, 03: Flash Attention O(N) vs O(N²), 04: ZeRO + gradient checkpointing, 05: HuggingFace streaming datasets, 06: teacher→student distillation)
+- **Exercises:** 6 files
+- **Key topics:** Chinchilla compute-optimal formula, loss scaling, Flash Attention blocked SRAM, ZeRO stages 1-3, DeepSpeed, `load_dataset(..., streaming=True)`, distillation KL divergence + temperature softening
+- **Status:** ✅ Complete (2026-05-30)
+
+---
+
+### Module 16 — Modern LLM Architectures
+- **Location:** `modules/16_modern_architectures/`
+- **Lessons (5):**
+  - L1: Auto-regressive recap + limitations (sequential, no revision, left-to-right bias)
+  - L2: Diffusion process for text (masking as noise, forward/reverse, parallel generation)
+  - L3: Diffusion Language Models — MDLM, SEDD, Plaid (absorbing states, vocab transitions, production scale)
+  - L4: Diffusion loss function (ELBO, VLB, denoising score matching, weighted cross-entropy on masked positions)
+  - L5: Multi-Token Prediction (MTP) — N heads, richer gradients, speculative decoding, Meta results
+- **Examples:** ❌ Not yet created
+- **Exercises:** ❌ Not yet created
+- **Key topics:** AR limits, masking diffusion, ELBO/VLB, MDLM absorbing state, SEDD score-based, MTP heads, speculative decoding, Pass@k for MTP inference
+- **Status:** 📖 Concepts complete (2026-05-31). Examples + exercises pending.
+
+---
+
+### Module 17 — LLM Evaluation & Benchmarks
+- **Location:** `modules/17_evaluation/`
+- **Lessons (5):**
+  - L1: Training metrics — cross-entropy loss, perplexity = exp(loss), overfitting detection (val loss rises)
+  - L2: General benchmarks — MMLU (57 subjects), HellaSwag (adversarial common sense), ARC-Challenge (science)
+  - L3: Task benchmarks — GSM8K (math word problems), HumanEval (Pass@k, code tests), TruthfulQA (factuality)
+  - L4: Text quality metrics — BLEU (precision, n-gram), ROUGE (recall, summarization), BERTScore (semantic)
+  - L5: Evaluation in practice — lm-evaluation-harness, OpenLLM Leaderboard, pitfalls (contamination, shot count)
+- **Examples:** ❌ Not yet created
+- **Exercises:** ❌ Not yet created
+- **Key topics:** Perplexity scale, overfitting curves, 25% random baseline, Pass@1 vs Pass@k, BLEU clipping, ROUGE-1/2/L, BERTScore cosine similarity, `lm_eval` CLI, data contamination, 0-shot vs 5-shot
+- **Libraries:** `evaluate`, `lm-eval`, `datasets`, `torch`, `numpy`, `matplotlib`
+- **Status:** 📖 Concepts complete (2026-05-31). Examples + exercises pending.
+
+---
+
+---
+
+### Module 18 — Qwen3.5 LLM from Scratch (PyTorch)
+- **Location:** `modules/18_qwen3_from_scratch/`
+- **Why Qwen3.5:** Production-grade open-source LLM. Combines modern techniques (RoPE, GQA, RLA) missing from classic GPT. Building it from scratch cements everything learned in M03–M15.
+- **Lessons (5):**
+  - L1: RoPE — Rotary Position Embeddings (replaces sinusoidal PE from M04)
+  - L2: Group-Query Attention (GQA) — fewer KV heads, same Q heads → faster inference, less VRAM
+  - L3: Recurrent Linear Attention (RLA) — O(1) memory per token, no quadratic attention, hybrid mode
+  - L4: KV Cache Management — cache past K/V tensors, paged attention, memory budget, eviction
+  - L5: Decoder Block + Full Qwen3.5 Assembly — stack all pieces, generate text, compare to nanoGPT
+- **Examples (5, planned):**
+  - 01: RoPE from scratch — rotation matrix math, compare sinusoidal vs RoPE position, visualize
+  - 02: GQA from scratch — full MHA vs GQA vs MQA, head count math, VRAM savings formula
+  - 03: Recurrent Linear Attention — linear attention kernel, recurrent form, hybrid attention block
+  - 04: KV Cache — manual cache implementation, paged cache, INT8 KV cache quantization
+  - 05: Full Qwen3.5 decoder — assemble L1–L4 into working model, generate text token-by-token
+- **Exercises (5, planned):**
+  - 01: RoPE — implement rotate_half(), apply RoPE to Q and K, verify position invariance
+  - 02: GQA — implement KV head expansion (repeat_kv), measure memory vs MHA
+  - 03: Linear Attention — implement linear attention from scratch, compare output to softmax attention
+  - 04: KV Cache — build KVCacheManager class, measure tokens/sec with and without cache
+  - 05: Full decoder — wire all components, count parameters, run forward pass on dummy input
+- **Project (1, planned):**
+  - Mini-Qwen: 6-layer, 256-dim Qwen3.5-style decoder trained on Shakespeare (~10M params)
+    - Uses RoPE + GQA + KV Cache
+    - Generates text and compares quality vs nanoGPT from M05
+    - Benchmarks: tokens/sec, VRAM usage, perplexity
+- **Key topics:** RoPE rotation matrix, θ frequencies, GQA head groups, repeat_kv, linear attention O(N) kernel, recurrent state, KV cache past_key_values, paged attention pages, memory formula, decoder stack, causal mask, RMSNorm, SwiGLU activation
+- **Prerequisites:** M04 (Transformers), M05 (Building LLM), M14 (KV Cache concept), M15 (Flash Attention)
+- **C# analogies:**
+  - RoPE ↔ injecting position info via complex multiplication (like a hash of index into a value)
+  - GQA ↔ sharing a read-only resource (KV heads) across multiple consumers (Q heads) — like a static readonly field
+  - KV Cache ↔ `Dictionary<int, (K, V)>` that grows with each token, read-only after written
+- **Libraries:** `torch`, `torch.nn`, `numpy`, `matplotlib`
+- **Status:** 📅 Planned
 
 ---
 
@@ -456,7 +563,7 @@ Part E: Fine-Tune on Custom Data (advanced bonus)
 After M03           --> Project A: House Price Prediction (beginner ML)
 After M10/M05       --> Project B: Movie Recommendation (intermediate ML)
 After M14/M17       --> Project C: Object Detection (advanced CV)
-After ALL modules   --> LLM Capstone: Chat with Codebase (offline RAG app)
+After M16/M17/M18   --> LLM Capstone: Chat with Codebase (offline RAG app)
 ```
 
 All 4 projects together = full-stack ML portfolio covering:
