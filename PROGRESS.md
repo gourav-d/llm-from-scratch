@@ -1,6 +1,6 @@
 # Learning Progress — LLM from Scratch
 
-**Last Updated:** 2026-05-31 (M16 Modern Architectures + M17 Evaluation concepts complete)
+**Last Updated:** 2026-06-30 (M18 fully complete — all examples + exercises + Mini-Qwen project added)
 **Student:** .NET developer learning Python + LLMs simultaneously
 
 ---
@@ -30,9 +30,9 @@
 | 14 | Deploying LLMs | 6 | 6 | 6 | — | ✅ Complete |
 | 14.5 | Gradio & Streamlit UIs | — | — | — | — | 📅 Planned (optional) |
 | 15 | Advanced LLM Training | 6 | 6 | 6 | — | ✅ Complete (2026-05-30) |
-| 16 | Modern LLM Architectures | 5 | — | — | — | 📖 Concepts only (examples/exercises pending) |
-| 17 | LLM Evaluation & Benchmarks | 5 | — | — | — | 📖 Concepts only (examples/exercises pending) |
-| 18 | Qwen3.5 LLM from Scratch (PyTorch) | 5 | — | — | 1 | 📅 Planned |
+| 16 | Modern LLM Architectures | 5 | 5 | 5 | — | ✅ Complete (2026-06-30) |
+| 17 | LLM Evaluation & Benchmarks | 5 | 5 | 5 | — | ✅ Complete (2026-06-30) |
+| 18 | Qwen3.5 LLM from Scratch (PyTorch) | 5 | 5 | 5 | 1 | ✅ Complete (2026-06-30) |
 
 \* Module 04 examples: 6 NumPy + 6 PyTorch + 6 TensorFlow (all in `examples/`, `examples/pytorch/`, `examples/tensorflow/`)
 
@@ -293,18 +293,7 @@
 
 ## What to Do Next
 
-### Priority 1 — Complete M16 + M17 (examples & exercises)
-- M16: 5 examples (AR limits, diffusion text, MDLM/SEDD/Plaid, ELBO loss, MTP)
-- M17: 5 examples (perplexity/loss curves, MMLU eval, GSM8K/HumanEval, BLEU/ROUGE/BERTScore, lm-eval harness)
-- M16: exercises pending
-- M17: exercises pending
-
-### Priority 2 — Module 18: Qwen3.5 from Scratch
-- Unlocks after M16 + M17 complete (or in parallel)
-- 5 lessons + 5 examples + 5 exercises + 1 Mini-Qwen project
-- Sequence: RoPE → GQA → RLA → KV Cache → Full Decoder
-
-### Priority 3 — Capstone: Chat with Codebase
+### Priority 1 — Capstone: Chat with Codebase
 - Unlocks after M16 + M17 + M18 complete
 - Stack: Ollama + ChromaDB + Streamlit + custom code chunker
 - Build phases: indexer → query engine → console → web UI → re-index script
@@ -338,10 +327,20 @@
   - L3: Diffusion Language Models — MDLM, SEDD, Plaid (absorbing states, vocab transitions, production scale)
   - L4: Diffusion loss function (ELBO, VLB, denoising score matching, weighted cross-entropy on masked positions)
   - L5: Multi-Token Prediction (MTP) — N heads, richer gradients, speculative decoding, Meta results
-- **Examples:** ❌ Not yet created
-- **Exercises:** ❌ Not yet created
+- **Examples (5):**
+  - `example_01_ar_limits.py` — Sequential steps, no-revision demo, left-to-right bias, AR vs diffusion vs MTP table
+  - `example_02_diffusion_text.py` — Forward masking (linear + cosine schedule), closed-form sampling, reverse unmasking, step count comparison
+  - `example_03_diffusion_models.py` — MDLM absorbing state, SEDD vocab transitions, confidence-ordered unmasking, MDLM vs SEDD vs Plaid comparison
+  - `example_04_elbo_loss.py` — Why log P(x) is intractable, GPT vs MDLM loss side-by-side, loss vs noise level, ELBO decomposition
+  - `example_05_mtp.py` — Standard vs MTP training, N=4 heads, richer gradient signal, speculative decoding speedup, MTP loss formula with weights
+- **Exercises (5):**
+  - `exercise_01_ar_limits.py` — count_ar_passes, diffusion_passes, speedup_ratio, has_right_context
+  - `exercise_02_diffusion_schedule.py` — linear_schedule, cosine_schedule, apply_mask, count_masked
+  - `exercise_03_mdlm.py` — is_absorbed, absorb_token, mdlm_forward, confidence_unmask
+  - `exercise_04_elbo_loss.py` — softmax, cross_entropy, mdlm_loss_at_step, training_loss
+  - `exercise_05_mtp.py` — get_target_token, head_loss, mtp_loss, gradient_signal_count
 - **Key topics:** AR limits, masking diffusion, ELBO/VLB, MDLM absorbing state, SEDD score-based, MTP heads, speculative decoding, Pass@k for MTP inference
-- **Status:** 📖 Concepts complete (2026-05-31). Examples + exercises pending.
+- **Status:** ✅ Complete (2026-06-30). All 5 lessons + 5 examples + 5 exercises done.
 
 ---
 
@@ -353,11 +352,21 @@
   - L3: Task benchmarks — GSM8K (math word problems), HumanEval (Pass@k, code tests), TruthfulQA (factuality)
   - L4: Text quality metrics — BLEU (precision, n-gram), ROUGE (recall, summarization), BERTScore (semantic)
   - L5: Evaluation in practice — lm-evaluation-harness, OpenLLM Leaderboard, pitfalls (contamination, shot count)
-- **Examples:** ❌ Not yet created
-- **Exercises:** ❌ Not yet created
+- **Examples (5):**
+  - `example_01_perplexity.py` — exp(loss) conversions, good training vs overfitting curves, automatic detection, BPC
+  - `example_02_general_benchmarks.py` — MMLU-style MCQ eval, accuracy + random baseline, real model leaderboard table
+  - `example_03_task_benchmarks.py` — GSM8K answer extraction, HumanEval Pass@k formula + table, TruthfulQA myth scoring
+  - `example_04_text_metrics.py` — BLEU n-gram precision (clipping demo), ROUGE-1/2/L, simulated BERTScore
+  - `example_05_evaluation_practice.py` — Leaderboard reading, before/after fine-tuning analysis, 3 pitfalls (0-shot vs 5-shot, contamination, single benchmark)
+- **Exercises (5):**
+  - `exercise_01_perplexity.py` — compute_perplexity, detect_overfitting, bits_per_character, overfitting_gap
+  - `exercise_02_benchmarks.py` — evaluate_multiple_choice, compute_accuracy, random_baseline, margin_over_random
+  - `exercise_03_pass_at_k.py` — pass_at_k, pass_at_1, required_attempts, benchmark_pass_at_k
+  - `exercise_04_text_metrics.py` — count_ngrams, ngram_precision, ngram_recall, compute_bleu
+  - `exercise_05_model_comparison.py` — normalize_score, rank_models, compare_zero_few_shot, detect_specialist
 - **Key topics:** Perplexity scale, overfitting curves, 25% random baseline, Pass@1 vs Pass@k, BLEU clipping, ROUGE-1/2/L, BERTScore cosine similarity, `lm_eval` CLI, data contamination, 0-shot vs 5-shot
 - **Libraries:** `evaluate`, `lm-eval`, `datasets`, `torch`, `numpy`, `matplotlib`
-- **Status:** 📖 Concepts complete (2026-05-31). Examples + exercises pending.
+- **Status:** ✅ Complete (2026-06-30). All 5 lessons + 5 examples + 5 exercises done.
 
 ---
 
@@ -396,7 +405,21 @@
   - GQA ↔ sharing a read-only resource (KV heads) across multiple consumers (Q heads) — like a static readonly field
   - KV Cache ↔ `Dictionary<int, (K, V)>` that grows with each token, read-only after written
 - **Libraries:** `torch`, `torch.nn`, `numpy`, `matplotlib`
-- **Status:** 📅 Planned
+- **Examples (5):**
+  - `example_01_rope.py` — theta freq table, 2D rotation, relative position verification (dot product depends only on gap)
+  - `example_02_gqa.py` — MHA/GQA/MQA memory math, repeat_kv, GQA attention computation, weight sizes
+  - `example_03_rla.py` — phi kernel (ELU+1), hidden state accumulation S = S + phi(K)⊗V, full RLA step
+  - `example_04_kv_cache.py` — SimpleKVCache class, sliding window eviction, INT8 quantization + error
+  - `example_05_qwen_assembly.py` — RMSNorm vs LayerNorm, SwiGLU vs GELU, architecture comparison table
+- **Exercises (5):**
+  - `exercise_01_rope.py` — compute_theta_freqs, rotate_pair, apply_rope, verify_relative_position
+  - `exercise_02_gqa.py` — compute_kv_cache_bytes, gqa_group_size, expand_kv_heads, weight_param_count
+  - `exercise_03_rla.py` — phi, outer_product, update_hidden_state, rla_step
+  - `exercise_04_kv_cache.py` — KVCache class (append/size_bytes/attend), sliding_window_evict, int8_quantize
+  - `exercise_05_assembly.py` — rms_norm, silu, swiglu_ffn, count_block_params
+- **Project (1):**
+  - `mini_qwen.py` — 4-layer 64-dim Qwen3.5-style decoder (pure Python, no deps), GQA, RoPE, SwiGLU, RMSNorm, tied embeddings, autoregressive generation
+- **Status:** ✅ Complete (2026-06-30). All 5 lessons + 5 examples + 5 exercises + 1 Mini-Qwen project done.
 
 ---
 
