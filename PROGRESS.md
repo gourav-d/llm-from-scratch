@@ -12,13 +12,14 @@
 | 01 | Python Basics | 10 | 10 | 0 | — | Content ready, exercises missing |
 | 01.5 | Pandas & Data Handling | 5 | 5 | 5 | — | ✅ Complete |
 | 02 | NumPy & Math | 3 | 4 | 3 | — | ✅ Complete |
+| 02.5 | Classical ML (Regression + Trees) | — | — | — | — | 📅 Planned |
 | 03 | Neural Networks | 6 | 6 | 6 | 3 | ✅ Complete |
 | 03.5 | PyTorch & TensorFlow | 5 | 2 | 1 | 1 | ✅ Complete (minimal exercises) |
 | 04 | Transformers | 9 | 18 * | 3 | — | ✅ Complete (L7–9 concept-only) |
 | 05 | Building Your LLM | 5 | 5 | 5 | 7 | ✅ Complete |
 | 05.5 | HuggingFace Tokenizers | — | — | — | — | 📅 Planned (optional) |
-| 06 | Training & Fine-tuning | 6 | 7 | — | 4 | ✅ Complete |
-| 07 | Reasoning & Coding Models | 10 | 10 | — | 5 | ✅ Complete |
+| 06 | Training & Fine-tuning | 6 | 7 | 6 | 4 | ✅ Complete |
+| 07 | Reasoning & Coding Models | 10 | 10 | 5 | 5 | ✅ Complete |
 | 08 | Prompt Engineering | 10 | 3 | 2 | — | ✅ Complete |
 | 09 | Production LLM Applications | 4 | 4 | 4 | 2 | ✅ Complete |
 | 10 | Vector Databases | 5 | 5 | 3 | 2 | ✅ Complete |
@@ -233,6 +234,24 @@
 ---
 
 ## New Modules (Planned — implement slowly)
+
+### Module 02.5 — Classical Machine Learning
+**Why here:** Bridges M02 (NumPy math) and M03 (Neural Networks). Regression and trees are simpler models — understanding them makes neural nets more meaningful ("why go deeper?"). Also unlocks Project A (House Price Prediction).
+
+| Lesson | Topic |
+|--------|-------|
+| L1 | Multiple linear regression — matrix form `w = (XᵀX)⁻¹Xᵀy`, gradient descent version, R²/MAE/RMSE |
+| L2 | Polynomial & regularized regression — feature engineering, Ridge (L2), Lasso (L1), overfitting demo |
+| L3 | Decision trees — Gini impurity, information gain, how splits are chosen, depth vs overfitting |
+| L4 | Random forests — bagging, bootstrap samples, feature importance, out-of-bag error |
+| L5 | Model selection — when classical ML beats neural nets, cross-validation, bias-variance tradeoff |
+
+**Libraries:** `numpy`, `sklearn`, `matplotlib`
+**C# analogies:** Regression ↔ linear equation solver; Decision tree ↔ nested if/else rules; Random forest ↔ committee voting pattern
+**Connects to:** M02 (matrix math), M03 (why neural nets go further), Project A (House Price Prediction)
+**Status:** 📅 Planned
+
+---
 
 ### Module 01.5 — Pandas & Data Handling
 **Why here:** Data cleaning is needed before NumPy/PyTorch touches training data. Also used in Module 06 (dataset prep) and Module 12 (JSONL building).
