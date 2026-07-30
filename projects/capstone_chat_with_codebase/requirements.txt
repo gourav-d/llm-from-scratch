@@ -1,0 +1,18 @@
+# Capstone: Chat with Codebase
+# Install with: pip install -r requirements.txt
+
+# Vector database -- stores embeddings locally on disk
+chromadb>=0.4.0
+
+# Web UI -- creates browser-based chat interface
+streamlit>=1.30.0
+
+# HTTP client -- calls Ollama REST API for embeddings + LLM
+requests>=2.31.0
+
+# Progress bars -- shows indexing progress in terminal
+tqdm>=4.66.0
+
+# File type detection -- skip binary files during indexing
+python-magic-bin>=0.4.14; sys_platform == "win32"
+python-magic>=0.4.27; sys_platform != "win32"
