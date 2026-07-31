@@ -1,6 +1,6 @@
 # Learning Progress — LLM from Scratch
 
-**Last Updated:** 2026-07-31 (M11++ MCP + LangGraph complete)
+**Last Updated:** 2026-07-31 (M01 exercises + M02.5 + M05.5 + M19 complete)
 **Student:** .NET developer learning Python + LLMs simultaneously
 
 ---
@@ -9,15 +9,15 @@
 
 | # | Module | Lessons | Examples | Exercises | Projects | Status |
 |---|--------|---------|----------|-----------|----------|--------|
-| 01 | Python Basics | 10 | 10 | 0 | — | Content ready, exercises missing |
+| 01 | Python Basics | 10 | 10 | 10 | — | ✅ Complete (exercises added 2026-07-31) |
 | 01.5 | Pandas & Data Handling | 5 | 5 | 5 | — | ✅ Complete |
 | 02 | NumPy & Math | 3 | 4 | 3 | — | ✅ Complete |
-| 02.5 | Classical ML (Regression + Trees) | — | — | — | — | 📅 Planned |
+| 02.5 | Classical ML (Regression + Trees) | 5 | 5 | 5 | — | ✅ Complete (2026-07-31) |
 | 03 | Neural Networks | 6 | 6 | 6 | 3 | ✅ Complete |
 | 03.5 | PyTorch & TensorFlow | 5 | 2 | 1 | 1 | ✅ Complete (minimal exercises) |
 | 04 | Transformers | 9 | 18 * | 3 | — | ✅ Complete (L7–9 concept-only) |
 | 05 | Building Your LLM | 5 | 5 | 5 | 7 | ✅ Complete |
-| 05.5 | HuggingFace Tokenizers | — | — | — | — | 📅 Planned (optional) |
+| 05.5 | HuggingFace Tokenizers | 5 | 5 | 5 | — | ✅ Complete (2026-07-31, HF optional) |
 | 06 | Training & Fine-tuning | 6 | 7 | 6 | 4 | ✅ Complete |
 | 07 | Reasoning & Coding Models | 10 | 10 | 5 | 5 | ✅ Complete |
 | 08 | Prompt Engineering | 10 | 3 | 2 | — | ✅ Complete |
@@ -38,7 +38,7 @@
 | **—** | **NEW MODULES — implement soon** | | | | | |
 | 13++ | M13 Extension: RLVR / GRPO | 3 | 3 | 3 | — | ✅ Complete (2026-07-31) |
 | 11++ | M11 Extension: MCP + LangGraph | 3 | 3 | 3 | — | ✅ Complete (2026-07-31) |
-| 19 | Mixture of Experts (MoE) | 5 | — | — | 1 | 📅 Planned |
+| 19 | Mixture of Experts (MoE) | 5 | 5 | 5 | — | ✅ Complete (2026-07-31, Mini-MoE GPT trains in ~6s CPU) |
 | 20 | State Space Models (Mamba/SSM) | 6 | — | — | 1 | 📅 Planned |
 | 10.9 | Multimodal RAG (ColPali) | 5 | — | — | — | 📅 Planned |
 | 14++ | M14 Extension: Speculative Decoding | 3 | — | — | — | 📅 Planned |
@@ -325,19 +325,20 @@
 ```
 ✅ M13++ RLVR/GRPO          ← DONE (2026-07-31): L6 RLVR, L7 GRPO, L8 Reasoning Chains
 ✅ M11++ MCP + LangGraph     ← DONE (2026-07-31): L6 MCP, L7 LangGraph, L8 Multi-Agent
+✅ M19   Mixture of Experts  ← DONE (2026-07-31): 5L+5E+5X, Mini-MoE GPT trains in ~6s CPU
 
 Next to implement:
-1. M19   Mixture of Experts  ← natural after M18 (same arch + router layer on top)
-2. M20   State Space Models  ← Mamba, O(n) attention alternative, hybrid SSM+Attn
-3. M10.9 Multimodal RAG      ← ColPali: PDF pages as images, no OCR, visual doc search
-4. M14++ Speculative Decoding ← 3x inference speedup, extends M14
-5. M21   Vision Language Models ← patch embeddings + LLM = multimodal
+1. M20   State Space Models  ← Mamba, O(n) attention alternative, hybrid SSM+Attn
+2. M10.9 Multimodal RAG      ← ColPali: PDF pages as images, no OCR, visual doc search
+3. M14++ Speculative Decoding ← 3x inference speedup, extends M14
+4. M21   Vision Language Models ← patch embeddings + LLM = multimodal
 ```
 
-### Priority 2 — Fill Gaps
-- Module 01: Add exercises
-- Module 03.5: Add more examples and exercises
-- Module 06/07: Add exercises
+### Priority 2 — Fill Gaps (ALL DONE 2026-07-31)
+- ✅ Module 01: 10 exercises added
+- ✅ Module 02.5: Full Classical ML module (5L+5E+5X, pure NumPy)
+- ✅ Module 05.5: HuggingFace Tokenizers (5L+5E+5X, HF optional)
+- Module 03.5: Could add more examples/exercises (low priority)
 
 ### Priority 3 — Standalone Projects (all unlocked)
 - Project A: House Price Prediction (unlock: M03 done ✅)
