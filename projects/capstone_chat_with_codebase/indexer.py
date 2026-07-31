@@ -48,6 +48,11 @@ import config
 from utils.chunker import walk_repo, chunk_file
 from utils.embedder import get_embedding, check_ollama_running, check_model_available
 
+# Path to the manifest file -- same location as reindex.py uses.
+# Saving the manifest here means reindex.py won't re-embed all files
+# the first time it runs after indexer.py.
+MANIFEST_PATH = os.path.join(os.path.dirname(__file__), "file_manifest.json")
+
 
 def make_chunk_id(file_path: str, chunk_idx: int, text: str) -> str:
     """
@@ -192,6 +197,17 @@ def index_repo(force_reindex: bool = False) -> dict:
         "errors": 0,
     }
 
+    # manifest: tracks {file_path: md5_hash} so reindex.py knows what changed.
+    # Load any existing manifest; if force_reindex, start fresh.
+    if force_reindex or not os.path.exists(MANIFEST_PATH):
+        manifest = {}
+    else:
+        try:
+            with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
+                manifest = json.load(f)
+        except Exception:
+            manifest = {}
+
     # tqdm wraps the file list and shows a progress bar in the terminal
     # C# analogy: like a for loop with Console.Write($"\r{i}/{total}")
     for file_path in tqdm(file_paths, desc="Indexing files", unit="file"):
@@ -247,6 +263,12 @@ def index_repo(force_reindex: bool = False) -> dict:
                 metadatas=metadatas,    # the extra metadata
             )
 
+            # Record this file's MD5 hash in the manifest.
+            # reindex.py reads this to skip files that haven't changed.
+            manifest[file_path] = hashlib.md5(
+                open(file_path, "rb").read()
+            ).hexdigest()
+
             stats["files_processed"] += 1
             stats["chunks_added"] += len(chunks)
 
@@ -254,6 +276,11 @@ def index_repo(force_reindex: bool = False) -> dict:
             # Don't let one bad file stop the whole indexing
             print(f"\nWARN: Could not index {file_path}: {e}")
             stats["errors"] += 1
+
+    # Save the manifest so reindex.py knows the state after this run.
+    # Without this, the first reindex.py call would re-embed all files again.
+    with open(MANIFEST_PATH, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2)
 
     return stats
 

@@ -1,6 +1,6 @@
 # Learning Progress — LLM from Scratch
 
-**Last Updated:** 2026-06-30 (M18 fully complete — all examples + exercises + Mini-Qwen project added)
+**Last Updated:** 2026-07-31 (M11++ MCP + LangGraph complete)
 **Student:** .NET developer learning Python + LLMs simultaneously
 
 ---
@@ -34,6 +34,15 @@
 | 16 | Modern LLM Architectures | 5 | 5 | 5 | — | ✅ Complete (2026-06-30) |
 | 17 | LLM Evaluation & Benchmarks | 5 | 5 | 5 | — | ✅ Complete (2026-06-30) |
 | 18 | Qwen3.5 LLM from Scratch (PyTorch) | 5 | 5 | 5 | 1 | ✅ Complete (2026-06-30) |
+| CAP | Capstone: Chat with Codebase | — | — | 3 | 1 | ✅ Complete (2026-07-31) |
+| **—** | **NEW MODULES — implement soon** | | | | | |
+| 13++ | M13 Extension: RLVR / GRPO | 3 | 3 | 3 | — | ✅ Complete (2026-07-31) |
+| 11++ | M11 Extension: MCP + LangGraph | 3 | 3 | 3 | — | ✅ Complete (2026-07-31) |
+| 19 | Mixture of Experts (MoE) | 5 | — | — | 1 | 📅 Planned |
+| 20 | State Space Models (Mamba/SSM) | 6 | — | — | 1 | 📅 Planned |
+| 10.9 | Multimodal RAG (ColPali) | 5 | — | — | — | 📅 Planned |
+| 14++ | M14 Extension: Speculative Decoding | 3 | — | — | — | 📅 Planned |
+| 21 | Vision Language Models (VLMs) | 5 | — | — | 1 | 📅 Planned |
 
 \* Module 04 examples: 6 NumPy + 6 PyTorch + 6 TensorFlow (all in `examples/`, `examples/pytorch/`, `examples/tensorflow/`)
 
@@ -312,20 +321,28 @@
 
 ## What to Do Next
 
-### Priority 1 — Capstone: Chat with Codebase
-- Unlocks after M16 + M17 + M18 complete
-- Stack: Ollama + ChromaDB + Streamlit + custom code chunker
-- Build phases: indexer → query engine → console → web UI → re-index script
+### Priority 1 — New Modules (implement soon, ordered by impact)
+```
+✅ M13++ RLVR/GRPO          ← DONE (2026-07-31): L6 RLVR, L7 GRPO, L8 Reasoning Chains
+✅ M11++ MCP + LangGraph     ← DONE (2026-07-31): L6 MCP, L7 LangGraph, L8 Multi-Agent
 
-### Priority 4 — Standalone Projects (unlocked)
-- Project A: House Price Prediction (unlock: M03 done ✅)
-- Project B: Movie Recommendation (unlock: M05 + M10 done ✅)
-- Project C: Object Detection (unlock: M14 done ✅)
+Next to implement:
+1. M19   Mixture of Experts  ← natural after M18 (same arch + router layer on top)
+2. M20   State Space Models  ← Mamba, O(n) attention alternative, hybrid SSM+Attn
+3. M10.9 Multimodal RAG      ← ColPali: PDF pages as images, no OCR, visual doc search
+4. M14++ Speculative Decoding ← 3x inference speedup, extends M14
+5. M21   Vision Language Models ← patch embeddings + LLM = multimodal
+```
 
-### Priority 5 — Fill Gaps
+### Priority 2 — Fill Gaps
 - Module 01: Add exercises
 - Module 03.5: Add more examples and exercises
 - Module 06/07: Add exercises
+
+### Priority 3 — Standalone Projects (all unlocked)
+- Project A: House Price Prediction (unlock: M03 done ✅)
+- Project B: Movie Recommendation (unlock: M05 + M10 done ✅)
+- Project C: Object Detection (unlock: M14 done ✅)
 
 ---
 
@@ -612,4 +629,172 @@ All 4 projects together = full-stack ML portfolio covering:
 - Classical ML (regression, recommender systems)
 - Computer vision (detection, real-time)
 - LLM applications (RAG, local deployment)
+
+---
+
+## New Module Detail Plans (added 2026-07-31)
+
+---
+
+### Module 13++ — RLVR / GRPO Extension (URGENT)
+**Location:** Add to `modules/13_rlhf_alignment/` as L6, L7, L8
+**Why urgent:** DeepSeek-R1 (Jan 2025) proved you can train reasoning models with ZERO supervised examples — only RL with verifiable rewards. Every top model in 2025-2026 (Qwen3, Llama4, Kimi) uses this. Already planned in M13; now critical.
+
+**Core idea:**
+- RLVR = reward signal comes from checking if the answer is CORRECT (math: check number, code: run tests). No human labelers needed.
+- GRPO = Group Relative Policy Optimization. Sample 8-16 responses to the same prompt, score them all, use relative ranking as reward. No separate value/critic network needed (cheaper than PPO).
+- Result: extended chain-of-thought thinking, self-correction, and reasoning emerge purely from RL.
+
+| Lesson | Topic |
+|--------|-------|
+| L6 | RLVR — verifiable rewards, no human labels, math/code use cases, contrast with RLHF |
+| L7 | GRPO algorithm — group sampling, relative reward, advantage = (score - group_mean) / group_std |
+| L8 | Reasoning chains from RL — how extended thinking emerges, "aha moment" phenomenon, R1 results |
+
+**C# analogy:** GRPO ≈ running a unit test suite and using pass-rate as the only feedback signal — no human reviewer needed.
+**Libraries:** `torch`, `numpy`
+**Prerequisites:** M13 (PPO, DPO, reward models)
+
+---
+
+### Module 11++ — MCP + LangGraph Extension ✅ COMPLETE (2026-07-31)
+**Location:** `modules/11_llm_agents/` — L6, L7, L8 + 3 examples + 3 exercises
+**Why:** MCP (Model Context Protocol, Anthropic Nov 2024) is now the industry standard for agent↔tool connections — adopted by OpenAI, Google, Microsoft, donated to Linux Foundation Dec 2025. 65% of LLM job listings require it. LangGraph replaced simple chain-based agents as the standard orchestration pattern.
+
+**What was built:**
+
+| File | Description |
+|------|-------------|
+| `lessons/06_mcp_protocol.md` | MCP M×N problem, server/client, tool schemas, tool discovery, MCP vs function calling |
+| `lessons/07_langgraph.md` | StateGraph, nodes, edges, conditional routing, retry loops, checkpointing, human-in-the-loop |
+| `lessons/08_multi_agent_mcp_langgraph.md` | Router→specialist pattern, interrupt gates, why this is in 65% of job postings |
+| `examples/example_06_mcp_protocol.py` | Simulated MCP server+client, 3 servers (calc/filesystem/github), discovery demo |
+| `examples/example_07_langgraph.py` | Simulated StateGraph, conditional retry loop, checkpointing (pause/resume), trace |
+| `examples/example_08_multi_agent_mcp_langgraph.py` | Router + 2 specialists, interrupt gate, full execution trace |
+| `exercises/exercise_06_mcp.py` | Build MCPServer + MCPClient + register tools + solve tasks via MCP |
+| `exercises/exercise_07_langgraph.py` | Node functions + run_graph + run_graph_with_conditions + full pipeline |
+| `exercises/exercise_08_multi_agent.py` | router_node + research_agent + math_agent + run_multi_agent_graph |
+
+**Key concepts delivered:**
+- MCP solves M×N integration problem: write tools once, any agent uses them
+- tools/list = discovery, tools/call = execution, tool schema = JSON Schema
+- LangGraph: State dict flows through nodes; conditional edges enable retry loops
+- Checkpointing = pause/resume (like Azure Durable Functions replay)
+- interrupt_before=["node"] = human-in-the-loop approval gate
+- Router pattern: supervisor LLM routes to specialist agent via conditional edge
+
+**C# analogies used:**
+- MCP Server ↔ gRPC/WCF service; MCP Client ↔ auto-generated typed client from Swagger
+- LangGraph ↔ Azure Durable Functions (explicit state, resumable, auditable)
+- Router ↔ MediatR command dispatcher / CQRS
+- Interrupt gate ↔ context.WaitForExternalEvent<bool>()
+
+**All examples:** Pure Python stdlib — no pip install needed. Migration path to real `langgraph` documented inline (same API).
+**Prerequisites:** M11 (agents, tool use, ReAct, multi-agent)
+
+---
+
+### Module 19 — Mixture of Experts (MoE)
+**Location:** `modules/19_mixture_of_experts/`
+**Key insight:** Standard LLM activates ALL parameters for every token. MoE activates only K of N expert FFN layers per token. DeepSeek-V3: 671B total params, 37B active per token → same quality, 18x less compute per forward pass.
+
+| Lesson | Topic |
+|--------|-------|
+| L1 | MoE concept — experts, router, sparse activation, why it scales (compute vs capacity) |
+| L2 | Router network — Top-K gating with softmax, how tokens are assigned to experts |
+| L3 | Load balancing — auxiliary loss prevents all tokens routing to same expert (collapse problem) |
+| L4 | MoE vs dense tradeoffs — more memory (store all experts) vs less compute (only run K) |
+| L5 | Build Mini-MoE GPT — replace FFN layers with 4 experts + router, train on Shakespeare |
+
+**Project:** Mini-MoE (4 experts, top-2 routing, 4-layer transformer) — compare perplexity and training speed vs dense nanoGPT from M05
+**C# analogy:** Router ≈ a strategy pattern that selects which implementation handles each request. Experts ≈ specialized service classes.
+**Libraries:** `torch`, `numpy`
+**Prerequisites:** M04 (Transformers), M05 (Building LLM), M18 (Qwen3 from scratch)
+
+---
+
+### Module 20 — State Space Models (Mamba / SSM)
+**Location:** `modules/20_state_space_models/`
+**Key insight:** Attention is O(n²) in sequence length — 4x longer sequence = 16x more compute. SSMs are O(n) linear. Mamba adds selectivity (input-dependent state transitions). Hybrid models (1/4 attention + 3/4 SSM) give 3x throughput at same quality.
+
+| Lesson | Topic |
+|--------|-------|
+| L1 | The O(n²) problem — memory and compute cost of attention at long contexts |
+| L2 | State Space Models — continuous-time system `x' = Ax + Bu`, discretization (ZOH), recurrent form |
+| L3 | Mamba / selective SSM — input-dependent A, B, C matrices, hardware-efficient parallel scan |
+| L4 | Mamba-2 — structured state spaces (diagonal A), SSD (State Space Duality), faster training |
+| L5 | Hybrid Attention+SSM — why mix both (SSM good for recall, Attention good for in-context), Jamba pattern |
+| L6 | Build Mini-Mamba — selective SSM layer from scratch in PyTorch, compare output to attention |
+
+**Project:** Mini-Mamba language model — train on Shakespeare, compare tokens/sec vs nanoGPT at 1024 and 4096 seq length
+**C# analogy:** SSM recurrent form ≈ a for-loop accumulating state (like `accumulator = f(accumulator, input[i])`). Parallel scan ≈ prefix sum / scan operation (PLINQ Aggregate with associative combiner).
+**Libraries:** `torch`, `numpy`
+**Prerequisites:** M04 (Transformers), M15 (Advanced Training — Flash Attention concepts)
+
+---
+
+### Module 10.9 — Multimodal RAG (ColPali)
+**Location:** `modules/10.9_multimodal_rag/`
+**Key insight:** Traditional RAG on PDFs: extract text → embed text → search text. Loses layout, tables, charts, diagrams, and anything OCR gets wrong. ColPali: render PDF page as IMAGE → embed image patches → multi-vector late interaction (MaxSim scoring). No OCR needed. Works on scanned docs, slides, engineering drawings.
+
+| Lesson | Topic |
+|--------|-------|
+| L1 | Why text-only RAG fails on visual documents — OCR errors, lost tables, lost diagrams |
+| L2 | Image patch embeddings — ViT splits image into 16×16 patches, each patch becomes a vector |
+| L3 | Late interaction / MaxSim scoring — multi-vector query vs multi-vector doc (ColBERT style for images) |
+| L4 | ColPali architecture — PaliGemma backbone + BiPali retriever, training on DocVQA |
+| L5 | Build visual document search — render PDF pages as images, embed patches, retrieve by question |
+
+**C# analogy:** Traditional RAG ≈ full-text search on extracted text. ColPali ≈ image recognition + semantic search combined — like asking "find the slide that shows this graph" without needing text extraction.
+**Libraries:** `Pillow`, `torch`, `chromadb`, `pypdf2` or `pdf2image`
+**Prerequisites:** M10 (Vector DBs), M10.8 (Semantic Search), M04 (Transformers — ViT is a transformer)
+
+---
+
+### Module 14++ — Speculative Decoding Extension
+**Location:** Add to `modules/14_deploying_llms/` as L7, L8, L9
+**Key insight:** LLM generates one token at a time (autoregressive = slow). Speculative decoding uses a small DRAFT model to guess N tokens at once, then the large TARGET model verifies ALL N in a single forward pass. If the draft is right (~80% acceptance with EAGLE-3), you get N tokens for the cost of ~1.3. Result: 3x throughput with zero quality loss.
+
+```
+Standard:   LLM → token1, LLM → token2, LLM → token3   (3 forward passes)
+Speculative: draft → [t1,t2,t3], LLM verifies all 3 at once (1 forward pass)
+             If all accepted: 3 tokens for cost of 1 LLM pass
+```
+
+| Lesson | Topic |
+|--------|-------|
+| L7 | Speculative decoding — draft + verify loop, acceptance criterion, guaranteed same output distribution |
+| L8 | EAGLE-3 — draft at the feature level (not token level), 80% acceptance rate, 3x throughput on H200 |
+| L9 | Combining with quantization — QSpec pattern: INT4 quant + speculative decoding = 6x combined improvement |
+
+**C# analogy:** Speculative execution ≈ CPU branch prediction — guess ahead, execute speculatively, roll back on misprediction. But here: no rollback, just reject the wrong tokens.
+**Libraries:** `torch`, `transformers` (for reference)
+**Prerequisites:** M14 (Deploying LLMs — quantization, KV Cache), M18 (autoregressive generation)
+
+---
+
+### Module 21 — Vision Language Models (VLMs)
+**Location:** `modules/21_vision_language_models/`
+**Key insight:** Add vision to an LLM by treating image patches as tokens. ViT splits image into 16×16 pixel patches, projects each to embedding dimension, feeds into transformer alongside text tokens. The LLM "sees" the image as a sequence of special tokens. LLaVA, Qwen-VL, Phi-4-Multimodal, Gemma 3 all use this pattern.
+
+```
+Image (224×224 pixels)
+  → split into 14×14 grid of 16×16 patches    = 196 patch tokens
+  → project each patch to hidden_dim          = 196 × 768 vectors
+  → concatenate with text tokens              = [patch_1, ..., patch_196, text_1, ...]
+  → feed to transformer                       → answer about the image
+```
+
+| Lesson | Topic |
+|--------|-------|
+| L1 | Vision encoder — ViT architecture, patch embeddings, CLS token, positional embeddings for patches |
+| L2 | Connecting vision to language — projection layer (linear or 2-layer MLP maps ViT dim → LLM dim) |
+| L3 | VLM training — Stage 1: image captioning pretraining (freeze LLM, train projection); Stage 2: instruction tuning (train all) |
+| L4 | Cross-attention for images — Flamingo-style: image features injected via cross-attention layers, not token concatenation |
+| L5 | Build Mini-VLM — ViT encoder (tiny) + MLP projection + small LLM, answer yes/no questions about images |
+
+**Project:** Mini-VLM that answers simple questions about images ("Is there a cat in this image?", "What color is the car?")
+**C# analogy:** ViT patch embedding ≈ splitting a byte array into fixed-size chunks and hashing each chunk into a feature vector. Projection layer ≈ an adapter/converter between two different vector spaces.
+**Libraries:** `torch`, `torchvision`, `Pillow`, `numpy`
+**Prerequisites:** M04 (Transformers), M05 (Embeddings), M18 (building LLM), M03.5 (PyTorch)
 
