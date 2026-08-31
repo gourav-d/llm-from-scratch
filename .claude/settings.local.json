@@ -22,7 +22,10 @@
       "Bash(pip install:*)",
       "Bash(rm:*)",
       "Bash(xargs basename *)",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "WebSearch",
+      "Bash(python3 -c ' *)",
+      "Bash(git -C \"C:/Users/gourav.dwivedi/OneDrive - BLACKLINE/Documents/GD/Learning/LLM/2026/1\" status --short)"
     ]
   }
 }
