@@ -1,0 +1,15 @@
+# Phase 1: Web fetching + HTML extraction
+trafilatura>=1.6.0
+justext>=3.0.0
+requests>=2.31.0
+
+# Phase 2: Embeddings + vector storage
+sentence-transformers>=2.7.0
+chromadb>=0.5.0
+
+# Phase 3: LLM (Ollama runs separately -- no pip package needed for the server)
+# Ollama install: https://ollama.ai
+# After install: ollama pull mistral
+
+# Utilities
+numpy>=1.24.0
